@@ -2,16 +2,16 @@
 layout: post
 title: "Machine learning appendix"
 date: 2017-02-01
-category: technical
+category: t
 ---
-For personal use, but suggestions are highly appreciated.
 _(to be updated sporadically)_
+For personal use, but suggestions are highly appreciated.
 <!--more-->
 
-## <a href="#glossary">Glossary of common terms and notations</a>
-Each row lists the terms that are _synonyms_ (or <em><font color="red">strongly related</font></em>)
+## <a name="glossary">Glossary</a>
+Glossary of common terms and their _synonyms_ (or <em><font color="red">strongly related</font></em>).
 
-> `>` For brevity, we write $$\text{Pr}\left(x\right)$$, instead of $$\text{Pr}\left(X=x\right)$$ as normally seen in statistical texts. Nevertheless, we should not do so when working on e.g. theoretical foundation of model robustness to avoid confusion.
+> $$\text{Pr}\left(x\right)$$ is written in place of $$\text{Pr}\left(X=x\right)$$ for brevity. Read [more](#more).
 
 | Term | Common notations and more information (if any)|
 |:---- |:-----------------------|
@@ -44,8 +44,20 @@ Each row lists the terms that are _synonyms_ (or <em><font color="red">strongly 
 | | `bias` has more [common meanings](https://en.wikipedia.org/wiki/Bias_(statistics)) |
 | parameterized function | $$f\left(x,y\,\mathbf{;}\,\theta\right)$$  |
 |*hàm có tham số* | |
-| parametric distribution | $$p_{\theta}\left(x\right)$$ |
+| parametric distribution | $$p\left(x\mathbf{;}\,\theta\right)$$; or $$p_{\theta}\left(x\right)$$ where {% m %} p\left(\cdot\right) {% em %} is density function |
 | *phân bố xác suất có tham số* | 
+
+### <a name="more">More notation</a> 
+
+> For brevity, $$\text{Pr}\left(x\right)$$ is often seen in ML literature instead of $$\text{Pr}\left(X=x\right)$$ as in statistical texts. I also use an overhead circle e.g. {% m %} \overset{\circ}{x} {% em %} to denote random variable, in place of capital letters e.g. X, N, K which are preserved for either sets of data points, matrices, or total number of samples/classes/features/...
+
+| Notation | |
+|:---:|:---|
+|{% m %} \overset{\circ}{y_{n}} {% em %} | A random variable. Thus {% m %} \text{Pr}\left(\overset{\circ}{y_{n}}\|\cdot\right) {% em %} implies a probability distribution. |
+|{% m %} y_{n} {% em %} | A realization of random variable {% m %} \overset{\circ}{y_{n}} {% em %}. Thus {% m %} \text{Pr}\left(y_{n}\|\cdot\right) {% em %} is a value. |
+| {% m %} \Omega_{\overset{\circ}{y_{n}}} {% em %} | Set of all possible realization {% m %} y_{n}{% em %}'s of random variable {% m %} \overset{\circ}{y_{n}} {% em %} i.e. ***sample space*** of {% m %} \overset{\circ}{y_{n}} {% em %}. |
+|{% m %} \hat{y}_{n} {% em %} | An estimate of random variable {% m %} \overset{\circ}{y_{n}} {% em %} |
+| {% m %} \underset{y_{n}^{'}}{\text{argmax}}\text{Pr}\left(y_{n}^{'}\|\cdot\right) {% em %} | short for {% m %} \underset{y_{n}^{'}\in\Omega_{\overset{\circ}{y_{n}}}}{\text{argmax}}\text{Pr}\left(\overset{\circ}{y_{n}}=y_{n}^{'}\|\cdot\right) {% em %}. We use notation {% m %} y_{n}^{'} {% em %} to not confuse with {% m %} y_{n} {% em %} which is reserved for the realization provided by training data {% m %} \mathcal{D}=\left\{ x_{n},y_{n}\right\}_{n=1}^{N}  {% em %}. |
 
 ## Back-propogation algorithm
 {% marginnote 'backprop-demo' "*Conditions*: (i) J is differentiable every where w.r.t. theta; (ii) J and all thetas form a directed acyclic computational graph." %} **For what**: computes gradient {% m %} 

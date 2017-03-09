@@ -130,7 +130,7 @@ blockquote p {  font-size: 1.1rem;
                 line-height: 1.78181818;
                 margin-top: 1.78181818rem;
                 margin-bottom: 1.78181818rem;
-                width: 70%;
+                width: 66%;  // body width - paddings
                 padding-left: 2.5%;
                 padding-right: 2.5%; }
 
@@ -143,11 +143,11 @@ blockquote footer { width: 45%;
 
 pre, pre code, p code, p pre code { font-family: $code-font;  // removed .code 'class' since code is an actual html tag
         font-size: 1.2rem;                   // also added p code, p pre code and pre selector to account for Markdown parsing
-        /*line-height: 1.71428571;        // of triple backticks plus rationalized line-heights and margins*/
-        margin-top: 1.71428571rem;
-        background-color: rgb(239,240,241);  // background color for code block: light gray (user comment)
+        line-height: 1.51428571;        // of triple backticks plus rationalized line-heights and margins
+        margin-top: 1.51428571rem;
+        background-color: #eff0f1;  // keep consistent with /_sass/_syntax-highlighting.scss (user setting)
         /*display: block;*/
-        /*border-radius: 4px*/
+        border-radius: 4px
       }
 
 
@@ -214,12 +214,17 @@ article { position: relative;
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
+p, footer, div.mathblock{ width: 71%; } // maincolumn content width (user comment)
+// removed width-constrainst on div.table-wrapper (user setting)
 
 // customize list ul, ol
-ul,ol { width: 68%; 
-     -webkit-padding-start: 5%;
+ul,ol { width: 68%;  // 3% more to match body width - 71% (user setting)
+     padding-left: 2%;  // for Edge
+     -webkit-padding-start: 2%;  // for Chrome
      -webkit-padding-end: 5%;
-     /*list-style-type: none;*/ }
+     }
+
+ul {list-style-type: square; }
 
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
@@ -245,7 +250,7 @@ img { max-width: 100%; }
 
 .sidenote, .marginnote { float: right;
                          clear: right;
-                         margin-right: -32%;
+                         margin-right: -33%;
                          width: 30%;
                          margin-top: 0;
                          margin-bottom: 1.96rem;
@@ -254,8 +259,7 @@ img { max-width: 100%; }
                          vertical-align: baseline;
                          position: relative; }
 
-li .sidenote, li .marginnote{ margin-right: -36.25%; } //added to allow for the fact that lists are indented and marginnotes and sidenotes push to right
-// fix sidenote in li being pushed too far to right (user setting)
+li .sidenote, li .marginnote{ margin-right: -38.75%; } // fix sidenote in li being pushed too far to right (user setting)
 
 blockquote .sidenote, blockquote .marginnote { margin-right: -35.5% }  // fix sidenote in blockquote being pushed too far to right (user setting)
 
@@ -276,7 +280,6 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -35.5% }  // fix si
                    color: $contrast-color;
                    top: 0rem; } //removed superscripting for numerical reference in sidenote
 
-p, footer, div.table-wrapper, div.mathblock{ width: 73.5%; } // maincolumn content width (user comment)
 
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
@@ -403,14 +406,14 @@ ul.footer-links li{
 
 //Full width page styling stuff
 
-body.full-width, .content-listing, ul.content-listing li.listing{ width: 92.5%;  // user settings
+body.full-width, .content-listing, ul.content-listing li.listing{ width: 82.5%;  // user settings
        margin-left: auto;
        margin-right: auto;
        padding: 0% 7.5%;  // user settings
 
 }
 .full-width article p{
-  width: 90%;
+  width: 100%;  // default: 90% (user-setting)
 }
 
 

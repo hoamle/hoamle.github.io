@@ -1,13 +1,15 @@
 ---
-title: "Primer on Building a Machine Learning Solution"
+title: "Part 1 - Primer on Building a Machine Learning Solution"
 layout: post
-category: technical
+category: t
 ---
+> *(Part 1b of the [Essence of Machine Learning (and Deep Learning)](/articles/16/essence-machine-deep-learning) series)*
+
 This week introduces **high-level overview of building a Machine Learning (ML) solution** for a problem, summarized by the following diagram and demo'ed with [`scikit-learn`](http://scikit-learn.org/stable/index.html).
 {% maincolumn 'assets/img/week1-2.png' '' %}
 
 
-**N.B.**{% marginnote 'mn-id-glossary' "Visit [MLglossary](https://hoamle.github.io/articles/17/machine-learning-appendix/#glossary) for a summary of the math notations. The MLglossary also lists common terms in ML with their synonyms or strongly related concepts. Because ML is an interdisplinary field, there are many different terminologies, which come from the relevant fields of research, that are actually *equivalent*." %} We will gradually *rephrase* every-day language with equivalent ML terminologies and their *math notations*.
+**N.B.**{% marginnote 'mn-id-glossary' "Visit [MLglossary](/articles/17/machine-learning-appendix/#glossary) for a summary of the math notations. The MLglossary also lists common terms in ML with their synonyms or strongly related concepts. Because ML is an interdisplinary field, there are many different terminologies, which come from the relevant fields of research, that are actually *equivalent*." %} We will gradually *rephrase* every-day language with equivalent ML terminologies and their *math notations*.
 
 Don't be afraid of Math, embrace it. Math is (1) an **efficient, universal and unanimously understood** language. Once we rephrase a problem in mathematical toungue, we may see hidden  connections between numerous of *supposedly* unrelated problems in different fields [[DAslides:pp22-38]](https://1drv.ms/b/s!ApOZHae4ogqZ3AJg76xtDPEzSlH-). Further more, Math is (2) **non-ambiguous** so that we can approach a solution of a problem with transparent and concrete reasoning. Nevertheless, always explain the math we use (or encounter) in our usual natural language if possible, so that we can imprint the **underlying intuition** and not getting lost in the technical details that follow.
 
@@ -21,7 +23,7 @@ Don't be afraid of Math, embrace it. Math is (1) an **efficient, universal and u
 <img src="{{ site.github.url }}/assets/img/Petal-sepal.jpg" width="360"> 
  <small>("which flower is this?" - photo from [bing](https://www.bing.com/images/search?view=detailV2&ccid=E8dlW334&id=690CFCA2C5419961A77E0534DC3B6AD1B61FA711&q=sepal&simid=608048017631022285&selectedIndex=5&ajaxhist=0))</small>
 
-**Experience** i.e **Training data**{% marginnote 'mn-trainset' "*training data/training set*" %}: `iris` dataset - a dataset that contain information about certain types of flower 
+**Experience** i.e ***Training data***{% marginnote 'mn-trainset' "*training data / training set* $$\\mathcal{D}_{\\text{train}}=\\left\\{ x^{\\left(n\\right)},y^{\\left(n\\right)}\\right\\}$$" %}: `iris` dataset - a dataset that contain information about certain types of flower 
 
 
 ```python
@@ -29,7 +31,7 @@ from sklearn import datasets
 iris_dataset = datasets.load_iris()
 ```
 
-First, study our data, so that we can **pre-process**{% marginnote 'mn-preprocess' "*data preprocessing*" %} the data provided. In this step, we might need to manipulate the raw data to extract important information, or normalize following certain standard. The purpose is (but not limited to) to prepare the data in proper formats for later implementation.
+First, study our data, so that we can ***pre-process***{% marginnote 'mn-preprocess' "*data preprocessing*" %} the data provided. In this step, we might need to manipulate the raw data to extract important information, or normalize following certain standard. The purpose is (but not limited to) to prepare the data in proper formats for later implementation.
 
 For demonstration purpose, we are using a "*clean"* dataset (already stored in structured format, no missing or suspicious values), so we only need to do minimal data pre-processing. Reminded that it is most likely *not* the case in practice [[DAslides:p11]](https://1drv.ms/b/s!ApOZHae4ogqZ3AJg76xtDPEzSlH-).
 
@@ -41,8 +43,8 @@ Read the "docs" i.e. data description
 ```python
 # print(iris_dataset)
 print(iris_dataset['DESCR'][:1000])  # the "doc" is quite long, so I 
-                                  # only extract the first 1000 
-                                  # characters for demonstration purpose    
+                                     # only extract the first 1000 
+                                     # characters
 ```
 
     Iris Plants Database
@@ -78,13 +80,10 @@ print(iris_dataset['DESCR'][:1000])  # the "doc" is quite long, so I
 
 Observe:
 
-`>` There are 150 examples i.e. *data points*
-
-`>` Each flower is described by $$P=4$$ attributes i.e. **features**{% marginnote 'mn-feature' "*features*" %} or *predictors*: `sepal length` ($$x_{1}$$), `sepal width` ($$x_{2}$$), `petal length` ($$x_{3}$$), `petal width` ($$x_{4}$$). 
-
-`>` All 4 features' measures are conceptually similar (numeric, real values that lie in the same domain), so no **data normalization**{% marginnote 'mn-norm' "*data normalization*" %} required.
-
-`>` There are $$K=3$$ types i.e. **classes**{% marginnote 'mn-class' "*class, label*" %} of flower, which are `setosa`, `versicolor`, and  `virginica` - represented by ID `0`, `1`, `2` respectively. Note: each flower is **labelled** by a *single* ID, indicating that a flower can only be member of 1 type.
+* There are 150 examples i.e. *data points*
+* Each flower is described by $$P=4$$ attributes i.e. ***features***{% marginnote 'mn-feature' "*features* $$x=\\left\\{ x_{p}\\right\\}_{P\\times1}$$" %} or *predictors*: `sepal length` ($$x_{1}$$), `sepal width` ($$x_{2}$$), `petal length` ($$x_{3}$$), `petal width` ($$x_{4}$$). 
+* All 4 features' measures are conceptually similar (numeric, real values that lie in the same domain), so no ***feature normalization***{% marginnote 'mn-norm' "*feature normalization*" %} required.
+* There are $$K=3$$ types i.e. ***classes***{% marginnote 'mn-class' "*class, label*" %} of flower, which are `setosa`, `versicolor`, and  `virginica` - represented by ID `0`, `1`, `2` respectively. Note: each flower is **labelled** by a *single* ID, indicating that a flower can only be member of 1 type.
 
 
 
@@ -105,7 +104,7 @@ print(iris_dataset['target'])
      2 2]
     
 
-We write the features as a feature vector $$x=\left(x_{1},x_{2},x_{3},x_{4}\right)^{T}$$. Vector $$x$$ is a **representation**{% marginnote 'mn-representation' "*data representation*" %} of a flower i.e. a summary of this flower attributes. We extract and store all feature vectors to a 2D-array{% sidenote 'sn-id-2d' "`2D-array` can be understood as a table-like data structure" %} $$X$$, where the $$n$$-th row corresponds to feature vector $$x^{\left(n\right)}$$. 
+We write the features as a feature vector $$x=\left(x_{1},x_{2},x_{3},x_{4}\right)^{T}$$. Vector $$x$$ is a ***representation***{% marginnote 'mn-representation' "*data representation*" %} of a flower i.e. a summary of this flower attributes. We extract and store all feature vectors to a 2D-array{% sidenote 'sn-id-2d' "`2D-array` can be understood as a table-like data structure" %} $$X$$, where the $$n$$-th row corresponds to feature vector $$x^{\left(n\right)}$$. 
 
 
 
@@ -139,7 +138,7 @@ Now we can define our problem more precisely by the language of math
 
 ### Define the problem
 
-Given any attribute $$x$$, we would like to **predict** a corresponding prediction $$\hat{y}\in$$  {`setosa`, `versicolor`, `virginica`} by a ML `Model` In order to know if our model has good predictive performance, we need an `Assessment` to measure the performance.  In this problem, we can measure the performance by an **evaluation metric**{% marginnote 'mn-metric' '*evaluation metrics*' %} called [*Accuracy*](http://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score), which
+Given any attribute $$x$$, we would like to **predict** a corresponding prediction $$\hat{y}\in$$  {`setosa`, `versicolor`, `virginica`} by a ML `Model` In order to know if our model has good predictive performance, we need an `Assessment` to measure the performance.  In this problem, we can measure the performance by an ***evaluation metric***{% marginnote 'mn-metric' '*evaluation metrics*' %} called [*Accuracy*](http://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score), which
 
 {% math %}\text{Accuracy}=\dfrac{1}{N}\sum_{n}\mathbb{1}\left(\hat{y}^{\left(n\right)}=y^{\left(n\right)}\right){% endmath %}
 
@@ -148,22 +147,19 @@ The value of this metric increases every time we correctly identify a flower typ
 {% maincolumn 'assets/img/week1-1.png' '' %}
 *<font color="red">Note</font>*{% marginnote 'mn-id-metrics' "Many problems require 2 or more metrics for an objective assessment." %}: while Accuracy is appropriate for this particular problem, other problems may require some other evaluation metric. For example, in case wewant to identify whether a patient has cancer or not, we may want to minimize the risk of missing true cases (patients who actually have cancer - True Positive cases) as much as possible. In this case, [*Recall*](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) is a better measure of performance than Accuracy.
 
-In order to build a model that perform well, we need to **train**{% sidenote 'sn-id-knn' "Note: *k-nearest neighbours* - a common ML algorithm - is an exception such that the algorithm virtually does not perform any kind of learning. While the algorithm has its own mertis, it does not scale to address high-dimensional inputs or non-trivial semantic recognition problems. Read more: [[cs231n]](http://cs231n.github.io/classification/#nn)" %} it by utilizing the *experience* that the model has. In other word, the model needs to improve its performance by *learning* from the *training data* $$\mathcal{D}_{\text{train}}=\left\{ x^{\left(n\right)},y^{\left(n\right)}\right\}$$ from an initial "naive" state. This task is called, unsurprisingly, **learning**{% marginnote 'mn-id-learning' "*learning*" %}, and is also commonly called **fitting**. 
+In order to build a model that perform well, we need to ***train***{% sidenote 'sn-id-knn' "Note: *k-nearest neighbours* - a common ML algorithm - is an exception such that the algorithm virtually does not perform any kind of learning. Read [[cs231n]](http://cs231n.github.io/classification/#nn) for its merits, limitation and use-cases." %} it by utilizing the *experience* that the model has. In other word, the model needs to improve its performance by *learning* from the *training data* $$\mathcal{D}_{\text{train}}=\left\{ x^{\left(n\right)},y^{\left(n\right)}\right\}$$ from an initial "naive" state. This task is called, unsurprisingly, ***learning***{% marginnote 'mn-id-learning' "*learning / fitting / training*" %}, and is also commonly called ***fitting***. 
 {% maincolumn 'assets/img/week1-2.png' '' %}
 
 
 
 
-A ML algorithm is not only required to perform well on the training data, but also on the *new, unseen data* that it has never encountered (i.e. not in the training set). Those unseen data that could be used to assess a model performance are called **test data**{% marginnote 'mn-id-testset' "*test data/test set*" %}. High performance on test data is important, because it is an indicator for the model's ability to  **generalize** to arbitrary data examples.
+A ML algorithm is not only required to perform well on the training data, but also on the *new, unseen data* that it has never encountered (i.e. not in the training set). Those unseen data that could be used to assess a model performance are called ***test data***{% marginnote 'mn-id-testset' "*test data / test set* $$\\mathcal{D}_{\\text{test}}$$" %}. High performance on test data is important, because it is an indicator for the model's ability to  **generalize** to arbitrary data examples.
 
-For demonstration purpose, we will use a small subset of `iris` dataset as test data. The remaining will serve as training data.  
+For demonstration purpose, we will use a small subset (20%) of `iris` dataset as test data. The remaining (80%) will serve as training data.  
 
 
 
 ```python
-# Randomly pick 20% of the examples as test data, and train
-# on the remaining 80%.
-
 from sklearn.cross_validation import train_test_split
 # note: sklearn 0.18 moved `train_test_split` to 
 # `sklearn.model_selection` module 
@@ -171,18 +167,14 @@ from sklearn.cross_validation import train_test_split
 indicies = [i for i in xrange(len(iris_dataset['data']))]
 train_idx, test_idx = train_test_split(indicies, train_size=0.8,
                                      random_state=1)  
-# Each time we run `train_test_split`, a new split is produced 
-# randomly and is different from the previous run. Therefore, 
+# Each time we run `train_test_split`, a new split is randomly 
+# produced and is *different* from the previous runs. Therefore, 
 # it is essential to assign a `random_state` to make our work 
 # reproducible on other machines or for later use. 
 
 # Use capital letter e.g. `X` to indicate set of data points.
-D_train = {'X': D['X'][train_idx],
-           'Y': D['Y'][train_idx]
-           }
-D_test = {'X': D['X'][test_idx],
-         'Y': D['Y'][test_idx]
-        }
+D_train = {'X': D['X'][train_idx], 'Y': D['Y'][train_idx]}
+D_test = {'X': D['X'][test_idx], 'Y': D['Y'][test_idx]}
 print("Test set size: {} examples".format(len(test_idx)))
 ```
 
@@ -194,15 +186,15 @@ In this week example demo, we use and train a model called **Softmax Regression*
 
 ```python
 from sklearn.linear_model import LogisticRegression
-# Softmax regression is a multi-class generalization of 
-# Logistic Regression model
+# Softmax regression is a multi-class generalization of Logistic Regression model
 
 # initialize a "naive" model
 model = LogisticRegression(multi_class="multinomial",
                           solver="lbfgs")  
 ```
 
-### Learning
+### Learning task
+{% marginnote 'mn-id-learning' "*learning task*"  %}
 
 
 ```python
@@ -211,7 +203,9 @@ model.fit(D_train['X'], D_train['Y']);  # after `.fit`, the model has finished i
 
 Learning finished! 
 
-### Prediction
+### Prediction task
+{% marginnote 'mn-id-predicition' "*prediction* $$\\hat{y}$$"  %}
+
 Now try indentifying a new, unseen flower with feature $$x^{\left(\text{test}\right)}$$
 
 
@@ -304,22 +298,21 @@ sum(Y_pred == D_test['Y']) / float(len(test_idx))
 
     0.96666666666666667
 
-*(comment: The performance is pretty impressive, but let hold off from a pre-matured assessment! See [Conclusion](#conclusion))*
+*(comment: The performance is pretty impressive, but let hold off from a pre-matured assessment! See [Recap](#Recap))*
 
-## <a href="#conclusion">Conclusion</a>
+## <a href="#Recap">Recap</a>
 
-To summarize, we have completed the most basic steps to build a ML solution for our problem as specified by this diagram
+We have completed the most basic steps to build a ML solution for our problem as summarized by this diagram
 {% maincolumn 'assets/img/week1-2.png' '' %}
 
-Specifically, we studied a (single-label) `multi-class classification`{% sidenote 'sn-id-slmc' "When ones refer to a `multi-class classification` problem, we implicit understand that it is a single-label problem. The more generalized classification problem is called `multi-label multi-class classification`, which we will not cover in this series." %} problem which require us to build a ML model that can predict a flower type based on its sepal and petal measurements. As a solution for this problem, we used and trained a Softmax Regression `Model`, did `Assessment` on *one* split of test set, measured the performance with Accuracy metric, and achieved impressive predictive Accuracy of $$96.7\%$$. 
+Specifically, we studied a (single-label) *multi-class classification* {% sidenote 'sn-id-slmc' "When ones refer to a *multi-class classification* problem, we implicit understand that it is a single-label problem. A more generalized classification problem is called *multi-label multi-class classification*, which we will not cover in this series." %} problem which require us to build a ML model that can predict a flower type based on its sepal and petal measurements. As a solution for this problem, we used and trained a Softmax Regression `Model`, did `Assessment` on *one* split of test set, measured the performance with Accuracy metric, and achieved impressive predictive Accuracy of $$96.7\%$$. 
 
 However, there still exist **fundamental** questions that we need to address:
 
 1. Is $$96.7\%$$ a *reliable* estimate for our model accuracy on **other test sets**?{% sidenote 'sn-id-assess' "TODO link to Part 4" %}
-2. How is Softmax Regression model **constructed**?{% sidenote 'sn-id-buildmodel' "TODO link to Part 2" %}
-3. In a problem for which **assumptions** imposed by Softmax Regression model do **not suffice**, how can we do better?{% sidenote 'sn-id-nonlinear' "TODO link to Part 3" %}
-4. How can *we* - as the human - **interpret** the contribution of the features to the prediction, or extract human-perceivable semantics that the features may hold? {% sidenote 'sn-id-nonlinear' "TODO link to Part 5" %}
-5. (other issues that would arise when approaching above questions)
+1. How is Softmax Regression model [**constructed**](/articles/17/principle-of-modelling)?
+1. In a problem for which **assumptions** imposed by Softmax Regression model do **not suffice**, how can we do better?{% sidenote 'sn-id-nonlinear' "TODO link to Part 3" %}
+1. How can *we* - as the human - **interpret** the contribution of the features to the prediction, or extract human-perceivable semantics that the features may hold? {% sidenote 'sn-id-nonlinear' "TODO link to Part 5" %}
+1. (other issues that would arise when approaching above questions)
 
-
-These questions define the topics for next parts of this series. In each part, we will be approaching different *multi-class classification* problems as case-studies for the relevant topics. The same reasoning and principles also straightforwardly apply to *binary classification*, *regression*, and *clustering* problems, which is left as homework for the readers.
+These questions define the topics for next parts of this series. In each part, we will be approaching different *multi-class classification* problems as case-studies for the relevant topics. The same reasoning and principles also straightforwardly apply to *binary **classification***, ***regression***, and ***clustering*** problems.

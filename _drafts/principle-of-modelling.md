@@ -1,47 +1,48 @@
 ---
-title: "Principle of Modelling"
+title: "Principle of Modelling: Model Structure and Learning Framework"
 layout: post
+category: t
+
 ---
 {% maincolumn 'assets/img/model_structures.png' '' %}
+## Case study
+Extend from the `iris` case-study in week 1
 
-> decision theory
-> > pick highest of posterior p(y|x)
-> > > reason: minimize
+### Statistical reasoning
+Statistis provide concrete mathematical framework to reason, and make decision (e.g. prediction, action) under **uncertainties**.
 
-> parametric model -> parametric distribution: governed by a small number of adaptive parameters -> need estimate of unknown parameters
-> > criterion: maximize likelhood p(y|theta)
-> > > reason: desired property on (asymptotic) unbiasness and measurable low variance estimate
+Reason about distribution of each flower type $y_{n}$ with and without information from features $x_{n}$
 
-This weeks explains how Softmax Regression is built
-## Motivation for statistical reasoning
-There are several points of view to build an ML model that can achieve certain objective(s). In many case, statistical perspective provide a more complete viewpoint 
+By decision theory {% sidenote "sn-id-decision" %}, the most optimal prediction is to set prediction $\hat{y}_{n}=\text{arg}\underset{\underbar{y}_{n}}{\max}\text{Pr}\left(y_{n}|x_{n}\right)$
 
-Powerful tools to predict/detect under uncertainty. All that task {marginnote "Read more: AI:IntroLecture"}
+###  Model structure
+built from scratch, parametric assumed
+...
+{}
 
-Follow statistcal reasoning would help us understand concretely why a model should work or not. Even for the models that were developed from non-probabilistic perspective (e.g. Neural Networks)
+### Learning framework
+Maximum likelihood principle {% marginnote %}
+Reason: the MLE satisfies "nice" properties of an estimator, which are asymptotic unbiased, and asymptoticly low variance (efficient i.e. variance reach Cramer-XX lower bound)
 
-TODO Pre-requisites: 
-- probability is a measure of uncertainty produced from one (or more) random process
-- statistics
+## Learning 
+Find all estimates of \theta s.t. $\hat{\theta}=\text{arg}\underset{\underbar{\theta}}{\max}\text{Pr}\left(y_{1..N}|x_{1..N};\theta\right)$
 
-Watch TODO (Statistics re-explained)
+$J\left(\theta,\mathcal{D}\right)=\sum_{n}\sum_{k}y_{nk}\log\mu_{nk}$
 
-## Case-study
+Closed-form solution not available => resort to numerical solution, found by optimization algorithm: gradient ascent (more commonly known as gradient descent when we minimize error function).
 
-Foundation: Decision theory {marginnote PRML:1.5}
-* best predictions are which minimizing mis-classification rate (i.e. 1 - [Accuracy](ref-to-last-week)): predict y_hat = k* if k* = argmax P(y=k*|x)
-* more generally, best predictions are which minimizing expected loss E[L] = error_weight * P(k*|x)
+$\hat{\theta}^{\left(i+1\right)}\leftarrow\hat{\theta}^{\left(i\right)}+\alpha\cdot\dfrac{1}{N}\cdot\nabla_{\theta}J\left(\hat{\theta}^{\left(i\right)}\right)$
 
-=> infer P(y|x) {marginnote "note on short-hand writing for `probability` of an outcome, and `probability distribution` of all outcomes"}
+$\nabla_{\theta}J\left(\hat{\theta}^{\left(i\right)}\right)=\left.\dfrac{\partial J}{\partial\theta}\right|_{\theta=\hat{\theta}^{\left(i\right)}}$
 
-### Model structure
+Note: although the gradients in Softmax regression model can be computed analytically, it is not the case in models with more complex structure (e.g. TODO link to week 3). In such cases, **back-propagation** is a common algorithm to compute these gradients.
 
-If no information provided i.e. P(y) {marginnote prior} =>  prior knowledge,  can be translated to the mathematical tools by using distribution P(y) to represent that knowledge => the distributions doing such thing is call **prior distributions**
+## Inference and Prediction
+Infer: $\text{Pr}\left(\left.y^{\text{\left(new\right)}}\right|x^{\text{\left(new\right)}},\mathcal{D}\right)$
 
-If there is information provided i.e. P(y|x) {marginnote posterior} => update the model knowledge given more data to produce more accurate predicition => translated to the mathematical tools by using distribution P(y|x) => these distribution conditioned on more information are called **posterior distributions**
+$\text{Pr}\left(\left.y^{\text{\ensuremath{\left(new\right)}}}\right|x^{\text{\ensuremath{\left(new\right)}}},\mathcal{D}\right)=...=\text{Pr}\left(\left.y^{\text{\ensuremath{\left(new\right)}}}\right|\mu^{\text{\ensuremath{\left(new\right)}}}=f\left(\hat{w}^{T}x^{\left(\text{new}\right)}\right)\right)
+ $
 
-* score function: [[cs229:notes1:III-9,9.3]](TODO)
+Predict $\hat{y}_{n}=\text{arg}\underset{\underbar{y}_{n}}{\max}\text{Pr}\left(y_{n}|x_{n}\right)$
 
-### Learning Framework
 
-TODO why MLE?

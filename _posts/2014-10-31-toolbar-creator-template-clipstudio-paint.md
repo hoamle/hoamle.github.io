@@ -2,11 +2,8 @@
 layout: post
 title: "Toolbar-Creator template for Photoshop and ClipStudio Paint"
 date: 2014-10-31
-category: Arts
+category: a
 ---
-
-***for Photoshop (R) and ClipStudio Paint aka. Manga Studio (R)***<br><br>
-on [GitHub](https://github.com/hoamle/Toolbar-Creator)
 
 **Toolbar Creator** is one of few especially useful on-screen toolbars for Windows Tablet PCs. It makes using Windows tablets without keyboard much more comfortable and convenient. The software is developed by [**lblb**](http://forum.tabletpcreview.com/threads/toolbar-creator-v-2-2-beta-available-for-download.63014/) at TabletPC Review forum, which is a user-friendly interface for `RawInputControlTest` script by [**koide**](http://39kasen.sakura.ne.jp/rawinputcontroltest/).
 
@@ -18,12 +15,10 @@ This repository is a toolbar *template*, specifically designed for painting in A
 ![Screenshot](https://raw.githubusercontent.com/hoamle/Toolbar-Creator/master/v2_2_b5/v2_2_b5.png)
 
 ## Logs
--  template for v2.2 beta 5 with more buttons added
+* template for v2.2 beta 5 with more buttons added
 
 ## Installation
-0. Download and extract this repo
-	- *(for non-GitHub users):* click [here](https://github.com/hemiolan/Toolbar-Creator/archive/master.zip), extract the downloaded file into a folder, and go into **`Toolbar-Creator-master`** folder.
-    - *(for GitHub users):* simply `clone` with `git`
-1. Copy and paste folder **`[version]\Files`** into your **`Toolbar Creator`** folder. Replace **`[version]`** with either **`v2_1`** or **`v2_2_b5`** accordingly to your existing **`Toolbar Creator`** version.
+0. Download, extract this [GitHub repo](https://github.com/hoamle/Toolbar-Creator/archive/master.zip), and go to `Toolbar-Creator-master` directory.
+1. Copy and paste directory `[version]\Files` into your `Toolbar Creator`'s root directory. Replace `[version]` with either `v2_1` or `v2_2_b5` accordingly to your existing `Toolbar Creator` version.
 2. Replace/Merge all existing files/folders if prompted.
-3. Launch Toolbar Creator and change the current toolbar to **`painting`**.
+3. Launch Toolbar Creator and change the current toolbar to `painting`.
