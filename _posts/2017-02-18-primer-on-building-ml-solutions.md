@@ -1,5 +1,5 @@
 ---
-title: "Part 1 - Primer on Building a Machine Learning Solution"
+title: "Part 1b - Primer on Building a Machine Learning Solution"
 layout: post
 category: t
 ---
