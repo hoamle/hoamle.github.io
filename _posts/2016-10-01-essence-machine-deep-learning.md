@@ -6,17 +6,22 @@ category: t
 ---
 Preliminary course for new members at DSLab-HUST. Pre-requisite for following courses in *Topic models (Probabilistic Graphical Models - PGM)* and *Deep neural networks - DNN*. 
 
-*Motivation.* Students at DSLab-HUST have been struggling (*a lot*) moving from reading Deep neural networks to Probabilistic models and vice-versa. This short course, therefore, is introduced to guide new starters to the field of Machine Learning with a more ***principled approach***, so that ones can understand the motivation and intuition behind ML concepts (which eventually includes *Deep Learning* along the course), keep their heads up on the big picture to not get lost in the complexity of the field, later learn advanced materials efficiently and catch up with recent advances in Machine Learning.
+*Motivation.* Students at DSLab-HUST have been struggling (*a lot*) moving from reading Deep neural networks to Probabilistic models and vice-versa. This short course, therefore, is introduced to guide new starters to the field of Machine Learning with a more ***principled approach***. Through the lens of *probabilistic modelling*, the series hope to help the new starters understand the motivation and intuition behind [Machine Learning core concepts](#core) that  define the spectrum of research in the field (which eventually includes *Deep Learning* along the course), keep their heads up on the big picture to not get lost in the complexity of the field, later learn advanced materials efficiently and catch up with recent advances in Machine Learning.
 
-*Intended learning objectives*: (i) understand and know what constitute of the core ML concepts below; (ii) be able to navigate new concepts in [the Map of Machine Learning](#map) to devise proper study-plans; and (iii) - *optionally* - articulate the math behind each model or concept and implement the ML models/algorithms covered in the course properly (expected from students who do the homework and ["Study-group" sessions](#study))
+ 
 
-## <a name="map">Core concepts</a>
+*Intended learning objectives*: 
+1. understand and know what constitute of the [core concepts](#core) in Machine Learning (ML); 
+2. be able to navigate new concepts/terminology in [the Map of Machine Learning](#map) to devise proper study-plans; and 
+3. *optionally* - articulate the math behind each model or concept and implement the ML models or algorithms covered in the course properly (expected from students who do the homework and ["Study-group" sessions](#study))
+
+## <a name="core">Core concepts</a>
 {% marginnote 'mn-map' 'TODO draw the Map' %} We will cover the following concepts. <font color="red">Note</font>: if not stated otherwise, concepts in ***bold italic*** are covered in the prelim course. [Course notes](#notes) is to be expected in respective blog posts. 
 
 ### Build a Machine Learning model
-**Design principle**: Model {% sidenote 'sn-model' '*"Model is a simplification of reality"*. Formulate real-life problems as ***parametric models*** (*non-parametric models/methods*  are briefly mentioned and left for further reading after this prelim course)' %} = Model "Structure"{% sidenote 'sn-structure' 'Relationships between model elements: data, parameters, and hyperparameters.  Relationships can either be *deterministic* or *stochastic*, and are visualized graphically by ***graphical models***.' %} + Learning Framework{% sidenote 'sn-framework' 'Examples: ***probabilistic modelling***, *metric learning* (not covered in prelim course)' %}
+`>` Design principle: ***Model*** {% sidenote 'sn-model' '*"Model is a simplification of reality"*. Formulate real-life problems as ***parametric models***. Note: *non-parametric models/methods* and [*geometric modelling*](https://metacademy.org/roadmaps/rgrosse/dgml) - a more abstract approach of modelling - are not covered and left for further reading after this prelim course.' %} = *(model)* ***Structure***{% sidenote 'sn-structure' 'Relationships between the elements of a model: data, parameters, and hyperparameters.  Relationships can either be *deterministic* or *stochastic*, and can be summarized graphically by ***graphical models***.' %} + ***Learning Framework***{% sidenote 'sn-framework' 'Probabilistic framework: ***maximum likelihood estimation*** and ***Bayesian reasoning***; non-probabilistic framework: *margin learning*, *metric learning* (not covered in prelim course)' %}
 
-***Learning task***, ***Inference task(s)***, and ***Decision***{% sidenote 'sn-estimate' 'Find/compute point estimates of *unknown* parameters (*learning task*) of the model, and other quantities of interest (*inference tasks*), e.g.predictive posterior distribution of outcomes, in order to make *optimal decision* under **uncertainties**.' %} 
+`>` Tasks to do:  ***Learning***, ***Inference***, and ***Decision making***{% sidenote 'sn-estimate' 'Find/compute point estimates of unknown parameters (***learning task***) of the model, and other quantities of interest, e.g.predictive posterior distribution of outcomes, given trained model (***inference tasks***), in order to make optimal ***decision*** under *uncertainties*.' %} 
 
 ### Evaluate performance of a model
 
@@ -25,11 +30,9 @@ Preliminary course for new members at DSLab-HUST. Pre-requisite for following co
 ***Analyze results***: are the results meaningful{% sidenote 'sn-meaningful' 'in terms of *statistical* significance, interpretability, or interesting observation' %}  and legitimate{% sidenote 'sn-analyze' 'We will touch on ***experimental design***' %}? 
 
 ### Regularize a model
-`>` to fight ***overfitting*** issue. Example approaches: weight penalty, ***Bayesian modelling***{% sidenote 'sn-bayes' 'We will also see Bayesian modelling, and eventually *Bayesian inference*, when building ***generative models*** for clustering problem' %}, Early-stopping, Data augmentation, Dropout; or
+`>` to fight ***overfitting*** issue. Example approaches: weight penalty, ***Bayesian reasoning***{% sidenote 'sn-bayes' 'We will also see Bayesian reasoning, and eventually *Bayesian inference*, when building ***generative models*** for clustering problem' %}, Early-stopping, Data augmentation, Dropout; or
 
-`>` to achieve some interpretability via *sparsity*{% sidenote 'sn-sparse' "covered in Topic Models course" %}; or
-
-`>` to achieve [other objectives](https://en.wikipedia.org/wiki/Regularization*(mathematics)).
+`>` to achieve some interpretability via *sparsity*{% sidenote 'sn-sparse' "covered in Topic Models course" %} or [other objectives](https://en.wikipedia.org/wiki/Regularization*(mathematics)).
 
 ### Tuning for more performance
 ***Model selection*** and *Ensemble* techniques

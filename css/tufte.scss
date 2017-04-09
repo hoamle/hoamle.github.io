@@ -218,10 +218,10 @@ p, footer, div.mathblock{ width: 71%; } // maincolumn content width (user commen
 // removed width-constrainst on div.table-wrapper (user setting)
 
 // customize list ul, ol
-ul,ol { width: 68%;  // 3% more to match body width - 71% (user setting)
+ul,ol { width: 71%;  // 3% more to match body width - 71% (user setting)
      padding-left: 2%;  // for Edge
      -webkit-padding-start: 2%;  // for Chrome
-     -webkit-padding-end: 5%;
+     /*-webkit-padding-end: 5%;*/
      }
 
 ul {list-style-type: square; }

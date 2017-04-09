@@ -4,11 +4,10 @@ title: "Machine learning appendix"
 date: 2017-02-01
 category: t
 ---
-_(to be updated sporadically)_
-For personal use, but suggestions are highly appreciated.
+_to be updated sporadically, suggestions are highly appreciated_
 <!--more-->
 
-## <a name="glossary">Glossary</a>
+## <a name="glossary">Glossary of common ML terminologies</a>
 Glossary of common terms and their _synonyms_ (or <em><font color="red">strongly related</font></em>).
 
 > $$\text{Pr}\left(x\right)$$ is written in place of $$\text{Pr}\left(X=x\right)$$ for brevity. Read [more](#more).
@@ -21,7 +20,7 @@ Glossary of common terms and their _synonyms_ (or <em><font color="red">strongly
 | *hàm mục tiêu, hàm lỗi, hàm tổn thất, hàm chi phí* |  |
 | learning, training; <font color="red">related</font>:  parameter estimation | |
 | *học mô hình, huấn luyện mô hình, ước lượng tham số* |  |
-| evaluating, forward pass - *as in* "computing some quantity given estimates of all unknown quantities" | <font color="red">note</font>: not to be confused with `performance evaluation`
+| evaluating, forward pass - <font color="red">as in</font> "computing some quantity given estimates of all unknown quantities" | <font color="red">note</font>: not to be confused with `performance evaluation`
 | *tính toán, chiều xuôi*  | |
 | score function; <font color="red">related</font>: (inverse) link function | $$s\left(\cdot\right)$$ ; or $$g\left(\cdot\right)$$ if link function |
 | *hàm tính điểm, hàm liên kết* |  |
@@ -51,9 +50,9 @@ Glossary of common terms and their _synonyms_ (or <em><font color="red">strongly
 
 > For brevity, $$\text{Pr}\left(x\right)$$ is often seen in ML literature instead of $$\text{Pr}\left(X=x\right)$$ as in statistical texts. I also use an overhead circle e.g. {% m %} \overset{\circ}{x} {% em %} to denote random variable, in place of capital letters e.g. X, N, K which are preserved for either sets of data points, matrices, or total number of samples/classes/features/...
 
-| Notation | |
+| Notation | Description |
 |:---:|:---|
-|{% m %} \overset{\circ}{y_{n}} {% em %} | A random variable. Thus {% m %} \text{Pr}\left(\overset{\circ}{y_{n}}\|\cdot\right) {% em %} implies a probability distribution. |
+|{% m %} \overset{\circ}{\mathbf{y}_{n}} {% em %} | A random variable. Thus {% m %} \text{Pr}\left(\overset{\circ}{y_{n}}\|\cdot\right) {% em %} implies a probability distribution. |
 |{% m %} y_{n} {% em %} | A realization of random variable {% m %} \overset{\circ}{y_{n}} {% em %}. Thus {% m %} \text{Pr}\left(y_{n}\|\cdot\right) {% em %} is a value. |
 | {% m %} \Omega_{\overset{\circ}{y_{n}}} {% em %} | Set of all possible realization {% m %} y_{n}{% em %}'s of random variable {% m %} \overset{\circ}{y_{n}} {% em %} i.e. ***sample space*** of {% m %} \overset{\circ}{y_{n}} {% em %}. |
 |{% m %} \hat{y}_{n} {% em %} | An estimate of random variable {% m %} \overset{\circ}{y_{n}} {% em %} |
@@ -68,5 +67,5 @@ Glossary of common terms and their _synonyms_ (or <em><font color="red">strongly
 *Use case(s)*: update optimal parameter {% m %} \hat{\theta} {% em %}'s of a neural network (or a certain class of probabilistic models) by gradient descent algorithms; 
 
 ## Manifold learning
-> __Manifold Learning__ (often also referred to as [__non-linear dimensionality reduction__](http://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction)) pursuits the goal to ___embed data that originally lies in a high dimensional space in a lower dimensional space___, while preserving characteristic properties. This is possible because *for any high dimensional data to be interesting, it must be intrinsically low dimensional*. For example, images of faces might be represented as points in a high dimensional space (let's say your camera has 5MP -- so your images, considering each pixel consists of three values \[r,g,b\], lie in a 15M dimensional space), but not every 5MP image is a face. Faces lie on a sub-manifold in this high dimensional space. A **sub-manifold** is ___locally Euclidean___, i.e. if you take two _very similar points_, for example two images of identical twins, you can _interpolate_ between them and still _obtain an image on the manifold_, but ___globally not Euclidean___ -- if you take two images that are very different --- for example [Arnold Schwarzenegger](http://www.anorak.co.uk/wp-content/uploads/2011/07/31.jpeg) and [Hillary Clinton](http://vivirlatino.com/i/2008/11/hillary-clinton.jpg) -- you _cannot interpolate_ between them{% sidenote 'sn-manifold-global' "The example assumely talked about a \"limited\" face image manifold right?" %}.
+> {% sidenote 'sn-id-manifold' "comment: not completely sure about this definition"  %} __Manifold Learning__ (often also referred to as [__non-linear dimensionality reduction__](http://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction)) pursuits the goal to ___embed data that originally lies in a high dimensional space in a lower dimensional space___, while preserving characteristic properties. This is possible because *for any high dimensional data to be interesting, it must be intrinsically low dimensional*. For example, images of faces might be represented as points in a high dimensional space (let's say your camera has 5MP -- so your images, considering each pixel consists of three values \[r,g,b\], lie in a 15M dimensional space), but not every 5MP image is a face. Faces lie on a sub-manifold in this high dimensional space. A **sub-manifold** is ___locally Euclidean___, i.e. if you take two _very similar points_, for example two images of identical twins, you can _interpolate_ between them and still _obtain an image on the manifold_, but ___globally not Euclidean___ -- if you take two images that are very different --- for example [Arnold Schwarzenegger](http://www.anorak.co.uk/wp-content/uploads/2011/07/31.jpeg) and [Hillary Clinton](http://vivirlatino.com/i/2008/11/hillary-clinton.jpg) -- you _cannot interpolate_ between them{% sidenote 'sn-manifold-global' "The example assumely talked about a \"limited\" face image manifold right?" %}.
 > <cite>[(ref)](http://www.cs.cornell.edu/~kilian/research/manifold/manifold.html)</cite>
