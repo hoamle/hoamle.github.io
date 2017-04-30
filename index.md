@@ -12,7 +12,7 @@ title: about
 <p>Prior to HUST, I had a brief but wonderful time at <a href="https://www.fpt-software.com/">FPT Software</a> Hanoi. In my early academic journey, I was a summer intern at Dr <a href="http://lenoverelab.org">Le Novere's lab</a>, also completed an M.Phil. in Computational Biology at <a href="http://www.cam.ac.uk/">Cambridge University</a> (2014), and a B.Sc. in Mathematics  with Finance  at <a href="http://www.exeter.ac.uk/">Exeter University</a> (2013). Before that, I was a B.A. student at the <a href="http://bsneu.edu.vn/?q=en">Business school, National Economics University</a> for one year.
 </p>
 <p>
-    For more information, please see my <a href="https://1drv.ms/b/s!ApOZHae4ogqZ5CB_tZqEZu1dZiQN">CV</a>.
+    For more information, please see my <a href="https://1drv.ms/b/s!ApOZHae4ogqZgohEDS28yb_d-amNFA">CV</a>.
 </p>
 
   

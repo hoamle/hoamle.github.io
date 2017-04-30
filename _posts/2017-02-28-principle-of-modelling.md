@@ -10,7 +10,7 @@ category: t
 
 
 ### Statistical reasoning
-Statistis provide concrete mathematical framework to reason, and make decision (e.g. prediction, action) under **uncertainties**.
+Statistics provide concrete mathematical framework to reason, and make decision (e.g. prediction, action) under **uncertainties**.
 
 Reason about distribution of each flower type $$y_{n}$$ with and without information from features $$x_{n}$$
 

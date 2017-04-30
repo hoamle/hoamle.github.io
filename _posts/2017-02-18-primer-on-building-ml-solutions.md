@@ -298,7 +298,7 @@ sum(Y_pred == D_test['Y']) / float(len(test_idx))
 
     0.96666666666666667
 
-*(comment: The performance is pretty impressive, but let hold off from a pre-matured assessment! See [Recap](#Recap))*
+The accuracy - $$96.7\%$$ - is pretty impressive, but <font color="red">hold off from a pre-matured conclusion!</font> See [Recap](#Recap)
 
 ## <a href="#Recap">Recap</a>
 

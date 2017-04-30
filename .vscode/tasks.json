@@ -1,0 +1,21 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "0.1.0",
+    "command": "rake",
+    "isShellCommand": true,
+    "args": [],
+    "showOutput": "always",
+    "suppressTaskName": true,
+    "echoCommand": true,
+    "tasks": [
+        {"taskName": "publish post",
+        "args": ["publish"]},
+
+        {"taskName": "publish site",
+        "args": ["publishsite"]},
+
+        {"taskName": "deploy",
+        "args": ["deploy['regular update']"]}
+    ]
+}

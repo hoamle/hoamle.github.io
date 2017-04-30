@@ -7,7 +7,7 @@ $spacing-unit:     30px;
 }
 
 .highlight {
-    background: #eff0f1;  // user-setting. default: #fffff8
+    background: #eeeeff;  // user-setting. default: #fffff8
     @extend %vertical-rhythm;
 
     .c     { color: #998; font-style: italic } // Comment

@@ -145,7 +145,7 @@ pre, pre code, p code, p pre code { font-family: $code-font;  // removed .code '
         font-size: 1.2rem;                   // also added p code, p pre code and pre selector to account for Markdown parsing
         line-height: 1.51428571;        // of triple backticks plus rationalized line-heights and margins
         margin-top: 1.51428571rem;
-        background-color: #eff0f1;  // keep consistent with /_sass/_syntax-highlighting.scss (user setting)
+        background-color: #eeeeff;  // keep consistent with /_sass/_syntax-highlighting.scss (user setting)
         /*display: block;*/
         border-radius: 4px
       }
