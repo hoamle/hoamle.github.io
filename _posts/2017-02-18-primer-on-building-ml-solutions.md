@@ -3,17 +3,15 @@ title: "Part 1b - Primer on Building a Machine Learning Solution"
 layout: post
 category: t
 ---
-> *(Part 1b of the [Essence of Machine Learning (and Deep Learning)](/articles/16/essence-machine-deep-learning) series)*
+> *Part 1b of the [Essence of Machine Learning (and Deep Learning)](/articles/16/essence-machine-deep-learning) series*
 
 This week introduces **high-level overview of building a Machine Learning (ML) solution** for a problem, summarized by the following diagram and demo'ed with [`scikit-learn`](http://scikit-learn.org/stable/index.html).
 {% maincolumn 'assets/img/week1-2.png' '' %}
 
 
-**N.B.**{% marginnote 'mn-id-glossary' "Visit [MLglossary](/articles/17/machine-learning-appendix/#glossary) for a summary of the math notations. The MLglossary also lists common terms in ML with their synonyms or strongly related concepts. Because ML is an interdisplinary field, there are many different terminologies, which come from the relevant fields of research, that are actually *equivalent*." %} We will gradually *rephrase* every-day language with equivalent ML terminologies and their *math notations*.
+**N.B.**{% marginnote 'mn-id-glossary' "Visit [MLglossary](/articles/17/machine-learning-appendix/#glossary) for a summary of the math notations. The MLglossary also lists common terms in ML with their synonyms or strongly related concepts. Because ML is an interdisplinary field, there are many different terminologies, which come from the relevant fields of research, that are actually *equivalent*." %} We will gradually *rephrase* every-day language with equivalent ML terminologies and their *math notations*. Nevertheless, always explain the math we use (or encounter) in our usual natural language if possible, so that we can imprint the **underlying intuition** and not getting lost in the technical jargons that follow.
 
-Don't be afraid of Math, embrace it. Math is (1) an **efficient, universal and unanimously understood** language. Once we rephrase a problem in mathematical toungue, we may see hidden  connections between numerous of *supposedly* unrelated problems in different fields [[DAslides:pp22-38]](https://1drv.ms/b/s!ApOZHae4ogqZ3AJg76xtDPEzSlH-). Further more, Math is (2) **non-ambiguous** so that we can approach a solution of a problem with transparent and concrete reasoning. Nevertheless, always explain the math we use (or encounter) in our usual natural language if possible, so that we can imprint the **underlying intuition** and not getting lost in the technical details that follow.
-
-> *Author's comment*: Machines are born "dumb". The more *we* - as human being - want more intelligent machines that can support us without much of the human's guidance, the more we need to mentor them by, at least, speaking explicitly in a language that machines can understand. Math is a much more machine-understandable language than our every-day natural languages. *Lesson*: there is no escaping from math if we want to advance in ML.
+> *Author's comment*: Machines are born "dumb". The more *we* - as human being - want more intelligent machines that can support us without much of the human's guidance, the more we need to mentor them by, at least, speaking explicitly in a language that machines can understand. Math is much more machine-understandable than any of our every-day natural languages are. *Lesson*: there is no escaping from math if we want to study ML further.
 
 ## Case-study
 
@@ -298,7 +296,7 @@ sum(Y_pred == D_test['Y']) / float(len(test_idx))
 
     0.96666666666666667
 
-The accuracy - $$96.7\%$$ - is pretty impressive, but <font color="red">hold off from a pre-matured conclusion!</font> See [Recap](#Recap)
+The accuracy - $$96.7\%$$ - is pretty impressive, but <font color="red">hold off from a pre-matured conclusion!</font> See [Recap](#Recap).
 
 ## <a href="#Recap">Recap</a>
 

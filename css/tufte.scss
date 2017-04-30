@@ -221,10 +221,16 @@ p, footer, div.mathblock{ width: 71%; } // maincolumn content width (user commen
 ul,ol { width: 71%;  // 3% more to match body width - 71% (user setting)
      padding-left: 2%;  // for Edge
      -webkit-padding-start: 2%;  // for Chrome
-     /*-webkit-padding-end: 5%;*/
+     -webkit-padding-end: 5%;
      }
 
 ul {list-style-type: square; }
+
+// h2 .ul, .ol { width: 95%;  // 3% more to match body width - 71% (user setting)
+//      padding-left: 2%;  // for Edge
+//      -webkit-padding-start: 2%;  // for Chrome
+//      /*-webkit-padding-end: 5%;*/
+//      }
 
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
