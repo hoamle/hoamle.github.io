@@ -1,13 +1,15 @@
 ---
-layout: full-width
+layout: post
 title: talks & tutorials
 ---
 
 ### <a href="{{ site.github.url }}/articles/16/essence-machine-deep-learning">Essence of Machine Learning (and Deep Learning)</a>
 
-Preliminary course for new members at DSLab-HUST. Pre-requisite for sessions in *Topic models* and (supervised) *Deep neural networks*. 
+"Base" course for new members at DSLab-HUST. Pre-requisite for subsequent training sessions in *Topic models* (or *Probabilistic Graphical Models*) and *Deep Learning*. 
 
-*Motivation.* Students at DSLab-HUST have been struggling moving from reading Deep neural networks to Probabilistic models and vice-versa. This short course, therefore, is introduced to guide new starters to the field of Machine Learning with a more ***principled approach***, so that ones can understand the motivation and intuition behind ML concepts (which eventually includes *Deep Learning* along the course), keep their heads up on the big picture to not get lost in the complexity of the field, later learn advanced materials efficiently and catch up with recent advances in Machine Learning.
+**Motivation.** The majority of DSLab-HUST members, including myself back in early 2016, are aspiring ML ***self-learners***, and have been struggling (*a lot*) to study **probabilistic/Bayesian modelling** on our own. For the newcomers - who are very likely exposed to Deep Neural Networks (DNN) *before* probabilistic modelling - I found it considerably more challenging and time-consuming to see the [big picture of Machine Learning](/articles/16/essence-machine-deep-learning#map) (*Deep Learning* included) research without *proper background in probabilistic (graphical) models - PGM* (which I wish I had known earlier).
+
+Nevertheless, it's truly hard to find a beginner-level MOOC in PGM{% sidenote 'sn-id-mooc' "Prof. [Daphne Koller's course in PGM](https://www.coursera.org/specializations/probabilistic-graphical-models) is a little bit abstract, and not a beginner-level course on ML" %} which can instill (i) probabilistic/statistical reasoning, and also introduce (ii) [ML core concepts](/articles/16/essence-machine-deep-learning#core) in a intuitive flow as Prof. [Andrew Ng's course](https://www.coursera.org/learn/machine-learning) did. Therefore, this course is devised to address the 2 purposes. Upon completing this course, the learners can, hopefully, explore the spectrum of ML research with minimal guidance, keep their heads up on the big picture to not get lost in the complexity (and the hype!) of the field, later learn advanced materials more efficiently, and catch up with recent advances in Machine Learning research.
 `[`[`Read more`](/articles/16/essence-machine-deep-learning)`]`
 
 

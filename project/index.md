@@ -1,5 +1,5 @@
 ---
-layout: full-width
+layout: post
 title: projects & publications
 ---
 <div>
@@ -15,11 +15,11 @@ title: projects & publications
 
     
     <p>
-        <strong>Project in Recommender Systems</strong>
+        <strong>Projects related to Recommendation Systems</strong>
     </p>
     <p>To be updated.
     </p>
-    [<a href="#">PDF</a>] (TBE)
+    [PDF] (TBE)
 
     <p>
         <strong>Fully Automated Multi-label Image Annotation by Convolutional Neural Network and Adaptive Thresholding</strong>
