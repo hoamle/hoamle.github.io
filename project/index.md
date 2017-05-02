@@ -6,9 +6,9 @@ title: projects & publications
 
 "Base" course for new members at DSLab-HUST. Pre-requisite for subsequent training sessions in *Topic models* (or *Probabilistic Graphical Models*) and *Deep Learning*. 
 
-**Motivation.** The majority of DSLab-HUST members, including myself back in early 2016, are aspiring ML ***self-learners***, and have been struggling (*a lot*) to study **probabilistic/Bayesian modelling** on our own. For the newcomers - who are very likely exposed to Deep Neural Networks (DNN) *before* probabilistic modelling - I found it considerably more challenging and time-consuming to see the [big picture of Machine Learning](/articles/16/essence-machine-deep-learning#map) (*Deep Learning* included) research without *proper background in probabilistic (graphical) models - PGM* (which I wish I had known earlier).
+**Motivation.** The majority of DSLab-HUST members, including myself back in early 2016, are aspiring ML ***self-learners***, and have been struggling (*a lot*) to study **probabilistic/Bayesian modelling** on our own. For the newcomers - who are very likely exposed to Deep Neural Networks (DNN) *before* probabilistic modelling - I found it considerably more challenging and time-consuming to see the [big picture of Machine Learning](/articles/16/essence-machine-deep-learning#map) (*Deep Learning* included) research without *proper background in probabilistic (graphical) models - PGM*.
 
-Nevertheless, it's truly hard to find a beginner-level MOOC in PGM{% sidenote 'sn-id-mooc' "Prof. [Daphne Koller's course in PGM](https://www.coursera.org/specializations/probabilistic-graphical-models) is a little bit abstract, and not a beginner-level course on ML" %} which can instill (i) probabilistic/statistical reasoning, and also introduce (ii) [ML core concepts](/articles/16/essence-machine-deep-learning#core) in a intuitive flow as Prof. [Andrew Ng's course](https://www.coursera.org/learn/machine-learning) did. Therefore, this course is devised to address the 2 purposes. Upon completing this course, the learners can, hopefully, explore the spectrum of ML research with minimal guidance, keep their heads up on the big picture to not get lost in the complexity (and the hype!) of the field, later learn advanced materials more efficiently, and catch up with recent advances in Machine Learning research.
+Nevertheless, it's truly hard to find a beginner-level MOOC in PGM which can instill (i) probabilistic/statistical reasoning, and also introduce (ii) [ML core concepts](/articles/16/essence-machine-deep-learning#core) in a intuitive flow as Prof. [Andrew Ng's course](https://www.coursera.org/learn/machine-learning) did. Therefore, this course is devised to address the 2 purposes. Upon completing this course, the learners can, hopefully, explore the spectrum of ML research with minimal guidance, keep their heads up on the big picture to not get lost in the complexity (and the hype!) of the field, later learn advanced materials more efficiently, and catch up with recent advances in Machine Learning research.
 `[`[`Read more`](/articles/16/essence-machine-deep-learning)`]`
 
 
@@ -16,7 +16,8 @@ Nevertheless, it's truly hard to find a beginner-level MOOC in PGM{% sidenote 's
 ### Projects related to Recommendation Systems
 To be updated.
 
-### Fully Automated Multi-label Image Annotation by Convolutional Neural Network and Adaptive Thresholding
+### Projects related to Computer Vision
+**Fully Automated Multi-label Image Annotation by Convolutional Neural Network and Adaptive Thresholding**
 <p>
 <u>Hoa M. Le</u>, <a href="http://soict.hust.edu.vn/en/index.php/bo-mon-trung-tam/information-system/faculty-and-staff/230-nguyen-thi-oanh-phd.html">Thi-Oanh Nguyen</a>, Dung Ngo-Tien
 <br> <em>in Proceedings of the 7th International Symposium on Information and Communication Technology (SoICT 2016). DOI: 10.1145/3011077.3011118</em> 
