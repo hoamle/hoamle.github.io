@@ -4,7 +4,7 @@
     	<!-- for badge -->
 <!-- 	<a href="{{site.baseurl}}/"><img class="badge" src="{{site.baseurl}}/assets/img/badge_1.png" alt="CH"></a>
  -->	
- 		{% assign pages = site.pages | sort:"title" %}
+ 		{% assign pages = site.pages | sort:"title" | reverse %}
  		{% for node in pages %}
 		{% unless node.nav_exclude %}
 		    {% if page.url == node.url %}

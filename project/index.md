@@ -4,7 +4,7 @@ title: projects & publications
 ---
 ### <a href="{{ site.github.url }}/articles/16/essence-machine-deep-learning">Essence of Machine Learning (and Deep Learning)</a>
 
-"Base" course for new members at DSLab-HUST. Pre-requisite for subsequent training sessions in *Topic models* (or *Probabilistic Graphical Models*) and *Deep Learning*. 
+{% marginfigure 'mf-id-essenceml' 'assets/img/mapofML_crop.png' '' %}"Base" course for new members at DSLab-HUST. Pre-requisite for subsequent training sessions in *Topic models* (or *Probabilistic Graphical Models*) and *Deep Learning*. 
 
 **Motivation.** The majority of DSLab-HUST members, including myself back in early 2016, are aspiring ML ***self-learners***, and have been struggling (*a lot*) to study **probabilistic/Bayesian modelling** on our own. For the newcomers - who are very likely exposed to Deep Neural Networks (DNN) *before* probabilistic modelling - I found it considerably more challenging and time-consuming to see the [big picture of Machine Learning](/articles/16/essence-machine-deep-learning#map) (*Deep Learning* included) research without *proper background in probabilistic (graphical) models - PGM*.
 
@@ -13,11 +13,11 @@ Nevertheless, it's truly hard to find a beginner-level MOOC in PGM which can ins
 
 
 
-### Projects related to Recommendation Systems
-To be updated.
+### Projects related to Recommender Systems
+{% marginfigure 'mf-id-recsys' 'assets/img/placeholder.png' %}To be updated.
 
 ### Projects related to Computer Vision
-**Fully Automated Multi-label Image Annotation by Convolutional Neural Network and Adaptive Thresholding**
+{% marginfigure 'mf-id-essenceml' 'assets/img/cnnat.png' '' %} **Fully Automated Multi-label Image Annotation by Convolutional Neural Network and Adaptive Thresholding**
 <p>
 <u>Hoa M. Le</u>, <a href="http://soict.hust.edu.vn/en/index.php/bo-mon-trung-tam/information-system/faculty-and-staff/230-nguyen-thi-oanh-phd.html">Thi-Oanh Nguyen</a>, Dung Ngo-Tien
 <br> <em>in Proceedings of the 7th International Symposium on Information and Communication Technology (SoICT 2016). DOI: 10.1145/3011077.3011118</em> 

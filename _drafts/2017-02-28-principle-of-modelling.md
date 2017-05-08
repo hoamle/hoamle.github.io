@@ -24,8 +24,8 @@ Notation:
 | {% m %} \underset{y_{n}^{'}}{\text{argmax}}\text{Pr}\left(y_{n}^{'}\|\cdot\right) {% em %} | short for {% m %} \underset{y_{n}^{'}\in\Omega_{\overset{\circ}{y_{n}}}}{\text{argmax}}\text{Pr}\left(\overset{\circ}{y_{n}}=y_{n}^{'}\|\cdot\right) {% em %}. We use notation {% m %} y_{n}^{'} {% em %} to not confuse with {% m %} y_{n} {% em %} which is reserved for the realization provided by training data {% m %} \mathcal{D}=\left\{ x_{n},y_{n}\right\}_{n=1}^{N}  {% em %}. |
 
 
-*By **decision theory*** {% sidenote "sn-id-decision" "TODO ref"%}, the most optimal prediction $$\hat{y}$$ is one s.t. 
-{% math %} \hat{y}=\underset{y}{\text{argmax}}\text{Pr}\left(y|x\right) {% endmath %}
+*By **decision theory*** {% sidenote "sn-id-decision" "Bayesian decision theory [PRML:1.5],[MLPP:5.7]"%}, the most ***optimal prediction*** $$\hat{y}$$ is one s.t. 
+{% math %} \hat{y}=\underset{y}{\text{argmax}}\text{Pr}\left(y|x\right) {% endmath %}, where *optimal prediction*{% marginnote 'mn-id-optimal' "There are certainly other definition of *optimal prediction*, depending on the context (See [PRML:1.5],[MLPP:5.7])" %} is defined as ones that *minimize misclassification rate* in this case-study. 
 
 ###  Model structure
 parametric assumed

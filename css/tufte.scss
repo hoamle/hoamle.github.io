@@ -145,7 +145,7 @@ pre, pre code, p code, p pre code { font-family: $code-font;  // removed .code '
         font-size: 1.2rem;                   // also added p code, p pre code and pre selector to account for Markdown parsing
         line-height: 1.51428571;        // of triple backticks plus rationalized line-heights and margins
         margin-top: 1.51428571rem;
-        background-color: #eeeeff;  // keep consistent with /_sass/_syntax-highlighting.scss (user setting)
+        background-color: #eff0f1;  // keep consistent with /_sass/_syntax-highlighting.scss (user setting)
         /*display: block;*/
         border-radius: 4px
       }
@@ -357,28 +357,39 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 //Nav and Footer styling area
 
 header > nav.group, body footer {
-  width: 95%;
-  padding-top: 2rem;
+  width: 100%;  // default: 95%
+  // padding-top: 1rem;
+  padding-bottom: 1rem;
 }
 
-nav.group a.active:before{ content:"\0003c\000a0";} // escaped unicode for the carats and then a space on active menu links
-nav.group a.active:after{ content:"\000a0\0003e" ;}
+// nav.group a.active:before{ content:"\0003c\000a0";} // escaped unicode for the carats and then a space on active menu links
+// nav.group a.active:after{ content:"\000a0\0003e" ;}
+nav.group a.active{ 
+  // font-style: bold;
+  text-transform: uppercase;
+  // background-color: $bg-color;
+  }
 
+
+header {
+    background-color: $contrast-color;
+}
 header > nav  a{
   font-size: 1.2rem;
   font-family: $sans-font;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: $contrast-color;
+  letter-spacing: 0.1em;
+  // text-transform: uppercase;
+  color: white;
   padding-top: 1.5rem;
   text-decoration: none;
   display: inline-block;
-  float: left;
+  float: right;
   margin-top: 0;
   margin-bottom: 0;
   padding-right: 2rem;
   //margin-left: 1rem;
   vertical-align: baseline;
+  // vertical-align: text-bottom;
 }
 header > nav a img{
   height: 5rem;
@@ -592,6 +603,9 @@ hr.slender {
 }
 .icon-googleplus:before {
   content: "\e608";
+}
+.icon-linkedin:before {
+  content: "\e608";  // TODO look for "linkedin" glyph's hex code
 }
 .icon-facebook:before {
   content: "\e609";
