@@ -3,15 +3,15 @@ title: "Part 1b - Primer on Building a Machine Learning Solution"
 layout: post
 category: t
 ---
-> *Part 1b of the [Essence of Machine Learning (and Deep Learning)](/articles/16/essence-machine-deep-learning) series*
+> *Part 1b of the [Essence of Machine Learning (and Deep Learning)](/articles/16/essence-machine-deep-learning) series. See [course notes](/articles/16/essence-machine-deep-learning#note) for Part 1a.*
 
-This week introduces **high-level overview of building a Machine Learning (ML) solution** for a problem, summarized by the following diagram and demo'ed with [`scikit-learn`](http://scikit-learn.org/stable/index.html).
+This week introduces **high-level overview of building a Machine Learning (ML) solution** for a given problem, summarized by the following diagram and demo'ed with [`scikit-learn`](http://scikit-learn.org/stable/index.html).
 {% maincolumn 'assets/img/week1-2.png' '' %}
 
 
-**N.B.**{% marginnote 'mn-id-glossary' "Visit [MLglossary](/articles/17/machine-learning-appendix/#glossary) for a summary of the math notations. The MLglossary also lists common terms in ML with their synonyms or strongly related concepts. Because ML is an interdisplinary field, there are many different terminologies, which come from the relevant fields of research, that are actually *equivalent*." %} We will gradually *rephrase* every-day language with equivalent ML terminologies and their *math notations*. Nevertheless, always explain the math we use (or encounter) in our usual natural language if possible, so that we can imprint the **underlying intuition** and not getting lost in the technical jargons that follow.
+**N.B.**{% marginnote 'mn-id-glossary' "Visit [MLglossary](/articles/17/machine-learning-appendix/#glossary) for a summary of the math notations. The MLglossary also lists common terms in ML with their synonyms or strongly related concepts. Because ML is an interdisplinary field of research, there are many different terminologies coming from repsective fields, which actually address the ***same things***." %} We will gradually *rephrase* every-day language with equivalent ML terminologies and their *math notations*. Nevertheless, always explain the math we use (or encounter) in our usual natural language if possible, so that we can imprint the **underlying intuition** and not getting lost in the technical jargons that follow.
 
-> *Author's comment*: Machines are born "dumb". The more *we* - as human being - want more intelligent machines that can support us without much of the human's guidance, the more we need to mentor them by, at least, speaking explicitly in a language that machines can understand. Math is much more machine-understandable than any of our every-day natural languages are. *Lesson*: there is no escaping from math if we want to study ML further.
+> *Self-comment*: Machines are born "dumb". The more *we* - as human being - want more intelligent machines that can support us without much of the human's guidance, the more we need to mentor them by, at least, speaking explicitly in a language that machines can understand. Math is much more machine-understandable than any of our every-day natural languages are. *Lesson*: there is no escaping from math if we want to study ML/AI further.
 
 ## Case-study
 
@@ -106,7 +106,7 @@ We write the features as a feature vector $$x=\left(x_{1},x_{2},x_{3},x_{4}\righ
 
 
 
-*<font color="red">Note</font>*: In this course, we use capital letters, e.g. $$X$$ to represent a set of data points rather than a matrix as usual. If we imply the latter, it should be clear from the context.
+> *<font color="red">Note</font>*: In this course, we use capital letters, e.g. $$X$$ to represent a set of data points rather than a matrix as usual. If we imply the latter, it should be clear from the context.
 
 
 
@@ -136,16 +136,16 @@ Now we can define our problem more precisely by the language of math
 
 ### Define the problem
 
-Given any attribute $$x$$, we would like to **predict** a corresponding prediction $$\hat{y}\in$$  {`setosa`, `versicolor`, `virginica`} by a ML `Model` In order to know if our model has good predictive performance, we need an `Assessment` to measure the performance.  In this problem, we can measure the performance by an ***evaluation metric***{% marginnote 'mn-metric' '*evaluation metrics*' %} called [*Accuracy*](http://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score), which
+Given any attribute $$x$$, we would like to **predict** a corresponding prediction $$\hat{y}\in$$  {`setosa`, `versicolor`, `virginica`} by a ML `Model` In order to know if our model has good predictive performance, we need an `Assessment` to measure the performance.  In this problem, we can measure the performance by an ***evaluation metric***{% marginnote 'mn-metric' '*evaluation metrics*' %} called [*Accuracy*](http://scikit-learn.org/stable/modules/model_evaluation.html#accuracy-score), which measures how many times we correctly predict a flower type on average:
 
 {% math %}\text{Accuracy}=\dfrac{1}{N}\sum_{n}\mathbb{1}\left(\hat{y}^{\left(n\right)}=y^{\left(n\right)}\right){% endmath %}
 
-The value of this metric increases every time we correctly identify a flower type. A prediction is correct if predicted type $$\hat{y}$$ of a flower is the same as its actual type $$y$$.
+A prediction is correct if predicted type $$\hat{y}$$ of a flower is the same as its actual type $$y$$.
 
 {% maincolumn 'assets/img/week1-1.png' '' %}
-*<font color="red">Note</font>*{% marginnote 'mn-id-metrics' "Many problems require 2 or more metrics for an objective assessment." %}: while Accuracy is appropriate for this particular problem, other problems may require some other evaluation metric. For example, in case wewant to identify whether a patient has cancer or not, we may want to minimize the risk of missing true cases (patients who actually have cancer - True Positive cases) as much as possible. In this case, [*Recall*](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) is a better measure of performance than Accuracy.
+> *<font color="red">Note</font>*{% marginnote 'mn-id-metrics' "Many problems require 2 or more metrics for an objective assessment." %}: while Accuracy is appropriate for this particular problem, other problems may require some other evaluation metric. For example, in case wewant to identify whether a patient has cancer or not, we may want to minimize the risk of missing true cases (patients who actually have cancer - True Positive cases) as much as possible. In this case, [*Recall*](http://scikit-learn.org/stable/modules/model_evaluation.html#precision-recall-f-measure-metrics) is a better measure of performance than Accuracy.
 
-In order to build a model that perform well, we need to ***train***{% sidenote 'sn-id-knn' "Note: *k-nearest neighbours* - a common ML algorithm - is an exception such that the algorithm virtually does not perform any kind of learning. Read [[cs231n]](http://cs231n.github.io/classification/#nn) for its merits, limitation and use-cases." %} it by utilizing the *experience* that the model has. In other word, the model needs to improve its performance by *learning* from the *training data* $$\mathcal{D}_{\text{train}}=\left\{ x^{\left(n\right)},y^{\left(n\right)}\right\}$$ from an initial "naive" state. This task is called, unsurprisingly, ***learning***{% marginnote 'mn-id-learning' "*learning / fitting / training*" %}, and is also commonly called ***fitting***. 
+In order to build a model that perform well, we need to ***train***{% sidenote 'sn-id-knn' "Note: *k-nearest neighbours* - a common ML algorithm - is an exception such that the algorithm virtually does not perform any kind of learning. See [[cs231n:kNN]](http://cs231n.github.io/classification/#nn) for its merits, limitation and use-cases." %} it by utilizing the *experience* that the model has. In other word, the model needs to improve its performance by *learning* from the *training data* $$\mathcal{D}_{\text{train}}=\left\{ x^{\left(n\right)},y^{\left(n\right)}\right\}$$ from an initial "naive" state. This task is called, unsurprisingly, ***learning***{% marginnote 'mn-id-learning' "*learning / fitting / training*" %}, and is also commonly called ***fitting***. 
 {% maincolumn 'assets/img/week1-2.png' '' %}
 
 
@@ -191,7 +191,7 @@ model = LogisticRegression(multi_class="multinomial",
                           solver="lbfgs")  
 ```
 
-### Learning task
+### <a name="learning">Learning task</a>
 {% marginnote 'mn-id-learning' "*learning task*"  %}
 
 
@@ -307,10 +307,10 @@ Specifically, we studied a (single-label) *multi-class classification* {% sideno
 
 However, there still exist **fundamental** questions that we need to address:
 
-1. Is $$96.7\%$$ a *reliable* estimate for our model accuracy on **other test sets**?{% sidenote 'sn-id-assess' "TODO link to Part 4" %}
-1. How is Softmax Regression model [**constructed**](/articles/17/principle-of-modelling)?
+1. Is $$96.7\%$$ a *reliable* estimate for our model accuracy on **other test sets**?{% sidenote 'sn-id-assess' "TODO link to Assessment post" %}
+1. How is Softmax Regression model [**constructed**](/articles/17/principle-of-modelling)?{% sidenote 'sn-id-principle' "TODO link to Part 2" %}
 1. In a problem for which **assumptions** imposed by Softmax Regression model do **not suffice**, how can we do better?{% sidenote 'sn-id-nonlinear' "TODO link to Part 3" %}
-1. How can *we* - as the human - **interpret** the contribution of the features to the prediction, or extract human-perceivable semantics that the features may hold? {% sidenote 'sn-id-nonlinear' "TODO link to Part 5" %}
+1. How can *we* - as the human - **interpret** the contribution of the features to the prediction, or extract human-perceivable semantics that the features may hold? {% sidenote 'sn-id-nonlinear' "TODO link to Part 4-5" %}
 1. (other issues that would arise when approaching above questions)
 
-These questions define the topics for next parts of this series. In each part, we will be approaching different *multi-class classification* problems as case-studies for the relevant topics. The same reasoning and principles also straightforwardly apply to *binary **classification***, ***regression***, and ***clustering*** problems.
+These questions define the topics for next parts of this series. In each part, we will be approaching different *multi-class classification* problems as case-studies for the relevant topics. The same reasoning and principles also straightforwardly apply to *binary **classification***, ***regression***, and (to certain extends) ***clustering*** problems.

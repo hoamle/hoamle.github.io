@@ -15,6 +15,7 @@ Nevertheless, it's truly hard to find a beginner-level MOOC in PGM which can ins
 
 ### Projects related to Recommender Systems
 {% marginfigure 'mf-id-recsys' 'assets/img/placeholder.png' %}To be updated.
+`[`[`PDF`](#)`]` 
 
 ### Projects related to Computer Vision
 {% marginfigure 'mf-id-essenceml' 'assets/img/cnnat.png' '' %} **Fully Automated Multi-label Image Annotation by Convolutional Neural Network and Adaptive Thresholding**
