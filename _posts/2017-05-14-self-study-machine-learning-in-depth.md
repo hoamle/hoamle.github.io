@@ -3,6 +3,7 @@ title: "Self-study Machine Learning in-depth"
 layout: post
 ---
 > *The post is in Vietnamese. English version TBE.*
+> *For more details on the [Map of Machine Learning](#map) mentioned in this post, please visit the [other post](/articles/16/essence-machine-deep-learning#map).*
 
 Trong bài viết này, mình muốn chia sẻ:
 * (A) ***a Map of Machine Learning*** - bản đồ khái quát bức tranh toàn thể của các mảng lớn trong Machine Learning và Deep Learning (ML/DL); và *quan trọng hơn* là 

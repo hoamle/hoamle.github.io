@@ -80,14 +80,14 @@ Course content is partially taken from the following sources:
 ## <a name="map">The Map(s)  of Machine Learning</a>
 The map below is one of many possible [projections](https://en.wikipedia.org/wiki/Map_projection) of Machine Learning. This map, in particular, focuses on **model classes** & connection to other fields of study. In addition, the map also aims to devise a *more principled* [**study-plan**](#plan){% sidenote 'sn-id-plan' "motivated by [metacademy\'s philosophy](https://metacademy.org/about)" %} to make it easier for aspiring ML self-learners to step-up/transit from [basic ML](https://www.coursera.org/learn/machine-learning) or DNN to PGM, ***given that they had covered the "base"*** (the first 4 parts in ["base" course's content](#note) above). 
 
-*Note*: Open the image in new tab to view in full size. For a more comprehensive picture of model classes, see [Shakir Mohamed's talk](http://videolectures.net/deeplearning2016_mohamed_generative_models/).
+*Note*: Open the image in new tab to view in full size. For a ***more comprehensive picture/maps*** of model classes, see [Shakir Mohamed's talk](http://videolectures.net/deeplearning2016_mohamed_generative_models/).
 
 > ***Disclaimer***: The map was designed accordingly to my self-study/reading/working via MOOCs/papers/projects related to statistical machine learning, thus there might exist some (hopefully minor) inaccuracies. Any suggestions and critics to improve this map are highly appreciated. 
 
 {% maincolumn 'assets/img/mapofML.png' "" %}
 
 |:---:|:---|
-|PGM | Probabilistic Graphical Models |
+|PGM | Probabilistic Graphical Models i.e. Probabilistic models |
 |GLM | Generalized Linear Models |
 |GMM, PPCA | (Gaussian) Mixture Models, Probabilistic Principle Component Analysis |
 |HMM, LDS | Hidden Markov Models, Linear Dynamical Systems (for modelling *sequential data*) |
@@ -126,11 +126,11 @@ The map below is one of many possible [projections](https://en.wikipedia.org/wik
 * PGM+DNN : PGM whose stochastic nodes are parametrized by DNNs + Monte Carlo's SGD-based Variational Inference + Structured priors i.e. Structured latent factors (incl. probabilistic attention mechanism)
 > *refs*: [Shakir Mohamed's talk](http://videolectures.net/deeplearning2016_mohamed_generative_models/) for the big picture + (huge body of) relevant works, especially VAE and variants.
 
-* GAN : Adversarial learning + Optimize (minimax.) an objective function and related issues (*e.g. mode collapsing*) + 
+* GAN : Adversarial learning + Optimize (minimax.) an objective function and related issues (*e.g. mode collapsing*) + Insight to Game Theory research (?)
 > *refs*: TODO - Ian Goodfellow et al's original paper (obviously) + an up-to-date GAN survey (?)
 
 * [TODO - other topics not mentioned]
-> *refs*: distribute materials in pending reading lists to appropriate node
+> *refs*: distribute materials in pending reading lists to appropriate nodes
 > [Metacademy's Bayesian ML roadmap](https://metacademy.org/roadmaps/rgrosse/bayesian_machine_learning)
 > [Dr Truyen Tran's 3-part tutorial @ AusDM'16 + Exhaustive list of resources](https://truyentran.github.io/ausdm16-tute.html)
 > Ferenc Huszar's posts, e.g. [Deep Learning is easy](http://www.inference.vc/deep-learning-is-easy/); [probabilistic interpretation of DAE](http://www.inference.vc/probabilistic-models-and-autoencoders-my-new-favourite-papers/)
