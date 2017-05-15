@@ -95,6 +95,7 @@ The map below is one of many possible [projections](https://en.wikipedia.org/wik
 |DNN | Deep Neural Networks |
 |MLP, CNN | Multi-layer Perceptrons, Convolutional NNs |
 |RNN | Recurrent NNs, including Recursive NN and Bi-directional RNN (for modelling *sequential data*) | 
+|"gates" | Gating mechanism: LSTM modules, GRUs, Residual connections |
 |EBM | Energy-based Models (*undirected* PGM) |
 |RBM, DBN, DBM | Restricted Boltzmann Machines, Deep Belief Networks (*not to be confused with* Dynamic Bayesian Networks), Deep Boltzmann Machines |
 |VAE, DRAW, AIR | Variational Auto-encoder, Deep Recurrent Attentive Writer, Attention-Infer-Repeat |
