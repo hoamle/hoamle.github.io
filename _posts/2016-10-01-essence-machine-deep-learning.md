@@ -93,8 +93,8 @@ The map below is one of many possible [projections](https://en.wikipedia.org/wik
 |HMM, LDS | Hidden Markov Models, Linear Dynamical Systems (for modelling *sequential data*) |
 |Topic Models | Latent Dirichlet Allocation (LDA - *not to be confused with* Linear Discriminant Analysis) and variants |
 |DNN | Deep Neural Networks |
-|MLP, CNN | Multi-layer Perceptrons, Convolutional NNs |
-|RNN | Recurrent NNs, including Recursive NN and Bi-directional RNN (for modelling *sequential data*) | 
+|MLP, CNN | Multi-layer Perceptrons, Convolutional NNs i.e. FNN - Feed-forward NN |
+|RNN | Recurrent NNs, also including Recursive NN and Bi-directional RNN (for modelling *sequential data*) | 
 |"gates" | Gating mechanism: LSTM modules, GRUs, Residual connections |
 |EBM | Energy-based Models (*undirected* PGM) |
 |RBM, DBN, DBM | Restricted Boltzmann Machines, Deep Belief Networks (*not to be confused with* Dynamic Bayesian Networks), Deep Boltzmann Machines |
@@ -115,19 +115,19 @@ The map below is one of many possible [projections](https://en.wikipedia.org/wik
 * base : as [Intended Learning Objectives](#ilo) above
 > *refs*: [base-notes](#note), [base-ref](#ref)
 
-* PGM (all stochastic nodes{% sidenote 'sn-id-node' 'Nodes of the respective [*graphical model*](#graphical), not the study-plan' %}) : Intro. to Latent Variable Models + Bayesian inference methods (*Variational methods*, *MCMC sampling e.g. Gibbs sampling*) + Sparse regularization + (optional) convex optimization
+* <a name="pgm">PGM</a> (all stochastic nodes{% sidenote 'sn-id-node' 'Nodes of the respective [*graphical model*](#graphical), not the study-plan' %}) : Intro. to Latent Variable Models + Bayesian inference methods (*Variational methods*, *MCMC sampling e.g. Gibbs sampling*) + Sparse regularization + (optional) convex optimization
 > *refs*: as in "base" course's [Recap](#note) slides, optionally incl. HMM, LDS for modelling *sequential data*. Further reading: [Daphne Koller's course](https://www.coursera.org/specializations/probabilistic-graphical-models)
 
-* DNN (all deterministic nodes{% sidenote 'sn-id-node' 'Nodes of the respective [*graphical model*](#graphical), not the study-plan' %}) : "Architectures" + Applications of modern DNNs to CompVis, NLP + Attention mechanism + (optional) non-convex optimization
+* <a name="dnn">DNN</a> (all deterministic nodes{% sidenote 'sn-id-node' 'Nodes of the respective [*graphical model*](#graphical), not the study-plan' %}) : "Architectures" + Applications of modern DNNs to CompVis, NLP + Attention mechanism + (optional) non-convex optimization
 > *refs*: [CS231n](http://cs231n.stanford.edu/), [CS224d](http://cs224d.stanford.edu/). Further reading: [Nando de Freitas's course](https://www.youtube.com/playlist?list=PLE6Wd9FR--EfW8dtjAuPoTuPcqmOV53Fu) @ Oxford,  [Deep Learning textbook](http://www.deeplearningbook.org/)
 
-* "Deep" PGM : Undirected PGM + More MCMC sampling methods (*e.g. CD-k*)
+* "Deep" PGM : <a name="ebm">Undirected PGM</a> + More MCMC sampling methods (*e.g. CD-k*)
 > *refs*: TODO - [Daphne Koller's course](https://www.coursera.org/specializations/probabilistic-graphical-models) (undirected PGM lectures), last-half of [Geoffrey Hinton's NN course](https://www.coursera.org/learn/neural-networks), and/or [Ruslan Salakhutdinov's tutorials](https://www.cs.cmu.edu/~rsalakhu/) in KDD 2011/2014 (?)
 
-* PGM+DNN : PGM whose stochastic nodes are parametrized by DNNs + Monte Carlo's SGD-based Variational Inference + Structured priors i.e. Structured latent factors (incl. probabilistic attention mechanism)
+* <a name="pgmdnn">PGM+DNN</a> : PGM whose stochastic nodes are parametrized by DNNs + Monte Carlo's SGD-based Variational Inference + Structured priors i.e. Structured latent factors (incl. probabilistic attention mechanism)
 > *refs*: [Shakir Mohamed's talk](http://videolectures.net/deeplearning2016_mohamed_generative_models/) for the big picture + (huge body of) relevant works, especially VAE and variants.
 
-* GAN : Adversarial learning + Optimize (minimax.) an objective function and related issues (*e.g. mode collapsing*) + Insight to Game Theory research (?)
+* <a name="gan">GAN</a> : Adversarial learning + Optimize (minimax.) an objective function and related issues (*e.g. mode collapsing*) + Insight to Game Theory research (?)
 > *refs*: TODO - Ian Goodfellow et al's original paper (obviously) + an up-to-date GAN survey (?)
 
 * [TODO - other topics not mentioned]

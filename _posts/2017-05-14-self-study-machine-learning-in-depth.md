@@ -24,6 +24,27 @@ Tuy nhiên, dù rất nhiều, các mô hình trong ML/DL thực chất đều c
 > A <a name="map">Map</a> of ML: [https://hoamle.github.io/articles/16/essence-machine-deep-learning/#map](https://hoamle.github.io/articles/16/essence-machine-deep-learning/#map) (Mở hình trong tab mới để xem kích thước đầy đủ. Chi tiết về các node chính trên bản đồ được đề cập trong phần [study-plan](https://hoamle.github.io/articles/16/essence-machine-deep-learning/#plan) bên dưới của link)
 {% maincolumn 'assets/img/mapofML.png' "" %}
 
+|:---:|:---|
+|[PGM](/articles/16/essence-machine-deep-learning#pgm) | Probabilistic Graphical Models i.e. Probabilistic models |
+|GLM | Generalized Linear Models |
+|GMM, PPCA | (Gaussian) Mixture Models, Probabilistic Principle Component Analysis |
+|HMM, LDS | Hidden Markov Models, Linear Dynamical Systems (for modelling *sequential data*) |
+|Topic Models | Latent Dirichlet Allocation (LDA - *not to be confused with* Linear Discriminant Analysis) and variants |
+|[DNN](/articles/16/essence-machine-deep-learning#dnn) | Deep Neural Networks |
+|MLP, CNN | Multi-layer Perceptrons, Convolutional NNs i.e. FNN - Feed-forward NN |
+|RNN | Recurrent NNs, also including Recursive NN and Bi-directional RNN (for modelling *sequential data*) | 
+|"gates" | Gating mechanism: LSTM modules, GRUs, Residual connections |
+|[EBM](/articles/16/essence-machine-deep-learning#ebm) | Energy-based Models (*undirected* PGM) |
+|RBM, DBN, DBM | Restricted Boltzmann Machines, Deep Belief Networks (*not to be confused with* Dynamic Bayesian Networks), Deep Boltzmann Machines |
+|[VAE, DRAW, AIR](/articles/16/essence-machine-deep-learning#pgmdnn) | Variational Auto-encoder, Deep Recurrent Attentive Writer, Attention-Infer-Repeat |
+|[GAN](/articles/16/essence-machine-deep-learning#gan) | Generative Adversarial Networks |
+|AAE | Adversarial Auto-encoders |
+|SVM | Support Vector Machines |
+|DP, GP | Dirichlet Processes, Gaussian Processes |
+|Tree, RF | Decision Trees, Random Forests |
+|kNN | k-Nearest Neighbours |
+
+> Xem [study-plan](/articles/16/essence-machine-deep-learning#plan) trong một bài viết khác để biết chi tiết hơn về nội dung có thể học từ các node lớn trên bản đồ.
 
 ## B. Kinh nghiệm tự học/nghiên cứu 
 Như có đề cập ở trên, có nền tảng vững về *probabilistic modelling* và *Bayesian inference methods* là một trong những điều kiện cần để nắm được bức tranh toàn cảnh, và có thể đi xa hơn trong ML. Thực ra, quan trọng nhất vẫn là (B1) **học/tìm hiểu như thế nào cho đúng**, rồi mới đến (B2) **học/tìm hiểu cái gì** ("cái gì" trong bài này là probabilistic modelling và Bayesian inference methods).
@@ -31,7 +52,7 @@ Như có đề cập ở trên, có nền tảng vững về *probabilistic mode
 ### B1. Tips cho việc tự học/tìm hiểu nói chung
 1. Minh họa các khái niệm/chủ đề mới bằng note viết tay, hình vẽ, code, ...
 2. Học/làm có nhóm (cùng chung mục tiêu), online hay offline không quan trọng nếu có thời gian biểu rõ ràng. Lợi ích: (i) có nhiều thứ người khác biết mà mình không biết; (ii) dạy/hướng dẫn lại các khái niệm/chủ đề cho người khác một cách dễ hiểu là một cách tự học hiệu quả; (iii) "muốn đi nhanh thì đi một mình, muốn đi xa thì cần một đội" (vì đường dài luôn gian nan).
-3. Cố gắng tiếp cận vấn đề rộng hơn một chút. 
+3. Cố gắng tiếp cận vấn đề rộng hơn một chút, vd. bằng các câu hỏi "for what?", "why", "why not Z"? 
 4. Nếu có thể, hãy làm một (mini-)project liên quan nhất đến thứ mình muốn học, vì có thể học được rất nhiều thứ khác từ project. TUY NHIÊN, điều kiện cần là có người đi trước/expert chỉ dẫn; hoặc có kiến thức nền tảng vững; hoặc có cái nhìn bao quát nhưng cũng đủ chi tiết về project mình định theo đuổi. LÝ DO: Project nghe càng thú vị, càng có khả năng cao là phức tạp hơn nhiều so với những gì ta nghĩ ban đầu.
 5. Với ML nói riêng, [Metacademy](https://metacademy.org) là một nguồn rất tốt để tìm hiểu một số khái niệm mới. Ưu điểm lớn nhất của trang là đưa ra *cụ thể* phần/mục nào trong tài liệu tham khảo các bạn cần đọc, và kiến thức nền tảng cần có là gì. Vd [https://metacademy.org/graphs/concepts/recurrent_neural_networks](https://metacademy.org/graphs/concepts/recurrent_neural_networks)
 Ngoài ra còn có những gợi ý xây dựng lộ trình tự học ([study-plan/roadmap](https://metacademy.org/roadmaps/)) các chủ đề chuyên sâu trong ML để level-up.
