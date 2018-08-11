@@ -1,12 +1,9 @@
 ---
-title: "Self-study Machine Learning in-depth"
+title: "Tự học Machine Learning một cách chuyên sâu"
 layout: post
 ---
-> *The post is in Vietnamese, English version TBE.*
-> *For more details (e.g. the acronyms) on the "Map of Machine Learning" mentioned in this post, please visit the [other post](/articles/16/essence-machine-deep-learning#map).*
-
 Trong bài viết này, mình muốn chia sẻ:
-* (A) ***a Map of Machine Learning*** - bản đồ khái quát bức tranh toàn thể của các mảng lớn trong Machine Learning và Deep Learning (ML/DL); và *quan trọng hơn* là 
+* (A) ***a [Map](#map) of Machine Learning*** - bản đồ khái quát bức tranh toàn thể của các mảng lớn trong Machine Learning và Deep Learning (ML/DL); và *quan trọng hơn* là 
 * (B) ***kinh nghiệm TỰ HỌC/nghiên cứu*** để nắm được bức tranh toàn cảnh đó, từ đấy tìm được những giải pháp tối ưu cho công việc/dự án riêng. 
 
 > (Những chia sẻ dưới đây rút ra từ quá trình học và làm việc của bản thân. Trong đó có 2+ năm tự học/làm việc tập trung về ML/AI + training cho các thành viên trong DSLab-HUST. Vì thế sẽ có selection bias và một số điểm cần cải thiện, bổ sung, nên rất hi vọng có thêm những ý kiến trao đổi & đóng góp từ mọi người!)
@@ -18,33 +15,11 @@ Lợi ích lớn nhất của việc có cái nhìn rộng và bao quát hơn v�
 
 Chắc hẳn có rất nhiều bạn như mình, đến với ML/AI buổi ban đầu qua việc tự học các online course và tutorial, và có những lúc *ngợp* trước một "rừng" các mô hình/kỹ thuật ML/DL/AI [[2]](#ref) ra đời hàng *tuần*, cũng như một rừng các tài liệu ML/AI liên quan [[3]](#ref). Đó là còn chưa kể đến các công việc thuộc những mảng trọng tâm khác trong ngành, vd. phương pháp học mô hình (inference methods), hay những vấn đề nảy sinh khi huấn luyện mô hình theo Generative Adversarial Networks (GAN) framework ... , cùng hàng đống khái niệm rất hay nghe tên nhưng lại tù mù không biết chúng là gì và làm gì.
 
-Tuy nhiên, dù rất nhiều, các mô hình trong ML/DL thực chất đều có thể phân loại vào MỘT SỐ ÍT *lớp mô hình tiêu biểu (**model classes**)*, và các khái niệm đều thuộc ~10 *khái niệm cốt lõi (**core concepts**)* mà bất kỳ mô hình ML nào cũng cần phải giải quyết. Cùng với đó, nếu có nền tảng bài bản về **xây dựng mô hình xác suất (probabilistic modelling)**, và kèm theo là **các phương pháp suy diễn Bayesian (Bayesian inference methods)**, ta cũng sẽ nắm được những chi tiết mấu chốt của gần như TOÀN BỘ các mô hình ML/DL - vd. mô hình làm gì, phù hợp với dữ liệu ntn, có những mô hình nào giải quyết vấn đề tương tự - và bức tranh toàn cảnh các vấn đề được quan tâm trong ML/DL{% sidenote 'sn-id-allmodels' 'Một số vấn đề đặc thù của DL, chủ yếu là của DNN, mà với chỉ nền tảng probabilistic modelling và Bayesian inference methods thì (có thể) chưa bao quát được hết, vd. \"*Thiết kế kiến trúc mạng (Architecture)*\"; hoặc cần kiến thức nền tảng sâu hơn về Toán/Lý, vd. \"*Ổn định quá trình tối ưu (minimax.) hàm mục tiêu của GAN-like models*\".' %}. 
+Tuy nhiên, dù rất nhiều, các mô hình trong ML/DL thực chất đều có thể phân loại vào MỘT SỐ ÍT *lớp mô hình (**model classes**)* tiêu biểu, và các khái niệm đều thuộc ~10 *khái niệm cốt lõi ([**core concepts**](https://hoamle.github.io/articles/16/essence-machine-deep-learning/#core))* mà bất kỳ mô hình ML nào cũng cần phải giải quyết. Cùng với đó, nếu có nền tảng bài bản về **xây dựng mô hình xác suất (probabilistic modelling)**, và kèm theo là **các phương pháp suy diễn Bayesian (Bayesian inference methods)**, ta cũng sẽ nắm được những chi tiết mấu chốt của gần như TOÀN BỘ các mô hình ML/DL - vd. mô hình làm gì, phù hợp với dữ liệu ntn, có những mô hình nào giải quyết vấn đề tương tự - và bức tranh toàn cảnh các vấn đề được quan tâm trong ML/DL{% sidenote 'sn-id-allmodels' 'Một số vấn đề đặc thù của DL, chủ yếu là của DNN, mà với chỉ nền tảng probabilistic modelling và Bayesian inference methods thì (có thể) chưa bao quát được hết, vd. \"*Thiết kế kiến trúc mạng (Architecture)*\"; hoặc cần kiến thức nền tảng sâu hơn về Toán/Lý, vd. \"*Ổn định quá trình tối ưu (minimax.) hàm mục tiêu của GAN-like models*\".' %}. 
 
-> Core ML concepts: [https://hoamle.github.io/articles/16/essence-machine-deep-learning/#core](https://hoamle.github.io/articles/16/essence-machine-deep-learning/#core)
-> A <a name="map">Map</a> of ML: [https://hoamle.github.io/articles/16/essence-machine-deep-learning/#map](https://hoamle.github.io/articles/16/essence-machine-deep-learning/#map) (Mở hình trong tab mới để xem kích thước đầy đủ. Chi tiết về các node chính trên bản đồ được đề cập trong phần [study-plan](https://hoamle.github.io/articles/16/essence-machine-deep-learning/#plan) bên dưới của link)
+> <a name="map">A map of ML</a>: Chi tiết về các node chính trên bản đồ cũng như các từ viết tắt được trình bày tại một [bài viết](https://hoamle.github.io/articles/16/essence-machine-deep-learning/#map) khác, và phần [study-plan](https://hoamle.github.io/articles/16/essence-machine-deep-learning/#plan) của bài viết.
 {% maincolumn 'assets/img/mapofML.png' "" %}
 
-|:---:|:---|
-|[PGM](/articles/16/essence-machine-deep-learning#pgm) | Probabilistic Graphical Models i.e. Probabilistic models |
-|GLM | Generalized Linear Models |
-|GMM, PPCA | (Gaussian) Mixture Models, Probabilistic Principle Component Analysis |
-|HMM, LDS | Hidden Markov Models, Linear Dynamical Systems (for modelling *sequential data*) |
-|Topic Models | Latent Dirichlet Allocation (LDA - *not to be confused with* Linear Discriminant Analysis) and variants |
-|[DNN](/articles/16/essence-machine-deep-learning#dnn) | Deep Neural Networks |
-|MLP, CNN | Multi-layer Perceptrons, Convolutional NNs i.e. FNN - Feed-forward NN |
-|RNN | Recurrent NNs, also including Recursive NN and Bi-directional RNN (for modelling *sequential data*) | 
-|"gates" | Gating mechanism: LSTM modules, GRUs, Residual connections |
-|[EBM](/articles/16/essence-machine-deep-learning#ebm) | Energy-based Models (*undirected* PGM) |
-|RBM, DBN, DBM | Restricted Boltzmann Machines, Deep Belief Networks (*not to be confused with* Dynamic Bayesian Networks), Deep Boltzmann Machines |
-|[VAE, DRAW, AIR](/articles/16/essence-machine-deep-learning#pgmdnn) | Variational Auto-encoder, Deep Recurrent Attentive Writer, Attention-Infer-Repeat |
-|[GAN](/articles/16/essence-machine-deep-learning#gan) | Generative Adversarial Networks |
-|AAE | Adversarial Auto-encoders |
-|SVM | Support Vector Machines |
-|DP, GP | Dirichlet Processes, Gaussian Processes |
-|Tree, RF | Decision Trees, Random Forests |
-|kNN | k-Nearest Neighbours |
-
-> Xem [study-plan](/articles/16/essence-machine-deep-learning#plan) trong một bài viết khác để biết chi tiết hơn về nội dung có thể học từ các node lớn trên bản đồ.
 
 ## B. Kinh nghiệm tự học/nghiên cứu 
 Như có đề cập ở trên, có nền tảng vững về *probabilistic modelling* và *Bayesian inference methods* là một trong những điều kiện cần để nắm được bức tranh toàn cảnh, và có thể đi xa hơn trong ML. Thực ra, quan trọng nhất vẫn là (B1) **học/tìm hiểu như thế nào cho đúng**, rồi mới đến (B2) **học/tìm hiểu cái gì** ("cái gì" trong bài này là probabilistic modelling và Bayesian inference methods).

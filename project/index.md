@@ -1,28 +1,55 @@
 ---
-layout: post
+layout: full-width
 title: projects & publications
 ---
-### <a href="{{ site.github.url }}/articles/16/essence-machine-deep-learning">Essence of Machine Learning (and Deep Learning)</a>
+## RECOMMENDER SYSTEMS
+### **Recommendation with Deep Learning in the Wild**
+*Summary*: Develop recommendation algorithms for world-wide clients as a Data Scientist at [NextSmarty](https://www.nextsmarty.com/).
 
-{% marginfigure 'mf-id-essenceml' 'assets/img/mapofML_crop.png' '' %}"Base" course for new members at DSLab-HUST. Pre-requisite for subsequent training sessions in *Topic models* (or *Probabilistic Graphical Models*) and *Deep Learning*. 
+*Type*: Industry Project
 
-**Motivation.** The majority of DSLab-HUST members, including myself back in early 2016, are aspiring ML ***self-learners***, and have been struggling (*a lot*) to study **probabilistic/Bayesian modelling** on our own. For the newcomers - who are very likely exposed to Deep Neural Networks (DNN) *before* probabilistic modelling - I found it considerably more challenging and time-consuming to see the [big picture of Machine Learning](/articles/16/essence-machine-deep-learning#map) (*Deep Learning* included) research without *proper background in probabilistic (graphical) models - PGM*.
+*Status*: Non-disclosed
 
-Nevertheless, it's truly hard to find a beginner-level MOOC in PGM which can instill (i) probabilistic/statistical reasoning, and also introduce (ii) [ML core concepts](/articles/16/essence-machine-deep-learning#core) in a intuitive flow as Prof. [Andrew Ng's course](https://www.coursera.org/learn/machine-learning) did. Therefore, this course is devised to address the 2 purposes. Upon completing this course, the learners can, hopefully, explore the spectrum of ML research with minimal guidance, keep their heads up on the big picture to not get lost in the complexity (and the hype!) of the field, later learn advanced materials more efficiently, and catch up with recent advances in Machine Learning research.
-`[`[`Read more`](/articles/16/essence-machine-deep-learning)`]`
+### **Hybrid Content-based Collaborative Filtering Probabilistic Model**
+<!-- {% maincolumn 'assets/img/cnnat.png' '' %} -->
+*Summary*: A novel, scalable, and interpretable Bayesian machine learning model which includes textual description of the items. The algorithm was evaluated on real-life, public and private datasets in 3 different recommendation tasks, and shows noticeable improvement in prediction accuracy against other competitors, as well as fast training time. 
 
+*Type*: Academic Project
 
+*Status*: Published. `[`[`Paper`](https://doi.org/10.1016/j.ijar.2018.02.001)`]`
 
-### Projects related to Recommender Systems
-{% marginfigure 'mf-id-recsys' 'assets/img/placeholder.png' %}To be updated.
-`[`[`PDF`](#)`]` 
+*Citation*: <u>Hoa M. Le</u>, Son Ta-Cong, Quyen Pham-The, Linh Ngo-Van, Khoat Than (2018) “Collaborative Topic Model for Poisson distributed ratings”, International Journal of Approximate Reasoning, Volume 95, Pages 62-76, Springer, 2018. DOI: [10.1016/j.ijar.2018.02.001](https://doi.org/10.1016/j.ijar.2018.02.001)
 
-### Projects related to Computer Vision
-{% marginfigure 'mf-id-essenceml' 'assets/img/cnnat.png' '' %} **Fully Automated Multi-label Image Annotation by Convolutional Neural Network and Adaptive Thresholding**
-<p>
-<u>Hoa M. Le</u>, <a href="http://soict.hust.edu.vn/en/index.php/bo-mon-trung-tam/information-system/faculty-and-staff/230-nguyen-thi-oanh-phd.html">Thi-Oanh Nguyen</a>, Dung Ngo-Tien
-<br> <em>in Proceedings of the 7th International Symposium on Information and Communication Technology (SoICT 2016). DOI: 10.1145/3011077.3011118</em> 
-</p>
+### **Recommendation for videos**
+*Summary*: Work on a video recomendation system as a developer at FPT Software.
 
-*Abstract*. This paper presents a fully automated and flexible ConvNet-based classifier for multi-label image annotation. The classifier alleviates hierarchical representation of image from a convolutional neural network, and adaptive thresholding technique on the ranked list of label scores. The method can annotate images with arbitrary number of labels that the classifier finds fit, as opposed to common methods which only assign a fixed number of those. Experiments show state-of-the-art on classification accuracy and competitive annotation performance across 2 intrinsically different datasets, Corel5K and MSRCv2. Although the proposed method shows some limitation in learning label semantics, empirical study indicates that it was due to the established drawback of univariate loss function, which the classifier optimised, in multi-label classification. It, therefore, opens for number of directions to improve the performance, while still retains the merits of the proposed method.
-`[`[`PDF`](https://1drv.ms/b/s!ApOZHae4ogqZwTBo1fsEvZ0uflbI)`]` `[`[`Code`](https://github.com/hoamle/multiLabel)`]`
+*Type*: Industry Project
+
+*Status*: Non-disclosed
+
+---
+## COMPUTER VISION
+### **Multi-label Image Classification by ConvNet and Adaptive Thresholding**
+{% maincolumn 'assets/img/cnnat.png' '' %}
+*Summary*: One of the early works which adopt ConvNet for multi-label classification. This work differs from the others, at the time of publishing, in which number of labels can be inferred adaptively, rather than being fixed at test time. Experiments with 2 small-scale datasets shows significant improvement in classification accuracy, and some expected drawbacks in ranking measures.
+
+*Type*: Academic Project
+
+*Status*: Published. `[`[`Paper`](https://doi.org/10.1145/3011077.3011118)`]` `[`[`Code`](https://github.com/hoamle/multiLabel)`]`
+
+*Citation*: <u>Hoa M. Le</u>, [Thi-Oanh Nguyen](https://soict.hust.edu.vn/en/index.php/our_team/nguyen-thi-oanh-phd/), Dung Ngo-Tien (2016) "Fully automated multi-label image annotation by convolutional neural network and adaptive thresholding", in Proceedings of the Seventh Symposium on Information and Communication Technology (SoICT ’16). ACM, New York, NY, USA, 323-330. DOI: [10.1145/3011077.3011118](https://doi.org/10.1145/3011077.3011118)
+
+---
+## COMPUTER GRAPHICS
+
+---
+## DEMOCRATIZING SCIENCE
+### **Machine Learning (and Deep Learning) under Probabilistic Perspective**
+{% maincolumn 'assets/img/mapofML_crop.png' "" %}
+*Summary*: A 6-week course with the objective of introducing [**core concepts of machine learning under probabilistic perspective**](/articles/16/essence-machine-deep-learning/), **using simpler language**. Upon completing this course, the learners can, hopefully, explore the spectrum of ML/AI research with minimal guidance, keep their heads up on the big picture to not get lost in the complexity (and the hype!) of the field, later learn advanced materials more efficiently, and catch up with the latest advances.
+
+*Type*: Personal Project
+
+*Status*: Work-in-progress. `[`[`Read more`](/articles/16/essence-machine-deep-learning)`]`
+
+*Motivation*: The majority of DSLab-HUST members, including myself back in late 2015, were aspiring ML *self-learners*, but struggled to study **probabilistic/Bayesian modelling** on our own. For the newcomers - who are very likely exposed to Deep Neural Networks (DNN) first - a *proper foundation* in probabilistic modelling is one of the most important foundation to see the [big picture of Machine Learning](/articles/16/essence-machine-deep-learning#map) (*Deep Learning* included), and to advance in the field. Nevertheless, it's truly hard to find an entry-level MOOC which can introduce (i) fundamentals of probabilistic modelling, and  (ii) [ML core concepts](/articles/16/essence-machine-deep-learning#core) in an intuitive structure as Prof. [Andrew Ng's course](https://www.coursera.org/learn/machine-learning) did. Therefore, this course is devised to serve the 2 purposes. 
