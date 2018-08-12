@@ -1,9 +1,9 @@
 ---
-title: "Tự học Machine Learning một cách chuyên sâu"
+title: "Tự học Machine Learning chuyên sâu"
 layout: post
 ---
 Trong bài viết này, mình muốn chia sẻ:
-* (A) ***a [Map](#map) of Machine Learning*** - bản đồ khái quát bức tranh toàn thể của các mảng lớn trong Machine Learning và Deep Learning (ML/DL); và *quan trọng hơn* là 
+* (A) ***[a Map of Machine Learning](#map)*** - bản đồ khái quát bức tranh toàn thể của các mảng lớn trong Machine Learning và Deep Learning (ML/DL); và *quan trọng hơn* là 
 * (B) ***kinh nghiệm TỰ HỌC/nghiên cứu*** để nắm được bức tranh toàn cảnh đó, từ đấy tìm được những giải pháp tối ưu cho công việc/dự án riêng. 
 
 > (Những chia sẻ dưới đây rút ra từ quá trình học và làm việc của bản thân. Trong đó có 2+ năm tự học/làm việc tập trung về ML/AI + training cho các thành viên trong DSLab-HUST. Vì thế sẽ có selection bias và một số điểm cần cải thiện, bổ sung, nên rất hi vọng có thêm những ý kiến trao đổi & đóng góp từ mọi người!)
