@@ -1,15 +1,17 @@
 ---
-layout: post
+layout: page
 title: talks & tutorials
+---
+<h1 class="content-listing-header sans">Talks & Tutorials</h1>
 ---
 
 ### Introduction to Data Analytics
 {% marginfigure 'mf-id-da' 'assets/img/placeholder.png' %}Elements of Data Analytics, Technical aspects and Presence in daily-life, business, science, technology & arts. 
 *Guest speaking session* at [CareerMe](http://mycareerme.com/recap-hoi-thao-data-analytics/), a start-up providing career orientation service. Joint-talk with [Linh Nghiem](https://www.linkedin.com/in/linhnghiem).
-Jul, 2016
+Jul, 2016. `[`[`PDF`](https://1drv.ms/b/s!ApOZHae4ogqZ3AEwVjwfWpxL0fT6)`]` <small>(in Vietnamese)</small> 
 
 <i>Data Analytics</i>, <i>Data Science</i>, and <i>Big Data</i> have been the trending words that appear frequently even on mainstream media. However, the terms address a wide spectrum of disciplines and often used arbitrarily, thus may confuse aspiring students or early starters. Nevertheless, their foundation might have been very familiar to many people without noticing <i>(spoiler: statistics, econometrics, ...)</i>. The objective of this talk is to de-mystify these terms, presenting the fundamentals and the big picture in data analytics, discussing career prospect, and sharing relevant experiences from the speakers.
-`[`[`PDF`](https://1drv.ms/b/s!ApOZHae4ogqZ3AEwVjwfWpxL0fT6)`]` <small>(in Vietnamese)</small> 
+
 
 
 ### How to Deliver an Effective Presentation

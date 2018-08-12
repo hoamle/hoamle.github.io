@@ -76,10 +76,10 @@ p > a { @if $link-style == underline
     }
   }
 
-body { width: 92.5%;
+body { width: 82.5%;
        margin-left: auto;
        margin-right: auto;
-       padding-left: 7.5%;
+       padding-left: 0%;
        font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        background-color: $bg-color;
        color: $text-color;

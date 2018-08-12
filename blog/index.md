@@ -5,9 +5,13 @@ title: blog
 ---
 
 <h1 class="content-listing-header sans">Articles</h1>
-<p>
-  I enjoy painting as much as I enjoy machine learning/AI. Therefore, the blog posts below are categorised accordingly to their intended audiences: <code>[T]</code> - scientific or technical posts, <code>[A]</code> - for (digital) artists, and <code>no prefix</code> - for all audiences.
-</p>
+I enjoy painting as much as I enjoy machine learning/AI. Therefore, the blog posts below are categorised accordingly to their intended audiences
+><code>[T]</code> - scientific or technical posts
+<br>
+><code>[A]</code> - posts intended for (digital) artists
+<br>
+><code>no prefix</code> - posts for general audiences.
+
 <ul class="content-listing ">
   {% for post in site.posts %}      
   <li class="listing">
