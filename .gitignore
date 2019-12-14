@@ -4,3 +4,5 @@ _site
 config.codekit
 /assets/img/placeholder.lip
 /_drafts/*
+.vscode/
+.idea/

@@ -2,7 +2,7 @@
 layout: post
 title: "Machine learning appendix"
 date: 2017-02-01
-category: t
+category: machine learning
 ---
 _to be updated sporadically, suggestions are highly appreciated_
 <!--more-->

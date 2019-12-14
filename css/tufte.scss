@@ -76,11 +76,11 @@ p > a { @if $link-style == underline
     }
   }
 
-body { width: 82.5%;
+body { width: 100%;
        margin-left: auto;
        margin-right: auto;
        padding-left: 0%;
-       font-family: et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
+       font-family: "Lato", et-bembo, Palatino, "Palatino Linotype", "Palatino LT STD", "Book Antiqua", Georgia, serif;
        background-color: $bg-color;
        color: $text-color;
        max-width: 1400px;
@@ -99,7 +99,7 @@ h2 { font-style: bold; color: $contrast-color;
      font-weight: 400;
      margin-top: 1.866666666666667rem;
      margin-bottom: 0;
-     font-size: 2.1rem;
+     font-size: 1.6rem;
      line-height: 0.933333333333333; }
 
 h3 { /*font-style: italic;*/
@@ -357,17 +357,19 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 //Nav and Footer styling area
 
 header > nav.group, body footer {
-  width: 100%;  // default: 95%
+  width: 95%;  // default: 95%
   // padding-top: 1rem;
-  padding-bottom: 1rem;
+  // padding-bottom: 0.5rem;
 }
 
 // nav.group a.active:before{ content:"\0003c\000a0";} // escaped unicode for the carats and then a space on active menu links
 // nav.group a.active:after{ content:"\000a0\0003e" ;}
 nav.group a.active{ 
   // font-style: bold;
-  text-transform: uppercase;
-  // background-color: $bg-color;
+  // text-transform: uppercafse;
+  background-color: #5e5e5e;
+  // padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
   }
 
 
@@ -386,9 +388,10 @@ header > nav  a{
   float: right;
   margin-top: 0;
   margin-bottom: 0;
-  padding-right: 2rem;
+  padding-bottom: 0.5rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
   //margin-left: 1rem;
-  vertical-align: baseline;
   // vertical-align: text-bottom;
 }
 header > nav a img{
@@ -437,7 +440,7 @@ body.full-width, .content-listing, ul.content-listing li.listing{ width: 82.5%; 
 h1.content-listing-header{
   font-style: normal;
   text-transform: uppercase;
-  letter-spacing: 0.2rem;
+  letter-spacing: 0.12rem;
   font-size: 1.8rem;
 }
 
@@ -599,28 +602,28 @@ hr.slender {
   content: "\e606";
 }
 .icon-mail:before {
-  content: "\e607";
+  content: "\ea84";
 }
 .icon-googleplus:before {
   content: "\e608";
 }
 .icon-linkedin:before {
-  content: "\e608";  // TODO look for "linkedin" glyph's hex code
+  content: "\eaca";
 }
 .icon-facebook:before {
   content: "\e609";
 }
 .icon-twitter:before {
-  content: "\e60a";
+  content: "\ea96";
 }
 .icon-feed:before {
-  content: "\e60b";
+  content: "\ea9c";
 }
 .icon-flickr:before {
   content: "\e60c";
 }
 .icon-github:before {
-  content: "\e60d";
+  content: "\eab0";
 }
 .icon-box-add:before {
   content: "\e60e";

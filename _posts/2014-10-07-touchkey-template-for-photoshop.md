@@ -2,7 +2,7 @@
 layout: post
 title: "TouchKey template for Photoshop"
 date: 2014-10-07
-category: a
+category: arts, tech
 ---
 
 **TouchKey** is one of few especially useful on-screen toolbars for Windows Tablet PCs. It makes using Windows tablets without keyboard much more comfortable. The software is developed by [**kannagi**](http://kannagi.net/touchkey/).

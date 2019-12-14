@@ -1,7 +1,14 @@
----
-layout: default
----
-<p class="subtitle">{{ page.date | date: "%B %-d, %Y" }}</p>
-
-
-{{ content }}
+<!DOCTYPE html>
+<html>
+  {% include head.html %}
+  <body>
+    {% include header.html %}
+    <article class="group">
+        <div style="margin-left: 3rem; width: 100%">
+        {{ content }}
+        </div>
+    </article>
+    {% include print-footer.html %}
+    {% include footer.html %}
+  </body>
+</html>

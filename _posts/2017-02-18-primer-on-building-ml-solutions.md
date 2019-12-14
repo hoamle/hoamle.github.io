@@ -1,7 +1,7 @@
 ---
-title: "Part 1b - Primer on Building a Machine Learning Solution"
+title: "Primer on Building a Machine Learning Solution"
 layout: post
-category: t
+category: machine learning
 ---
 > *Part 1b of the [Essence of Machine Learning (and Deep Learning)](/articles/16/essence-machine-deep-learning) series. See [course notes](/articles/16/essence-machine-deep-learning#note) for Part 1a.*
 
@@ -308,9 +308,9 @@ Specifically, we studied a (single-label) *multi-class classification* {% sideno
 However, there still exist **fundamental** questions that we need to address:
 
 1. Is $$96.7\%$$ a *reliable* estimate for our model accuracy on **other test sets**?{% sidenote 'sn-id-assess' "TODO link to Assessment post" %}
-1. How is Softmax Regression model [**constructed**](/articles/17/principle-of-modelling)?{% sidenote 'sn-id-principle' "TODO link to Part 2" %}
-1. In a problem for which **assumptions** imposed by Softmax Regression model do **not suffice**, how can we do better?{% sidenote 'sn-id-nonlinear' "TODO link to Part 3" %}
-1. How can *we* - as the human - **interpret** the contribution of the features to the prediction, or extract human-perceivable semantics that the features may hold? {% sidenote 'sn-id-nonlinear' "TODO link to Part 4-5" %}
-1. (other issues that would arise when approaching above questions)
+2. How is Softmax Regression model [**constructed**](/articles/17/principle-of-modelling)?{% sidenote 'sn-id-principle' "TODO link to Part 2" %}
+3. In a problem for which **assumptions** imposed by Softmax Regression model do **not suffice**, how can we do better?{% sidenote 'sn-id-nonlinear' "TODO link to Part 3" %}
+4. How can *we* - as the human - **interpret** the contribution of the features to the prediction, or extract human-perceivable semantics that the features may hold? {% sidenote 'sn-id-nonlinear' "TODO link to Part 4-5" %}
+5. (other issues that would arise when approaching above questions)
 
 These questions define the topics for next parts of this series. In each part, we will be approaching different *multi-class classification* problems as case-studies for the relevant topics. The same reasoning and principles also straightforwardly apply to *binary **classification***, ***regression***, and (to certain extends) ***clustering*** problems.

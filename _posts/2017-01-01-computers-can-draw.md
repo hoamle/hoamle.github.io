@@ -2,6 +2,7 @@
 layout: post
 title: "Computers can Draw (TBE)"
 date: 2017-01-01
+category: arts, tech, machine learning
 ---
 Survey on the attempts to build an AI artist
 (Note-to-self: divided into 2 posts) 

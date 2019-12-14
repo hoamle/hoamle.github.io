@@ -2,7 +2,7 @@
 layout: post
 title: "Essence of Machine Learning (and Deep Learning)"
 date: 2016-10-01
-category: t
+category: machine learning
 ---
 **"Base"** course for Machine Learning (ML) starters, under the language of ***probabilistic modelling***. Pre-requisite for subsequent training sessions in *Topic models* -or *Probabilistic (graphical) models, Deep Learning*, and *other ML topics* (see [A Map of Machine Learning](#map)). Upon completing this course, the learners can, hopefully, explore the spectrum of ML research with minimal guidance, keep their heads up on the big picture to not get lost in the complexity (and the hype!) of the field, later learn advanced materials more efficiently, and catch up with recent advances in the field.
  

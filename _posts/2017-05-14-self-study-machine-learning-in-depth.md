@@ -1,6 +1,7 @@
 ---
 title: "Tự học Machine Learning chuyên sâu"
 layout: post
+category: machine learning
 ---
 Trong bài viết này, mình muốn chia sẻ:
 * (A) ***[a Map of Machine Learning](#map)*** - bản đồ khái quát bức tranh toàn thể của các mảng lớn trong Machine Learning và Deep Learning (ML/DL); và *quan trọng hơn* là 

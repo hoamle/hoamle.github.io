@@ -2,6 +2,7 @@
 layout: post
 title: "Deep Art fun"
 date: 2016-01-16
+category: arts, machine learning
 ---
 Last weekend I finally took some of personal photos and artwork to *\"paint\"* them in, but not limited to, Van Gogh style. The \"painting\" part was actually done by [**DeepArt algorithm**](#deepart){% sidenote "sn-id-artomatix" "It's worth to note that Artomatix, Inc. - an Irish startup - had introduced a [similar work](https://youtu.be/un9lSayNOIY?t=51) several months before DeepArt algorithm was published." %} - an inspiring application from **Deep learning** research. In short, the Deep learning model - a deep neural network - takes your photo (referred as ***content-image*** henceforth) and a reference style (combination of 1 or more ***style-images***) as the inputs and produces your photo in that style. 
 

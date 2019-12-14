@@ -2,7 +2,7 @@
 layout: post
 title: "Toolbar-Creator template for Photoshop and ClipStudio Paint"
 date: 2014-10-31
-category: a
+category: arts, tech
 ---
 
 **Toolbar Creator** is one of few especially useful on-screen toolbars for Windows Tablet PCs. It makes using Windows tablets without keyboard much more comfortable and convenient. The software is developed by [**lblb**](http://forum.tabletpcreview.com/threads/toolbar-creator-v-2-2-beta-available-for-download.63014/) at TabletPC Review forum, which is a user-friendly interface for `RawInputControlTest` script by [**koide**](http://39kasen.sakura.ne.jp/rawinputcontroltest/).
