@@ -1,15 +1,15 @@
 ---
 title: "Primer on Building a Machine Learning Solution"
 layout: post
-category: machine learning
+tag: [mini-course, beginner, machine learning]
 ---
-> *Part 1b of the [Essence of Machine Learning (and Deep Learning)](/articles/16/essence-machine-deep-learning) series. See [course notes](/articles/16/essence-machine-deep-learning#note) for Part 1a.*
+> *Part 1b of the [Essence of Machine Learning (and Deep Learning)](/blog/16/essence-machine-deep-learning) series. See [course notes](/blog/16/essence-machine-deep-learning#note) for Part 1a.*
 
 This week introduces **high-level overview of building a Machine Learning (ML) solution** for a given problem, summarized by the following diagram and demo'ed with [`scikit-learn`](http://scikit-learn.org/stable/index.html).
 {% maincolumn 'assets/img/week1-2.png' '' %}
 
 
-**N.B.**{% marginnote 'mn-id-glossary' "Visit [MLglossary](/articles/17/machine-learning-appendix/#glossary) for a summary of the math notations. The MLglossary also lists common terms in ML with their synonyms or strongly related concepts. Because ML is an interdisplinary field of research, there are many different terminologies coming from repsective fields, which actually address the ***same things***." %} We will gradually *rephrase* every-day language with equivalent ML terminologies and their *math notations*. Nevertheless, always explain the math we use (or encounter) in our usual natural language if possible, so that we can imprint the **underlying intuition** and not getting lost in the technical jargons that follow.
+**N.B.**{% marginnote 'mn-id-glossary' "Visit [MLglossary](/blog/17/machine-learning-appendix/#glossary) for a summary of the math notations. The MLglossary also lists common terms in ML with their synonyms or strongly related concepts. Because ML is an interdisplinary field of research, there are many different terminologies coming from repsective fields, which actually address the ***same things***." %} We will gradually *rephrase* every-day language with equivalent ML terminologies and their *math notations*. Nevertheless, always explain the math we use (or encounter) in our usual natural language if possible, so that we can imprint the **underlying intuition** and not getting lost in the technical jargons that follow.
 
 > *Self-comment*: Machines are born "dumb". The more *we* - as human being - want more intelligent machines that can support us without much of the human's guidance, the more we need to mentor them by, at least, speaking explicitly in a language that machines can understand. Math is much more machine-understandable than any of our every-day natural languages are. *Lesson*: there is no escaping from math if we want to study ML/AI further.
 
@@ -24,10 +24,10 @@ This week introduces **high-level overview of building a Machine Learning (ML) s
 **Experience** i.e ***Training data***{% marginnote 'mn-trainset' "*training data / training set* $$\\mathcal{D}_{\\text{train}}=\\left\\{ x^{\\left(n\\right)},y^{\\left(n\\right)}\\right\\}$$" %}: `iris` dataset - a dataset that contain information about certain types of flower 
 
 
-```python
+{% highlight python %}
 from sklearn import datasets 
 iris_dataset = datasets.load_iris()
-```
+{% endhighlight %}
 
 First, study our data, so that we can ***pre-process***{% marginnote 'mn-preprocess' "*data preprocessing*" %} the data provided. In this step, we might need to manipulate the raw data to extract important information, or normalize following certain standard. The purpose is (but not limited to) to prepare the data in proper formats for later implementation.
 
@@ -38,43 +38,44 @@ For demonstration purpose, we are using a "*clean"* dataset (already stored in s
 Read the "docs" i.e. data description
 
 
-```python
+{% highlight python %}
 # print(iris_dataset)
 print(iris_dataset['DESCR'][:1000])  # the "doc" is quite long, so I 
                                      # only extract the first 1000 
                                      # characters
-```
+{% endhighlight %}
 
-    Iris Plants Database
-    
-    Notes
-    -----
-    Data Set Characteristics:
-        :Number of Instances: 150 (50 in each of three classes)
-        :Number of Attributes: 4 numeric, predictive attributes and the class
-        :Attribute Information:
-            - sepal length in cm
-            - sepal width in cm
-            - petal length in cm
-            - petal width in cm
-            - class:
-                    - Iris-Setosa
-                    - Iris-Versicolour
-                    - Iris-Virginica
-        :Summary Statistics:
-    
-        ============== ==== ==== ======= ===== ====================
-                        Min  Max   Mean    SD   Class Correlation
-        ============== ==== ==== ======= ===== ====================
-        sepal length:   4.3  7.9   5.84   0.83    0.7826
-        sepal width:    2.0  4.4   3.05   0.43   -0.4194
-        petal length:   1.0  6.9   3.76   1.76    0.9490  (high!)
-        petal width:    0.1  2.5   1.20  0.76     0.9565  (high!)
-        ============== ==== ==== ======= ===== ====================
-    
-        :Missing Attribute Values: None
-      
-    
+{% highlight bash %}
+Iris Plants Database
+
+Notes
+-----
+Data Set Characteristics:
+    :Number of Instances: 150 (50 in each of three classes)
+    :Number of Attributes: 4 numeric, predictive attributes and the class
+    :Attribute Information:
+        - sepal length in cm
+        - sepal width in cm
+        - petal length in cm
+        - petal width in cm
+        - class:
+                - Iris-Setosa
+                - Iris-Versicolour
+                - Iris-Virginica
+    :Summary Statistics:
+
+    ============== ==== ==== ======= ===== ====================
+                    Min  Max   Mean    SD   Class Correlation
+    ============== ==== ==== ======= ===== ====================
+    sepal length:   4.3  7.9   5.84   0.83    0.7826
+    sepal width:    2.0  4.4   3.05   0.43   -0.4194
+    petal length:   1.0  6.9   3.76   1.76    0.9490  (high!)
+    petal width:    0.1  2.5   1.20  0.76     0.9565  (high!)
+    ============== ==== ==== ======= ===== ====================
+
+    :Missing Attribute Values: None
+{% endhighlight %}
+
 
 Observe:
 
@@ -86,20 +87,22 @@ Observe:
 
 
 
-```python
+{% highlight python %}
 print(iris_dataset['data'].shape)  # each row in `iris_dataset['data']` is 
                                    # a feature vector of the respective flower
 print(iris_dataset['target_names'])
 print(iris_dataset['target'])
-```
+{% endhighlight %}
 
-    (150L, 4L)
-    ['setosa' 'versicolor' 'virginica']
-    [0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
-     0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
-     1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2
-     2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
-     2 2]
+{% highlight bash %}
+(150L, 4L)
+['setosa' 'versicolor' 'virginica']
+[0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0
+ 0 0 0 0 0 0 0 0 0 0 0 0 0 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1
+ 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 2 2 2 2 2 2 2 2 2 2 2
+ 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2 2
+ 2 2]
+{% endhighlight %}
     
 
 We write the features as a feature vector $$x=\left(x_{1},x_{2},x_{3},x_{4}\right)^{T}$$. Vector $$x$$ is a ***representation***{% marginnote 'mn-representation' "*data representation*" %} of a flower i.e. a summary of this flower attributes. We extract and store all feature vectors to a 2D-array{% sidenote 'sn-id-2d' "`2D-array` can be understood as a table-like data structure" %} $$X$$, where the $$n$$-th row corresponds to feature vector $$x^{\left(n\right)}$$. 
@@ -111,26 +114,30 @@ We write the features as a feature vector $$x=\left(x_{1},x_{2},x_{3},x_{4}\righ
 
 
 
-```python
+{% highlight python %}
 D = {}
 D['X'] = iris_dataset['data']
 print(D['X'].shape)
-```
+{% endhighlight %}
 
-    (150L, 4L)
+{% highlight bash %}
+(150L, 4L)
+{% endhighlight %}
     
 
 We extract and store all the labels to an 1D-array{% sidenote 'sn-id-labels' "In actual implementation (which we won't see in this week example), $$Y$$ is almost always converted to an equivalent 2D-array implicitly, where each column is a binary indicator (e.g. {1, 0}) of a respective class in all examples." %} $$Y$$, where the $$n$$-th element indicates flower type $$y^{\left(n\right)}$$. *<font color="red">Note</font>*: the order of all $$n$$'s in $$Y$$ must match with the counterparts in $$X$$.
 
 
 
-```python
+{% highlight python %}
 D['Y'] = iris_dataset['target']
 print(D['Y'].shape)
-```
+{% endhighlight %}
 
-    (150L,)
-    
+{% highlight bash %}
+(150L, )
+{% endhighlight %}
+
 
 Now we can define our problem more precisely by the language of math
 
@@ -157,7 +164,7 @@ For demonstration purpose, we will use a small subset (20%) of `iris` dataset as
 
 
 
-```python
+{% highlight python %}
 from sklearn.cross_validation import train_test_split
 # note: sklearn 0.18 moved `train_test_split` to 
 # `sklearn.model_selection` module 
@@ -174,30 +181,32 @@ train_idx, test_idx = train_test_split(indicies, train_size=0.8,
 D_train = {'X': D['X'][train_idx], 'Y': D['Y'][train_idx]}
 D_test = {'X': D['X'][test_idx], 'Y': D['Y'][test_idx]}
 print("Test set size: {} examples".format(len(test_idx)))
-```
+{% endhighlight %}
 
-    Test set size: 30 examples
+{% highlight bash %}
+Test set size: 30 examples
+{% endhighlight %}
     
 
 In this week example demo, we use and train a model called **Softmax Regression**. For now, we can simply understand Softmax Regression as a "black-box" ML algorithm that can do our prediction problem. *"What are assumptions on model structure? How was learning task done? Can we do better than standard Softmax Regression?, etc"* are the topics for next weeks.
 
 
-```python
+{% highlight python %}
 from sklearn.linear_model import LogisticRegression
 # Softmax regression is a multi-class generalization of Logistic Regression model
 
 # initialize a "naive" model
 model = LogisticRegression(multi_class="multinomial",
                           solver="lbfgs")  
-```
+{% endhighlight %}
 
 ### <a name="learning">Learning task</a>
 {% marginnote 'mn-id-learning' "*learning task*"  %}
 
 
-```python
+{% highlight python %}
 model.fit(D_train['X'], D_train['Y']);  # after `.fit`, the model has finished its learning
-```
+{% endhighlight %}
 
 Learning finished! 
 
@@ -207,21 +216,26 @@ Learning finished!
 Now try indentifying a new, unseen flower with feature $$x^{\left(\text{test}\right)}$$
 
 
-```python
+{% highlight python %}
 x_test = D_test['X'][0]
 print(x_test)
-```
+{% endhighlight %}
 
-    [ 5.8  4.   1.2  0.2]
-    
+{% highlight bash %}
+[ 5.8  4.   1.2  0.2]   # the predicted petal and sepal size
+{% endhighlight %}
 
 
-```python
+
+{% highlight python %}
 y_pred = model.predict(x_test)  
 print(y_pred)
-```
+{% endhighlight %}
 
-    [0]
+{% highlight bash %}
+[0]         # i.e. corresponding to type `setosa`
+{% endhighlight %}
+
     
 
 
@@ -230,17 +244,19 @@ print(y_pred)
 Our model `predict`s that the flower whose petal and sepal size are as described by $$x^{\left(\text{test}\right)}$$ is a "setosa" (`id: 0`). **Is this true?**
 
 
-```python
+{% highlight python %}
 print(y_pred == D_test['Y'][0])
-```
+{% endhighlight %}
 
-    [ True]
+{% highlight bash %}
+[ True]     # Great!
+{% endhighlight %}
     
 
 Good news! But what about prediction for other flowers?
 
 
-```python
+{% highlight python %}
 Y_pred = model.predict(D_test['X'])
 
 print("Flower\tPredict\tActual\tCorrect prediction?")
@@ -251,52 +267,57 @@ for i in xrange(len(test_idx)):
             D_test['Y'][i],
             Y_pred[i] == D_test['Y'][i]
         ))
-```
+{% endhighlight %}
 
-    Flower  Predict Actual  Correct prediction?
-    14      0       0       True    
-    98      1       1       True    
-    75      1       1       True    
-    16      0       0       True    
-    131     2       2       True    
-    56      1       1       True    
-    141     2       2       True    
-    44      0       0       True    
-    29      0       0       True    
-    120     2       2       True    
-    94      1       1       True    
-    5       0       0       True    
-    102     2       2       True    
-    51      1       1       True    
-    78      1       1       True    
-    42      0       0       True    
-    92      1       1       True    
-    66      1       1       True    
-    31      0       0       True    
-    35      0       0       True    
-    90      1       1       True    
-    84      1       1       True    
-    77      2       1       False   
-    40      0       0       True    
-    125     2       2       True    
-    99      1       1       True    
-    33      0       0       True    
-    19      0       0       True    
-    73      1       1       True    
-    146     2       2       True    
+{% highlight bash %}
+Flower  Predict Actual  Correct prediction?
+14      0       0       True    
+98      1       1       True    
+75      1       1       True    
+16      0       0       True    
+131     2       2       True    
+56      1       1       True    
+141     2       2       True    
+44      0       0       True    
+29      0       0       True    
+120     2       2       True    
+94      1       1       True    
+5       0       0       True    
+102     2       2       True    
+51      1       1       True    
+78      1       1       True    
+42      0       0       True    
+92      1       1       True    
+66      1       1       True    
+31      0       0       True    
+35      0       0       True    
+90      1       1       True    
+84      1       1       True    
+77      2       1       False   
+40      0       0       True    
+125     2       2       True    
+99      1       1       True    
+33      0       0       True    
+19      0       0       True    
+73      1       1       True    
+146     2       2       True    
+{% endhighlight %}
+
 
 Our model correctly indentifies 29 examples and makes 1 error out of 30 testing examples, achieving an Accuracy of $$\dfrac{1}{N}_{\text{test}}\sum_{n}\mathbb{1}\left(\hat{y}^{\left(n\right)}=y^{\left(n\right)}\right)=29/30=96.7\%$$ 
 
 
 
 
-```python
+{% highlight python %}
 sum(Y_pred == D_test['Y']) / float(len(test_idx))
-```
+{% endhighlight %}
 
-    0.96666666666666667
+{% highlight bash %}
+0.96666666666666667
+{% endhighlight %}
 
-The accuracy - $$96.7\%$$ - is pretty impressive, but <font color="red">hold off from a pre-matured conclusion!</font> See [Recap](#Recap).
+The accuracy - $$96.7\%$$ - is pretty impressive, but <font color="red">hold off from a pre-matured conclusion!</font> See more in [Recap](#Recap).
 
 ## <a href="#Recap">Recap</a>
 
@@ -305,10 +326,10 @@ We have completed the most basic steps to build a ML solution for our problem as
 
 Specifically, we studied a (single-label) *multi-class classification* {% sidenote 'sn-id-slmc' "When ones refer to a *multi-class classification* problem, we implicit understand that it is a single-label problem. A more generalized classification problem is called *multi-label multi-class classification*, which we will not cover in this series." %} problem which require us to build a ML model that can predict a flower type based on its sepal and petal measurements. As a solution for this problem, we used and trained a Softmax Regression `Model`, did `Assessment` on *one* split of test set, measured the performance with Accuracy metric, and achieved impressive predictive Accuracy of $$96.7\%$$. 
 
-However, there still exist **fundamental** questions that we need to address:
+However, there still exists <font color="red">pending questions</font> need addressing:
 
-1. Is $$96.7\%$$ a *reliable* estimate for our model accuracy on **other test sets**?{% sidenote 'sn-id-assess' "TODO link to Assessment post" %}
-2. How is Softmax Regression model [**constructed**](/articles/17/principle-of-modelling)?{% sidenote 'sn-id-principle' "TODO link to Part 2" %}
+1. Is $$96.7\%$$ a <font color="red">reliable estimate</font> for our model accuracy on **other test sets**? *Spoiler*: Not at all, given this simple Experimental design in this starter post!{% sidenote 'sn-id-assess' "TODO link to Assessment post" %}
+2. How is Softmax Regression model [**constructed**](/blog/17/principle-of-modelling)?{% sidenote 'sn-id-principle' "TODO link to Part 2" %}
 3. In a problem for which **assumptions** imposed by Softmax Regression model do **not suffice**, how can we do better?{% sidenote 'sn-id-nonlinear' "TODO link to Part 3" %}
 4. How can *we* - as the human - **interpret** the contribution of the features to the prediction, or extract human-perceivable semantics that the features may hold? {% sidenote 'sn-id-nonlinear' "TODO link to Part 4-5" %}
 5. (other issues that would arise when approaching above questions)

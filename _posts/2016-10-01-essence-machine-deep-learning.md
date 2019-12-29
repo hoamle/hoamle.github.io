@@ -2,12 +2,12 @@
 layout: post
 title: "Essence of Machine Learning (and Deep Learning)"
 date: 2016-10-01
-category: machine learning
+tag: [mini-course, machine learning]
 ---
 **"Base"** course for Machine Learning (ML) starters, under the language of ***probabilistic modelling***. Pre-requisite for subsequent training sessions in *Topic models* -or *Probabilistic (graphical) models, Deep Learning*, and *other ML topics* (see [A Map of Machine Learning](#map)). Upon completing this course, the learners can, hopefully, explore the spectrum of ML research with minimal guidance, keep their heads up on the big picture to not get lost in the complexity (and the hype!) of the field, later learn advanced materials more efficiently, and catch up with recent advances in the field.
  
 
-*Motivation*. The majority of DSLab-HUST members, including myself back in late 2015, were aspiring ML *self-learners*, but struggled to study **probabilistic/Bayesian modelling** on our own. For the newcomers - who are very likely exposed to Deep Neural Networks (DNN) first - a *proper foundation* in probabilistic modelling is one of the most important foundation to see the [big picture of Machine Learning](/articles/16/essence-machine-deep-learning#map) (*Deep Learning* included), and to advance in the field. Nevertheless, it's truly hard to find an entry-level MOOC which can introduce (i) fundamentals of probabilistic modelling, and  (ii) [ML core concepts](/articles/16/essence-machine-deep-learning#core) in an intuitive structure as Prof. [Andrew Ng's course](https://www.coursera.org/learn/machine-learning) did. Therefore, this course is devised to serve the 2 purposes. 
+*Motivation*. The majority of DSLab-HUST members, including myself back in late 2015, were aspiring ML *self-learners*, but struggled to study **probabilistic/Bayesian modelling** on our own. For the newcomers - who are very likely exposed to Deep Neural Networks (DNN) first - a *proper foundation* in probabilistic modelling is one of the most important foundation to see the [big picture of Machine Learning](/blog/16/essence-machine-deep-learning#map) (*Deep Learning* included), and to advance in the field. Nevertheless, it's truly hard to find an entry-level MOOC which can introduce (i) fundamentals of probabilistic modelling, and  (ii) [ML core concepts](/blog/16/essence-machine-deep-learning#core) in an intuitive structure as Prof. [Andrew Ng's course](https://www.coursera.org/learn/machine-learning) did. Therefore, this course is devised to serve the 2 purposes. 
 
 <a name="ilo">**Intended Learning Objectives**</a>
 1. understand the motivation and intuition behind Bayesian inference/reasoning and other [core concepts](#core) in ML, including representative models and/or methods for each concept; 
@@ -25,9 +25,9 @@ Via the lens of probabilistic modelling, we will introduce the following high-le
 > *Tip: read the side notes on the right margin of this page for more details.*
 
 ### Build a Machine Learning model
-`>` Design principle: ***Model*** {% sidenote 'sn-model' '*"Model is a simplification of reality"*. Formulate real-life problems as ***parametric models***. Note: *non-parametric models/methods* are not covered and left for further reading after "base" course. See [the map](#map).' %} = *(model)* ***Structure***{% sidenote 'sn-structure' 'Relationships between the elements of a model: data, parameters, and hyperparameters.  Relationships can either be *deterministic* or *stochastic*, and can be summarized graphically by <a name="graphical" href="/articles/17/principle-of-modelling">***graphical models***</a>.' %} + ***Learning Framework***{% sidenote 'sn-framework' 'Probabilistic framework: ***maximum likelihood estimation*** and ***Bayesian reasoning***. Non-probabilistic frameworks include [*differential geometry*](https://metacademy.org/roadmaps/rgrosse/dgml), which is more mathematical i.e. more abstract, and is only recommended upon completing `PGM` node in the [study-plan](#plan).' %}
+`>` Design principle: <a name="arc">***Model***</a> {% sidenote 'sn-model' '*"Model is a simplification of reality"*. Formulate real-life problems as ***parametric models***. Note: *non-parametric models/methods* are not covered and left for further reading after "base" course. See [the map](#map).' %} = *(model)* ***Structure***{% sidenote 'sn-structure' 'Relationships between the elements of a model: data, parameters, and hyperparameters.  Relationships can either be *deterministic* or *stochastic*, and can be summarized graphically by <a name="graphical" href="/blog/17/principle-of-modelling">***graphical models***</a>.' %} + ***Learning Framework***{% sidenote 'sn-framework' 'Probabilistic framework: ***maximum likelihood estimation*** and ***Bayesian reasoning***. Non-probabilistic frameworks include [*differential geometry*](https://metacademy.org/roadmaps/rgrosse/dgml), which is more mathematical i.e. more abstract, and is only recommended upon completing `PGM` node in the [study-plan](#plan).' %}
 
-> *Note: the term "<a name="arc">**Architecture**</a>" - often seen in DNN - can be thought of as a sub-concept of "**Structure**"*
+> *Note: the term "**Architecture**" - often seen in DNN - can be thought of as a sub-concept of "**Structure**"*
 
 `>` Tasks to do:  ***Learning***, ***Inference***, and ***Decision making***{% sidenote 'sn-estimate' 'Realize a model by finding/computing (point) estimates of unknown parameters/ hyper-parameters (***learning task***) of the model; other quantities of interest, e.g. predictive posterior distribution of outcomes/ estimates of missing data/ ... given trained model (***inference tasks***), in order to make optimal ***decisions*** - prediction, actions - under *uncertainties*.' %} 
 > *Note: in many cases, the term "**inference methods**" refers to methods that do both learning and inference tasks.*
@@ -47,7 +47,7 @@ Via the lens of probabilistic modelling, we will introduce the following high-le
 ***Model selection*** and *Model ensemble*
 
 ## <a name="note">Course notes</a>
-PART 1 - (a) [Introduction](https://raw.githubusercontent.com/hoamle/essence_ml/e788aef7617fed6911bcfd710ebbccd8ed34eae6/essence_ml.pdf)  & (b) [Primer on Building a Machine Learning solution](/articles/17/primer-on-building-ml-solutions)
+PART 1 - (a) [Introduction](https://raw.githubusercontent.com/hoamle/essence_ml/e788aef7617fed6911bcfd710ebbccd8ed34eae6/essence_ml.pdf)  & (b) [Primer on Building a Machine Learning solution](/blog/17/primer-on-building-ml-solutions)
 
 PART 2 - Principles of Modelling: Model structure (linear models), Learning framework
 

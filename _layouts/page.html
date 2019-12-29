@@ -4,11 +4,20 @@
   <body>
     {% include header.html %}
     <article class="group">
-        <div style="margin-left: 3rem; width: 100%">
+        <div style="margin-left: 8rem; margin-right: 8rem;">
         {{ content }}
         </div>
     </article>
     {% include print-footer.html %}
     {% include footer.html %}
+    
+    <!-- vanilla-back-to-top -->
+    <script src="https://unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+        diameter: 56,
+        backgroundColor: 'rgb(255, 82, 82)',
+        textColor: '#fff'
+      })</script>
+
   </body>
 </html>

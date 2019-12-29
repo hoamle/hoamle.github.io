@@ -1,17 +1,16 @@
 ---
 layout: post
-title: "Computers can Draw (TBE)"
+title: "Computers can Draw (draft)"
 date: 2017-01-01
-category: arts, tech, machine learning
+tag: [arts, tech, AI]
 ---
 Survey on the attempts to build an AI artist
-(Note-to-self: divided into 2 posts) 
 
-## Overview
+## History
 - AARON (Harold Cohen)
 - "The Painting Fool" (Simon Colton)
 - "The Next Rembrandt" (TU Delft)
-- Probabilistic models
+- Machine learning
 
 ## Modern advances 
 
@@ -19,7 +18,7 @@ Survey on the attempts to build an AI artist
 - physic-based: NPR book 
 - data-driven: texture/style transfer, e.g. Artomatix (Erric Risser et al), Neural Art (Gatys et al)
 
-### Generative probabilistic model of images (separated post)
+### Generative model of images
 - Restricted Boltzman Machine (RBM)
 - Variational Auto Encoder (VAE), Deep Recurrent Attentive Writer (DRAW)
 - Generative Adversarial Network (GAN)
@@ -30,10 +29,8 @@ Survey on the attempts to build an AI artist
 ## Applications in graphics
 - iGAN (Jun-Yan Zhu et al)
 - StyLit (Jakub Fišer et al)
-- Colorisation (various) (note-to-self: r/colorization might be a good place to crawl labelled data)
+- Colorisation (various) (note-to-self: `r/colorization` might be a good place to crawl labelled data)
 - Texture propagation (Satoshi Iizuaka et al)
 - Sketch cleaning (Satoshi Iizuaka et al)
 - Super-resolution
 - ... 
-
-(Inner-thought: arghh I'm so eager to finish the current duties, so that I can draft a comprehensive post of this survey) 

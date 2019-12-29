@@ -2,7 +2,7 @@
 layout: post
 title: "Deep Art fun"
 date: 2016-01-16
-category: arts, machine learning
+tag: [arts, general-audience, AI]
 ---
 Last weekend I finally took some of personal photos and artwork to *\"paint\"* them in, but not limited to, Van Gogh style. The \"painting\" part was actually done by [**DeepArt algorithm**](#deepart){% sidenote "sn-id-artomatix" "It's worth to note that Artomatix, Inc. - an Irish startup - had introduced a [similar work](https://youtu.be/un9lSayNOIY?t=51) several months before DeepArt algorithm was published." %} - an inspiring application from **Deep learning** research. In short, the Deep learning model - a deep neural network - takes your photo (referred as ***content-image*** henceforth) and a reference style (combination of 1 or more ***style-images***) as the inputs and produces your photo in that style. 
 
@@ -13,7 +13,7 @@ Here we have the content-image on the top-left, the style-image is an artwork by
 <img src="https://raw.githubusercontent.com/hoamle/neural-style-example/master/content-imgs/exeter.jpg" height="150"> <img src="https://raw.githubusercontent.com/hoamle/neural-style-example/master/style-imgs/Afremov2.jpg" height="150">
 <img src="https://raw.githubusercontent.com/hoamle/neural-style-example/master/visually-appealing/exeter-afremov2.png" width="460">
 
-The machine did not "paint" the picture out of the blue, it\'s an iterative learning process. In short, it starts with a blank (noisy) canvas and tries to learn prominent features in both content-image and style-image(s) and present them on the final product. That learning process is mathematically expressed as optimization process of a function representing the combined *similarity* between the output and the inputs. Optimizing such function requires an algorithm which goes through series of updating iterations, visualized in the following gif.
+The machine did not "paint" the picture out of the blue, it\'s an iterative process. In short, it starts with a blank (noisy) canvas and tries to learn prominent features in both content-image and style-image(s) and present them on the final product. That learning process is mathematically expressed as optimization process of a function representing the combined *similarity* between the output and the inputs. Optimizing such function requires an algorithm which goes through series of updating iterations, visualized in the following gif.
 
 <img src="https://raw.githubusercontent.com/hoamle/neural-style-example/master/exeter_afremov2.gif" width="460">
 
@@ -57,10 +57,10 @@ The machine did not "paint" the picture out of the blue, it\'s an iterative lear
 * I drool over a Titan X.
 
 ## Hardware setup
-The main work-horse is a humble 2GB nVidia GTX 660 GPU{% sidenote 'sn-gpu' 'i.e. common video graphic card for gaming' %} plugged in a dated LGA 775 desktop. <del>Each image was generated in ~90 seconds (for a 512px-image) or 2-3 mins (for a 784px-image)</del>{% sidenote "sn-id-advances" "[Recent advances](https://github.com/jcjohnson/fast-neural-style) have largely reduce generation time down to just *a few seconds*" %}. GPU(s) with generous memory is desirable.
+The main work-horse is a humble 2GB nVidia GTX 660 GPU{% sidenote 'sn-gpu' 'i.e. common video graphic card for gaming' %} plugged in a dated LGA 775 desktop. <del>Each image was generated in ~90 seconds (for a 512px-image) or 2-3 mins (for a 784px-image)</del>{% sidenote "sn-id-advances" "*Learning-based approaches* e.g. [fast-neural-style](//github.com/jcjohnson/fast-neural-style) have largely reduce generation time down to just *a few seconds*" %}. GPU(s) with generous memory is desirable.
 
 It\'s *much* faster to run DeepArt algorithm on GPU(s) instead of common CPUs. Even a modern i7 K-series can take upto hour to train and generate 1 image of above sizes. However, running on CPU can take advantages of *abundant* host memory (easily >8GB on a single machine), not to mention the possibility to be accompanied with a coprocessor (eg: Xeon Phi), or running on distributed platform.
 
 ## <a name="refs">References</a>
-* <a name="deepart">[A Neural Algorithm of Artistic Style](http://arxiv.org/abs/1508.06576) (Gatys et al, 2015) i.e. DeepArt algorithm. The name "DeepArt" is adopted from the authors' commercial website [deepart.io](https://deepart.io/)
+1. <a name="deepart">[A Neural Algorithm of Artistic Style](http://arxiv.org/abs/1508.06576) (Gatys et al, 2015) i.e. DeepArt algorithm. The name "DeepArt" is adopted from the authors' commercial website [deepart.io](//deepart.io/)
 </a>

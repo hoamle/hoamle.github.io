@@ -12,16 +12,19 @@ kramdown:
   syntax_highlighter: rouge
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 highlighter: rouge
-permalink: /articles/:short_year/:title
+permalink: /blog/:short_year/:title
 timezone: America/New_York
 excerpt_separator: "" # <!--more-->  # you can specify your own separator, of course.
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
-post:
-  template: _post.txt
-  extension: md
-page:
-  template: _page.txt
-  extension: md
+collections:
+  artworks:
+    output: true
+  post:
+    template: _post.txt
+    extension: md
+  page:
+    template: _page.txt
+    extension: md
 editor: gvim
 git:
   branch: source  # deploy source to `source`, locally published site to `master`
