@@ -1,10 +1,10 @@
 ---
-layout: page
-title: about
+layout: default
+title: About
 ---
 
-<h1 class="content-listing-header sans">Hoa M. Le</h1>
 <ul class="social-links">
+<li><h1 class="content-listing-header sans">Hoa M. Le</h1></li>
   <!-- <li><a href="mailto:hoamle@outlook.com"><span class="icon-mail"></span></a></li>     -->
   {% for entry in site.data.social %}
     <li>

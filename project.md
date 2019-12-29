@@ -1,6 +1,6 @@
 ---
-layout: page
-title: projects & publications
+layout: default
+title: Projects & Publications
 ---
 
 <br>

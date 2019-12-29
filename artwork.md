@@ -1,6 +1,6 @@
 ---
-layout: page
-title: sketch & artwork
+layout: default
+title: Sketch & Artwork
 ---
 <div style="margin-top: 30px; text-align: center; margin-bottom: 30px">
 		<!-- <div>

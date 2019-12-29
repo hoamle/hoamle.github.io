@@ -1,8 +1,6 @@
 ---
-layout: page
-title: talks & tutorials
----
-<h1 class="content-listing-header sans">Talks & Tutorials</h1>
+layout: default
+title: Talks & Tutorials
 ---
 <h2 class="content-listing-header sans" style="color: #222">Panelist at "AI is Now!"</h2>
 <span style="font-size: 12px; color: #666">HANOI, MAY'19 - VPBANK TOWER

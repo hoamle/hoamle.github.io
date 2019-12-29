@@ -1,12 +1,12 @@
 ---
 title: "Primer on Building a Machine Learning Solution"
 layout: post
-tag: [mini-course, beginner, machine learning]
+tag: [mini-course, starter, machine learning]
 ---
 > *Part 1b of the [Essence of Machine Learning (and Deep Learning)](/blog/16/essence-machine-deep-learning) series. See [course notes](/blog/16/essence-machine-deep-learning#note) for Part 1a.*
 
 This week introduces **high-level overview of building a Machine Learning (ML) solution** for a given problem, summarized by the following diagram and demo'ed with [`scikit-learn`](http://scikit-learn.org/stable/index.html).
-{% maincolumn 'assets/img/week1-2.png' '' %}
+{% fullwidth 'assets/img/week1-2.png' '' %}
 
 
 **N.B.**{% marginnote 'mn-id-glossary' "Visit [MLglossary](/blog/17/machine-learning-appendix/#glossary) for a summary of the math notations. The MLglossary also lists common terms in ML with their synonyms or strongly related concepts. Because ML is an interdisplinary field of research, there are many different terminologies coming from repsective fields, which actually address the ***same things***." %} We will gradually *rephrase* every-day language with equivalent ML terminologies and their *math notations*. Nevertheless, always explain the math we use (or encounter) in our usual natural language if possible, so that we can imprint the **underlying intuition** and not getting lost in the technical jargons that follow.
@@ -322,7 +322,7 @@ The accuracy - $$96.7\%$$ - is pretty impressive, but <font color="red">hold off
 ## <a href="#Recap">Recap</a>
 
 We have completed the most basic steps to build a ML solution for our problem as summarized by this diagram
-{% maincolumn 'assets/img/week1-2.png' '' %}
+{% fullwidth 'assets/img/week1-2.png' '' %}
 
 Specifically, we studied a (single-label) *multi-class classification* {% sidenote 'sn-id-slmc' "When ones refer to a *multi-class classification* problem, we implicit understand that it is a single-label problem. A more generalized classification problem is called *multi-label multi-class classification*, which we will not cover in this series." %} problem which require us to build a ML model that can predict a flower type based on its sepal and petal measurements. As a solution for this problem, we used and trained a Softmax Regression `Model`, did `Assessment` on *one* split of test set, measured the performance with Accuracy metric, and achieved impressive predictive Accuracy of $$96.7\%$$. 
 
