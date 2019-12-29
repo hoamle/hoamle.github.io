@@ -79,7 +79,8 @@ p > a { @if $link-style == underline
 body { width: 100%;
        margin-left: auto;
        margin-right: auto;
-      //  padding-left: 12.5%;
+      //  padding-left: 6.25%;
+      //  padding-right: 6.25%;
        font-family: $body-font;
        background-color: $bg-color;
        color: $text-color;
@@ -201,9 +202,9 @@ th, td{ font-size: 1.2rem;
 /* Basic Layout stuff --*/
 
 article { position: relative;
-          padding: 1
-
-          rem 0rem 2.5rem 0rem; } // reduced top and bottom padding by 50%
+          padding: 1rem 2.5rem 2.5rem 5rem; // reduced top and bottom padding by 50%
+          text-align: justify;
+        }
 
 section { padding-top: 1rem;
           padding-bottom: 1rem; }
@@ -272,7 +273,7 @@ p, footer, div.table-wrapper, div.mathblock{ width: 55%; }
 
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
-@media screen and (max-width: 760px) { p, footer,div.mathblock { width: 100%; }
+@media screen and (max-width: 760px) { p, footer,div.mathblock { width: 90%; }
                                        pre code { width: 87.5%; }
                                        ul { width: 85%; }
                                        figure { max-width: 90%; }
@@ -315,7 +316,7 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
                                                                    vertical-align: baseline;
                                                                    position: relative; }
                             label { cursor: pointer; }
-                            pre, pre code, p code, p pre code { width: 90%;
+                            pre, pre code, p code, p pre code { width: 100%;
                                        padding: 0; }
                             .table-caption { display: block;
                                              float: right;
@@ -390,12 +391,12 @@ ul.footer-links li{
 }
 ul.social-links {
   list-style: none;
-  text-align: left;
+  text-align: center;
   opacity: 50%;
-  font-size: medium;
-  margin-left: -1.5rem;
-  margin-top: -0.75rem;
-  margin-bottom: 1rem;
+  // font-size: medium;
+  // margin-left: 1.5rem;
+  margin-top: -1.75rem;
+  // margin-bottom: 1rem;
 
 }
 ul.social-links li{
@@ -419,14 +420,14 @@ ul.social-links li{
 
 //Full width page styling stuff
 
-body.full-width, .content-listing, ul.content-listing li.listing{ width: 90%;
+body.full-width, .content-listing, ul.content-listing li.listing{ width: 100%;
        margin-left: auto;
        margin-right: auto;
-       padding: 0% 5%;
+       padding: 0% 0%;
 
 }
 .full-width article p{
-  width: 90%;
+  width: 100%;
 }
 
 
