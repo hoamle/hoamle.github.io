@@ -328,10 +328,10 @@ Specifically, we studied a (single-label) *multi-class classification* {% sideno
 
 However, there still exists <font color="red">pending questions</font> need addressing:
 
-1. Is $$96.7\%$$ a <font color="red">reliable estimate</font> for our model accuracy on **other test sets**? *Spoiler*: Not at all, given this simple Experimental design in this starter post!{% sidenote 'sn-id-assess' "TODO link to Assessment post" %}
-2. How is Softmax Regression model [**constructed**](/blog/17/principle-of-modelling)?{% sidenote 'sn-id-principle' "TODO link to Part 2" %}
-3. In a problem for which **assumptions** imposed by Softmax Regression model do **not suffice**, how can we do better?{% sidenote 'sn-id-nonlinear' "TODO link to Part 3" %}
-4. How can *we* - as the human - **interpret** the contribution of the features to the prediction, or extract human-perceivable semantics that the features may hold? {% sidenote 'sn-id-nonlinear' "TODO link to Part 4-5" %}
-5. (other issues that would arise when approaching above questions)
+1. Is $$96.7\%$$ a <font color="red">reliable estimate</font> for our model accuracy on **other test sets**? *Spoiler*: Not at all, given this simple Experimental design in this starter post!
+2. How is Softmax Regression model [**constructed**](/blog/17/principle-of-modelling)?
+3. In a problem for which **assumptions** imposed by Softmax Regression model do **not suffice**, how can we do better?
+4. How can *we* - as the human - **interpret** the contribution of the features to the prediction, or extract human-perceivable semantics that the features may hold?
+5. Additional issues arised when addressing the above questions
 
 These questions define the topics for next parts of this series. In each part, we will be approaching different *multi-class classification* problems as case-studies for the relevant topics. The same reasoning and principles also straightforwardly apply to *binary **classification***, ***regression***, and (to certain extends) ***clustering*** problems.

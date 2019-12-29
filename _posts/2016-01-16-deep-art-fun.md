@@ -2,9 +2,9 @@
 layout: post
 title: "Deep Art fun"
 date: 2016-01-16
-tag: [arts, general-audience, AI]
+tag: [arts, AI, general-audience,]
 ---
-Last weekend I finally took some of personal photos and artwork to *\"paint\"* them in, but not limited to, Van Gogh style. The \"painting\" part was actually done by [**DeepArt algorithm**](#deepart){% sidenote "sn-id-artomatix" "It's worth to note that Artomatix, Inc. - an Irish startup - had introduced a [similar work](https://youtu.be/un9lSayNOIY?t=51) several months before DeepArt algorithm was published." %} - an inspiring application from **Deep learning** research. In short, the Deep learning model - a deep neural network - takes your photo (referred as ***content-image*** henceforth) and a reference style (combination of 1 or more ***style-images***) as the inputs and produces your photo in that style. 
+Last weekend I finally had the time to take some of personal photos and *\"paint\"* them in Van Gogh and other artist styles. The \"painting\" part was actually done automatically by [**DeepArt algorithm**](#deepart){% sidenote "sn-id-artomatix" "It's worth to note that Artomatix, Inc. - an Irish startup - had introduced a [similar work](//youtu.be/un9lSayNOIY?t=51) under the name \"Texture Painting\" several months before DeepArt algorithm was published." %} - an inspiring application from Deep learning research. In short, the algorithm takes your source photo - hereby referred as ***content-image*** - and a reference style - called ***style-image*** - as the inputs and produces your source photo in that style. 
 
 ## Demo
 I used [jcjohnson's implementation](https://github.com/jcjohnson/neural-style) of DeepArt algorithm for this demo. 
@@ -62,5 +62,5 @@ The main work-horse is a humble 2GB nVidia GTX 660 GPU{% sidenote 'sn-gpu' 'i.e.
 It\'s *much* faster to run DeepArt algorithm on GPU(s) instead of common CPUs. Even a modern i7 K-series can take upto hour to train and generate 1 image of above sizes. However, running on CPU can take advantages of *abundant* host memory (easily >8GB on a single machine), not to mention the possibility to be accompanied with a coprocessor (eg: Xeon Phi), or running on distributed platform.
 
 ## <a name="refs">References</a>
-1. <a name="deepart">[A Neural Algorithm of Artistic Style](http://arxiv.org/abs/1508.06576) (Gatys et al, 2015) i.e. DeepArt algorithm. The name "DeepArt" is adopted from the authors' commercial website [deepart.io](//deepart.io/)
+1. <a name="deepart">[A Neural Algorithm of Artistic Style](//arxiv.org/abs/1508.06576) (Gatys et al, 2015) i.e. DeepArt algorithm. The name "DeepArt" is adopted from the authors' commercial website [deepart.io](//deepart.io/)
 </a>

@@ -124,14 +124,14 @@ p, ol, ul { font-size: 1.4rem; }
 
 p, li { line-height: 2rem;
         margin-top: 1.4rem;
-        padding-right: 2rem; //removed because,  why?
+        // padding-right: 2rem; //removed because,  why?
         vertical-align: baseline; }
 
 blockquote p {  font-size: 1.1rem;
                 line-height: 1.78181818;
                 margin-top: 1.78181818rem;
                 margin-bottom: 1.78181818rem;
-                width: 45%;
+                width: 52.5%;
                 padding-left: 2.5%;
                 padding-right: 2.5%; }
 
@@ -202,7 +202,7 @@ th, td{ font-size: 1.2rem;
 /* Basic Layout stuff --*/
 
 article { position: relative;
-          padding: 1rem 2.5rem 2.5rem 5rem; // reduced top and bottom padding by 50%
+          padding: 1rem 2.5rem 2.5rem 7.5%; // reduced top and bottom padding by 50%
           text-align: justify;
         }
 
@@ -210,7 +210,7 @@ section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
 
-ul,ol { width: 45%;
+ul,ol { width: 52.5%;
      -webkit-padding-start: 5%;
      -webkit-padding-end: 5%;
      list-style-type: none; }
@@ -269,13 +269,13 @@ blockquote .sidenote, blockquote .marginnote { margin-right: -79% }
                    color: $contrast-color;
                    top: 0rem; } //removed superscripting for numerical reference in sidenote
 
-p, footer, div.table-wrapper, div.mathblock{ width: 55%; }
+p, footer, div.table-wrapper, div.mathblock{ width: 62.5%; }
 
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
 @media screen and (max-width: 760px) { p, footer,div.mathblock { width: 90%; }
                                        pre code { width: 87.5%; }
-                                       ul { width: 85%; }
+                                       ol,ul { width: 85%; }
                                        figure { max-width: 90%; }
                                        figcaption, figure.fullwidth figcaption { margin-right: 0%;
                                                                                  max-width: none; }

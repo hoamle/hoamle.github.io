@@ -72,7 +72,6 @@ Course content is partially taken from the following sources:
 ## <a name="study">Course logistics</a>
 2 sessions/week: 1x "**Lecture**" session + 1x optional "**Study-group**" session.
 * ***Lectures*** are meant to lead you in the right direction --- just to get your started. They are **not** meant to tell you *everything* in *every details*. Thus, you should also utilize the reference reading materials, online resources for missing details *<- (the role of **self-study**)*
-
 * It should be reckoned that we do not know everything (in many situations, we *don't even know what we don't know*), so do not hesitate to get in touch with the course instructors, the teaching assistant - TAs, your classmates, circles of friends for further support/discussion/...  *<- (the role of **Study-group**)* 
 
 
@@ -83,27 +82,7 @@ The map below is one of many possible projections of the field Machine Learning.
 
 > ***Disclaimer***: The map was designed accordingly to my self-study/reading/working via MOOCs/papers/projects related to statistical machine learning, thus there might exist some (hopefully minor) inaccuracies. Any suggestions and critics to improve this map are highly appreciated. 
 
-{% maincolumn 'assets/img/mapofML.png' "" %}
-
-|:---:|:---|
-|PGM | Probabilistic Graphical Models i.e. Probabilistic models |
-|GLM | Generalized Linear Models |
-|GMM, PPCA | (Gaussian) Mixture Models, Probabilistic Principle Component Analysis |
-|HMM, LDS | Hidden Markov Models, Linear Dynamical Systems (for modelling *sequential data*) |
-|Topic Models | Latent Dirichlet Allocation (LDA - *not to be confused with* Linear Discriminant Analysis) and variants |
-|DNN | Deep Neural Networks |
-|MLP, CNN | Multi-layer Perceptrons, Convolutional NNs i.e. FNN - Feed-forward NN |
-|RNN | Recurrent NNs, also including Recursive NN and Bi-directional RNN (for modelling *sequential data*) | 
-|"gates" | Gating mechanism: LSTM modules, GRUs, Residual connections |
-|EBM | Energy-based Models (*undirected* PGM) |
-|RBM, DBN, DBM | Restricted Boltzmann Machines, Deep Belief Networks (*not to be confused with* Dynamic Bayesian Networks), Deep Boltzmann Machines |
-|VAE, DRAW, AIR | Variational Auto-encoder, Deep Recurrent Attentive Writer, Attention-Infer-Repeat |
-|GAN | Generative Adversarial Networks |
-|AAE | Adversarial Auto-encoders |
-|SVM | Support Vector Machines |
-|DP, GP | Dirichlet Processes, Gaussian Processes |
-|Tree, RF | Decision Trees, Random Forests |
-|kNN | k-Nearest Neighbours |
+{% maincolumn 'assets/img/mapofML.png' "\"gates\" in the figure refers to \"gating mechanism\" presented in LSTM / GRU modules. See <a href=/blog/17/machine-learning-appendix#ml-models>ML Appendix</a> for full form of the other acronyms" %}
 
 {% marginnote 'mn-id-global' 'The farther we go on the map, the more materials in *Global topics* we will also encounter' %}The <a name="plan">**study-plan**</a> can be read directly from the model classes i.e. the nodes in the map. The expected contents covered in each node is summarized in the list below, in which the references are chosen so that their technical details have as small overlap with the references in other nodes as possible. The objective is to optimize the time spent on learning, while covering wide enough spectrum of ML research. 
 

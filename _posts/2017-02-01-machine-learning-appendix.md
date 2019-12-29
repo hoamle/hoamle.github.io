@@ -58,6 +58,28 @@ Glossary of common terms and their _synonyms_ (or <em><font color="red">strongly
 |{% m %} \hat{y}_{n} {% em %} | An estimate of random variable {% m %} \overset{\circ}{y_{n}} {% em %} |
 | {% m %} \underset{y_{n}^{'}}{\text{argmax}}\text{Pr}\left(y_{n}^{'}\|\cdot\right) {% em %} | short for {% m %} \underset{y_{n}^{'}\in\Omega_{\overset{\circ}{y_{n}}}}{\text{argmax}}\text{Pr}\left(\overset{\circ}{y_{n}}=y_{n}^{'}\|\cdot\right) {% em %}. We use notation {% m %} y_{n}^{'} {% em %} to not confuse with {% m %} y_{n} {% em %} which is reserved for the realization provided by training data {% m %} \mathcal{D}=\left\{ x_{n},y_{n}\right\}_{n=1}^{N}  {% em %}. |
 
+## <a name="ml-models">Common machine learning models acronym</a> 
+
+|Acronym | Full form |
+|:---:|:---|
+|PGM | Probabilistic Graphical Models i.e. Probabilistic models |
+|GLM | Generalized Linear Models |
+|GMM, PPCA | (Gaussian) Mixture Models, Probabilistic Principle Component Analysis |
+|HMM, LDS | Hidden Markov Models, Linear Dynamical Systems (for modelling *sequential data*) |
+|Topic Models | Latent Dirichlet Allocation (LDA - *not to be confused with* Linear Discriminant Analysis) and variants |
+|DNN | Deep Neural Networks |
+|MLP, CNN | Multi-layer Perceptrons, Convolutional NNs i.e. FNN - Feed-forward NN |
+|RNN | Recurrent NNs, also including Recursive NN and Bi-directional RNN (for modelling *sequential data*) | 
+|EBM | Energy-based Models (*undirected* PGM) |
+|RBM, DBN, DBM | Restricted Boltzmann Machines, Deep Belief Networks (*not to be confused with* Dynamic Bayesian Networks), Deep Boltzmann Machines |
+|VAE, DRAW, AIR | Variational Auto-encoder, Deep Recurrent Attentive Writer, Attention-Infer-Repeat |
+|GAN | Generative Adversarial Networks |
+|AAE | Adversarial Auto-encoders |
+|SVM | Support Vector Machines |
+|DP, GP | Dirichlet Processes, Gaussian Processes |
+|Tree, RF | Decision Trees, Random Forests |
+|kNN | k-Nearest Neighbours |
+
 ## Back-propogation algorithm
 {% marginnote 'backprop-demo' "*Conditions*: (i) J is differentiable every where w.r.t. theta; (ii) J and all thetas form a directed acyclic computational graph." %} **For what**: computes gradient {% m %} 
 \nabla_{\theta}J=\dfrac{\partial J}{\partial\theta} {% em %} for **all** {% m %} \theta 

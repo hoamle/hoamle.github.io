@@ -15,7 +15,7 @@ title: Blog
       {% if {{post.tag | size }} > 0 %}
       <br/>
       {% for cat in post.tag %}
-      <span style="font-size: 12px; color: #666; text-transform: uppercase; margin-right: 2px">{{ cat }}</span>
+      <span style="font-size: 1rem; color: #666; text-transform: uppercase; margin-right: 2px">{{ cat }}</span>
       {% endfor %}
       {% endif %}
       <br><span class="smaller">{{ post.date | date: "%B %-d, %Y" }}</span>  <br/>
