@@ -2,7 +2,7 @@
 layout: post
 title: "Machine learning appendix"
 date: 2017-02-01
-tag: [machine learning]
+category: [machine learning]
 ---
 _to be updated sporadically, suggestions are highly appreciated_
 <!--more-->
@@ -39,8 +39,8 @@ Glossary of common terms and their _synonyms_ (or <em><font color="red">strongly
 | data point | $$x$$ ; or (if working with more than 1 data point) $$x^{\left(n\right)}$$, or $$x_{n}$$ if $$x$$ represents a set of data points |
 | *điểm dữ liệu* |  |
 | parameter; <font color="red">related</font>: weight, bias (as the "offset" from the origin) | $$\theta$$ , $$W$$, $$b$$ respectively |
-| *tham số, trọng số, độ lệch* | <font color="red">note</font>: `bias` is an [umbrella term](https://en.wikipedia.org/wiki/Umbrella_term) |
-| | `bias` has more [common meanings](https://en.wikipedia.org/wiki/Bias_(statistics)) |
+| *tham số, trọng số, độ lệch* | <font color="red">note</font>: `bias` is an [umbrella term](//en.wikipedia.org/wiki/Umbrella_term) |
+| | `bias` has more [common meanings](//en.wikipedia.org/wiki/Bias_(statistics)) |
 | parameterized function | $$f\left(x,y\,\mathbf{;}\,\theta\right)$$  |
 |*hàm có tham số* | |
 | parametric distribution | $$p\left(x\mathbf{;}\,\theta\right)$$; or $$p_{\theta}\left(x\right)$$ where {% m %} p\left(\cdot\right) {% em %} is density function |
@@ -60,7 +60,7 @@ Glossary of common terms and their _synonyms_ (or <em><font color="red">strongly
 
 ## <a name="ml-models">Common machine learning models acronym</a> 
 
-|Acronym | Full form |
+|Acronym | Description |
 |:---:|:---|
 |PGM | Probabilistic Graphical Models i.e. Probabilistic models |
 |GLM | Generalized Linear Models |
@@ -84,10 +84,6 @@ Glossary of common terms and their _synonyms_ (or <em><font color="red">strongly
 {% marginnote 'backprop-demo' "*Conditions*: (i) J is differentiable every where w.r.t. theta; (ii) J and all thetas form a directed acyclic computational graph." %} **For what**: computes gradient {% m %} 
 \nabla_{\theta}J=\dfrac{\partial J}{\partial\theta} {% em %} for **all** {% m %} \theta 
 {% em %}'s of interest. 
-[[Demo](#)] TODO
 
 *Use case(s)*: update optimal parameter {% m %} \hat{\theta} {% em %}'s of a neural network (or a certain class of probabilistic models) by gradient descent algorithms; 
 
-## Manifold learning
-> {% sidenote 'sn-id-manifold' "comment: not completely sure about this definition"  %} __Manifold Learning__ (often also referred to as [__non-linear dimensionality reduction__](http://en.wikipedia.org/wiki/Nonlinear_dimensionality_reduction)) pursuits the goal to ___embed data that originally lies in a high dimensional space in a lower dimensional space___, while preserving characteristic properties. This is possible because *for any high dimensional data to be interesting, it must be intrinsically low dimensional*. For example, images of faces might be represented as points in a high dimensional space (let's say your camera has 5MP -- so your images, considering each pixel consists of three values \[r,g,b\], lie in a 15M dimensional space), but not every 5MP image is a face. Faces lie on a sub-manifold in this high dimensional space. A **sub-manifold** is ___locally Euclidean___, i.e. if you take two _very similar points_, for example two images of identical twins, you can _interpolate_ between them and still _obtain an image on the manifold_, but ___globally not Euclidean___ -- if you take two images that are very different --- for example [Arnold Schwarzenegger](http://www.anorak.co.uk/wp-content/uploads/2011/07/31.jpeg) and [Hillary Clinton](http://vivirlatino.com/i/2008/11/hillary-clinton.jpg) -- you _cannot interpolate_ between them{% sidenote 'sn-manifold-global' "The example assumely talked about a \"limited\" face image manifold right?" %}.
-> <cite>[(ref)](http://www.cs.cornell.edu/~kilian/research/manifold/manifold.html)</cite>

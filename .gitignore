@@ -6,3 +6,8 @@ config.codekit
 /_drafts/*
 .vscode/
 .idea/
+*.ipynb
+.ipynb_checkpoints/
+*.jpg~
+*.png~
+*.psd

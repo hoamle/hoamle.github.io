@@ -2,15 +2,22 @@
 <header>
     <nav class="group">
     	<!-- for badge -->
-	<a href="{{site.baseurl}}/"><img class="badge" src="data:," alt></a>
-	
- 		{% assign pages = site.pages | sort:"title" %}
+	<!-- <a href="{{site.baseurl}}/"><img class="badge" src="data:," alt></a> -->
+ 		{% assign pages = site.pages | sort:"priority" | reverse %}
  		{% for node in pages %}
 		{% unless node.nav_exclude %}
-		    {% if page.url == node.url %}
-		      <a class="active" href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
+			{% if page.url == node.url %}
+				{% if node.title == "About" %}
+				<a href="{{node.url | prepend: site.baseurl}}" class="icon-home" style="width: 1%; color: white;"></a>
+				{% else %}
+				<a href="{{node.url | prepend: site.baseurl}}" class="active">{{node.title}}</a>
+				{% endif %}
 		    {% else %}
-		      <a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
+		    	{% if node.title == "About" %}
+		      	<a href="{{node.url | prepend: site.baseurl}}" class="icon-home" style="width: 1%; color: white;"></a>
+				{% else %}
+		      	<a href="{{node.url | prepend: site.baseurl}}">{{node.title}}</a>
+				{% endif %}
 		    {% endif %}
 	    {% endunless %}
   	{% endfor %}

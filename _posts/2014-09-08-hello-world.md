@@ -7,7 +7,7 @@ Hello world for the $$n+1$$ times. This post will serve as a repo for troublesho
 HTML to MarkDown: `pandoc input.html -o output.md --parse-raw`
 
 ### Markdown editors
-[`MarkdownEditting`](https://github.com/SublimeText-Markdown/MarkdownEditing) for Sublime Text
+[`MarkdownEditting`](//github.com/SublimeText-Markdown/MarkdownEditing) for Sublime Text
 
 
 ```r

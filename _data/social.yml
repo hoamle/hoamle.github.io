@@ -1,8 +1,6 @@
-- link: /feed.xml
-  icon: icon-feed
+# - link: /feed.xml
+#   icon: icon-feed
 - link: //linkedin.com/in/hoamle 
   icon: icon-linkedin
 - link: //twitter.com/hoamle 
   icon: icon-twitter
-- link: //github.com/hoamle 
-  icon: icon-github

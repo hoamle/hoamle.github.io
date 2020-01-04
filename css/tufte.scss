@@ -58,7 +58,7 @@ html{
   font-size: 1.3rem;
 }
 a {
-  color: $contrast-color;
+  color: $link-text-color;
   text-decoration: none;
 }
 
@@ -71,7 +71,7 @@ p > a { @if $link-style == underline
     }
     @else
     {
-      color: $contrast-color;
+      color: $link-text-color;
       text-decoration: none;
     }
   }
@@ -87,6 +87,11 @@ body { width: 100%;
        max-width: 1400px;
        counter-reset: sidenote-counter; }
 
+body.dark {
+  background-color: #1b1b1b;
+  color: #999;
+}
+
 // --------- Typography stuff -----------//
 // added rational line height and margins ala http://webtypography.net/intro/
 
@@ -94,21 +99,31 @@ h1 { font-weight: 400;
      margin-top: 1.568rem;
      margin-bottom: 1.568rem;
      font-size: 2.5rem;
-     line-height: 0.784; }
+     line-height: 0.784; 
+     text-align: left;
+    }
 
 h2 { font-style: italic;
      font-weight: 400;
      margin-top: 1.866666666666667rem;
      margin-bottom: 0;
      font-size: 2.1rem;
-     line-height: 0.933333333333333; }
+     line-height: 0.933333333333333; 
+     text-align: left;
+    }
+h2.folio-listing-header { font-style: italic;
+  margin-top: 0;
+  text-align: center;
+  }
 
 h3 { font-style: italic;
      font-weight: 400;
      font-size: 1.8rem;
      margin-top: 2.1777777777777778rem;
      margin-bottom: 0;
-     line-height: 1.08888888888889; }
+     line-height: 1.08888888888889; 
+     text-align: left;
+    }
 
 // ET says a need for more than 3 levels of headings is the sign of a diseased mind
 
@@ -202,7 +217,7 @@ th, td{ font-size: 1.2rem;
 /* Basic Layout stuff --*/
 
 article { position: relative;
-          padding: 1rem 2.5rem 2.5rem 7.5%; // reduced top and bottom padding by 50%
+          padding: 1rem 7.5% 2.5rem 7.5%; // reduced top and bottom padding by 50%
           text-align: justify;
         }
 
@@ -210,10 +225,14 @@ section { padding-top: 1rem;
           padding-bottom: 1rem; }
 
 
-ul,ol { width: 52.5%;
+ul { width: 52.5%;
      -webkit-padding-start: 5%;
      -webkit-padding-end: 5%;
      list-style-type: none; }
+ol { width: 52.5%;
+     -webkit-padding-start: 5%;
+     -webkit-padding-end: 5%;
+  }
 
 //li { padding: 0.5em 0; } //vertical padding on list items screws up vertical rhythym
 
@@ -273,9 +292,9 @@ p, footer, div.table-wrapper, div.mathblock{ width: 62.5%; }
 
 div.table-wrapper { overflow-x: auto; } //changed all overflow values to 'auto' so scroll bars appear only as needed
 
-@media screen and (max-width: 760px) { p, footer,div.mathblock { width: 90%; }
+@media screen and (max-width: 760px) { p, footer,div.mathblock { width: 100%; }
                                        pre code { width: 87.5%; }
-                                       ol,ul { width: 85%; }
+                                       ol,ul { width: 90%; }
                                        figure { max-width: 90%; }
                                        figcaption, figure.fullwidth figcaption { margin-right: 0%;
                                                                                  max-width: none; }
@@ -337,6 +356,8 @@ label.margin-toggle:not(.sidenote-number) { display: none; }
 //helper classes
 
 .contrast { color: $contrast-color;}
+.subtle-headline { font-size: 1rem; color: #666; text-transform: uppercase; 
+}
 .smaller { font-size: 80%;}
 //Nav and Footer styling area
 
@@ -349,7 +370,7 @@ header > nav.group, body footer {
 // nav.group a.active:after{ content:"\000a0\0003e" ;}
 nav.group a.active{ 
   background-color: #5e5e5e;
-  padding-bottom: 1rem;
+  padding-bottom: 0.5rem;
 }
 
 
@@ -362,16 +383,10 @@ header > nav  a{
   letter-spacing: 0.15em;
   text-transform: uppercase;
   color: white;
-  padding-top: 1.5rem;
-  padding-bottom: 1rem;
+  padding: 0.75rem 1rem 0.5rem 1rem;
   text-decoration: none;
   display: inline-block;
-  float: left;
-  margin-top: 0;
-  margin-bottom: 0;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  //margin-left: 1rem;
+  float: none;
   vertical-align: baseline;
 }
 header > nav a img{
@@ -380,6 +395,16 @@ header > nav a img{
   max-width: 100%;
   top:-1.5rem;
 }
+
+header.post-art {
+  background-color: white;
+  text-align: center;
+}
+header.post-art > nav  {
+  font-size: 2.8rem;
+  color: #666;
+}
+
 ul.footer-links, .credits{
   list-style: none;
   text-align: center;
@@ -395,7 +420,7 @@ ul.social-links {
   opacity: 50%;
   // font-size: medium;
   // margin-left: 1.5rem;
-  margin-top: -1.75rem;
+  // margin-top: -1.75rem;
   // margin-bottom: 1rem;
 
 }
@@ -436,7 +461,30 @@ h1.content-listing-header{
   text-transform: uppercase;
   letter-spacing: 0.2rem;
   font-size: 1.8rem;
+  text-align: left;
+  line-height: unset;
 }
+// copied from h1.content-listing-header
+h1.folio-listing-header{
+  font-style: normal;
+  text-transform: uppercase;
+  letter-spacing: 0.2rem;
+  font-size: 1.8rem;
+  text-align: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+
+}
+
+.full-width ul { width: 90%;
+  -webkit-padding-start: 5%;
+  -webkit-padding-end: 5%;
+  list-style-type: none; }
+.full-width ol { width: 90%;
+  -webkit-padding-start: 5%;
+  -webkit-padding-end: 5%;
+}
+
 
 li.listing hr{
   width:100%;
@@ -472,6 +520,18 @@ hr.slender {
     background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
     background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
 }
+// copied from hr.slender
+hr.slender-small {
+    border: 0;
+    height: 1px;
+    margin-top: 1rem;
+    // margin-bottom:1rem;
+    background-image: -webkit-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:    -moz-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:     -ms-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+    background-image:      -o-linear-gradient(left, rgba(0,0,0,0), rgba(0,0,0,0.75), rgba(0,0,0,0));
+}
+
 // End of front listing page stuff
 
 
@@ -571,6 +631,9 @@ hr.slender {
   -moz-osx-font-smoothing: grayscale;
 }
 
+.icon-home:before {
+  content: "\e900";
+}
 .icon-pencil:before {
   content: "\e600";
 }
@@ -638,30 +701,30 @@ display: table;
 clear: both;
 }
 .project {
-width: 33.33%;
-height: 250px;
+width: 50%;
+height: 16rem;
 float: left;
 vertical-align: middle;
 box-sizing: border-box;
-padding: 10px;
+// padding: 10px;
 }
 .thumbnail{
 width: 100%;
-height: 230px;
+height: 16rem;
 overflow: hidden;
 }
 .thumbnail img{
-width: 500px;
+width: 700px;
 height: auto;
 position: relative;
-left: -25%;
-top: -5%;
+// left: -25%;
+// top: -5%;
 }
 .thumbnail a{
 float: left;
 position: relative;
 width: 100%;
-height: 230px;
+height: 16rem;
 }
 .thumbnail a span {
 display: none;
@@ -672,10 +735,10 @@ bottom: 0;
 right: 0;
 background: rgba(0,0,0,0.4);
 color: $grey-color-light;
-padding: 40px;
+padding: 5rem 1rem 0rem 1rem;
 text-align: center;
 }
-.thumbnail a:hover span {
+.thumbnail a span {
 display: block;
 }
 /** 
@@ -684,38 +747,47 @@ display: block;
 .blankbox{
   background: $theme-color;
   }
-  .img_row{
+.img_row{
   height: $img_height;
-  width: 100%;
+  width: 95%;
   overflow: hidden;
   box-sizing:border-box;
-  padding: $img_spacing;
+  padding: $img_spacing 0 2rem 1rem;
   }
-  .col{ 
+.col{ 
   width: 100%;
   height: 100%;
   float: left;
   object-fit: cover;
   box-sizing:border-box;
-  padding: $img_spacing;
+  padding: $img_spacing 0.5rem 0 0.5rem;
   }
-  .right{
+.right{
   float: right;
   }
-  .one {
+.one {
   width:33.33%;
   }
-  .two {
+.two {
   width: 66.66%;
   }
-  .three{
+.three{
   width: 100%;
   }
-  .caption{
+.banner{
+    width: 100%;
+    height: 12rem;
+}
+.caption{
   height: 100%;
   color: $caption_color;
   text-align: center;
   vertical-align: middle;
   font-size: $caption_font_size;
   }
+  
+  @media (max-width: 760px) {
+    .project {width: 100%;}
+  }
+  
   

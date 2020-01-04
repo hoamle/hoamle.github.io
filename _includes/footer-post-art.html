@@ -1,0 +1,14 @@
+<footer>
+  <hr class="slender">
+<div class="credits">
+<span>&copy; {{ site.time | date: '%Y' }} &nbsp;&nbsp;{{site.author | upcase }}</span>
+<div class="col three caption" style="margin: 0.5rem 0 0 0 ;">
+  {% assign pageurl_array = page.url | split: "/" %}
+  {% assign path = pageurl_array[0] %}
+  {% assign parent = pageurl_array[1] %}
+  <a href="{{ path }}/{{ parent }}" class="icon-home" style="color: #666; opacity: 50%; font-size: 1.4rem;"></a>
+</div>
+
+</div>  
+
+</footer>

@@ -8,16 +8,17 @@ $sans-font: "Lato", "Gill Sans", "Gill Sans MT", Calibri, sans-serif;
 $code-font: Consolas, "Liberation Mono", Menlo, Courier, monospace;
 $url-font: "Lucida Console", "Lucida Sans Typewriter", Monaco, "Bitstream Vera Sans Mono", monospace;
 $text-color: #222222;
+$link-text-color: #517fb1;
 $bg-color: #ffffff;  // user-setting. default: #fffff8 
 $contrast-color: #272822;
 $border-color: #333333;
-$link-style: underline; // choices are 'color' or 'underline'. Default is color using $contrast-color set above
+$link-style: color; // choices are 'color' or 'underline'. Default is color using $link-text-color set above
 
 // From -folio
 /* portfolio tinkering */
 $img_spacing: 5px; 
 $img_height: 275px;
-$caption_font_size: 12px;
+$caption_font_size: 1.2rem;
 $caption_color: #aaa;
 
 /* COLORS  */
@@ -29,7 +30,7 @@ $lime_green: #B7D12A;
 $purple: #B509AC;
 
 $grey-color-light: #ddd; 
-$theme-color: $contrast-color;
+$theme-color: $bg-color;
 
 
 
