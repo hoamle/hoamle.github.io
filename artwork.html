@@ -4,31 +4,39 @@ title: Art keep
 priority: 50
 ---
 
-{% assign featured_works = site.artwork | sort:"date" | where: "category", "featured" | reverse %}
+{% assign featured_works = site.artwork | sort:"date" | where: "category",
+"featured" | reverse %}
 
 <div style="margin-top: 2rem; text-align: center; margin-bottom: 20px">
-		<!-- <span style="font-size: 23px; color: #888">GALLERY</span><br/> -->
-		<span style="font-size: 1.2rem; color: #aaa">RENDERED IN DIGITAL PAINT AND PENCIL</span>
-        <!-- <br/><span style="font-size: 1.2rem; color: #aaa">since 2007</span> -->
+  <!-- <span style="font-size: 23px; color: #888">GALLERY</span><br/> -->
+  <span style="font-size: 1.2rem; color: #aaa"
+    >RENDERED IN DIGITAL PAINT AND PENCIL</span
+  >
+  <!-- <br/><span style="font-size: 1.2rem; color: #aaa">since 2007</span> -->
 </div>
 
 {% for project in featured_works %}
 <div class="project">
-    <div class="thumbnail">
-        <a href="{{ site.baseurl }}{{ project.url }}">
-        {% if project.thumb %}
-            <img class="thumbnail" src="{{ project.thumb }}"/>
-            {% else %}
-            <!-- TODO page took long time to load, replace with dedicated/compressed thumbnails -->
-            <img class="thumbnail" src="{{ project.img }}"/>
-            {% endif %}    
-        <span>
-            <h1 class="folio-listing-header" style="margin-bottom: 0.5rem">{{ project.title}}</h1>
-            {{ project.type }}
-            <!-- <h2 class="folio-listing-header" style="margin-top: 1.5rem">{{ project.date | date: "%Y" }}</h2> -->
-            <br>{{ project.note }}
-        </span>
-        </a>
-    </div>
+  <div class="thumbnail">
+    <a href="{{ site.baseurl }}{{ project.url }}">
+      {% if project.thumb %}
+      <img class="thumbnail" src="{{ project.thumb }}" />
+      {% else %}
+      <!-- TODO page took long time to load, replace with dedicated/compressed thumbnails -->
+      <img class="thumbnail" src="{{ project.img }}" />
+      {% endif %}
+      <span>
+        <h1
+          class="folio-listing-header"
+          style="margin-bottom: 0.5rem; color: rgba(255, 255, 255, 0.7)"
+        >
+          {{ project.title}}
+        </h1>
+        {{ project.type }}
+        <!-- <h2 class="folio-listing-header" style="margin-top: 1.5rem">{{ project.date | date: "%Y" }}</h2> -->
+        <br />{{ project.note }}
+      </span>
+    </a>
+  </div>
 </div>
 {% endfor %}
