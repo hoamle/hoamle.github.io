@@ -1,6 +1,6 @@
 ---
 layout: default-folio
-title: Artwork & Sketch
+title: Art keep
 priority: 50
 ---
 
@@ -15,20 +15,17 @@ priority: 50
 {% for project in featured_works %}
 <div class="project">
     <div class="thumbnail">
-        {% if project.redirect %}
-            <a href="{{ project.redirect }}" target="_blank">
-            {% else %}
-            <a href="{{ site.baseurl }}{{ project.url }}">
-            {% endif %}    
+        <a href="{{ site.baseurl }}{{ project.url }}">
         {% if project.thumb %}
             <img class="thumbnail" src="{{ project.thumb }}"/>
             {% else %}
+            <!-- TODO page took long time to load, replace with dedicated/compressed thumbnails -->
             <img class="thumbnail" src="{{ project.img }}"/>
             {% endif %}    
         <span>
             <h1 class="folio-listing-header" style="margin-bottom: 0.5rem">{{ project.title}}</h1>
             {{ project.type }}
-            <h2 class="folio-listing-header" style="margin-top: 1.5rem">{{ project.date | date: "%Y" }}</h2>
+            <!-- <h2 class="folio-listing-header" style="margin-top: 1.5rem">{{ project.date | date: "%Y" }}</h2> -->
             <br>{{ project.note }}
         </span>
         </a>

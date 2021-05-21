@@ -2,34 +2,39 @@
 layout: base-post-art
 comments: true
 ---
-{% if page.darktheme %}{% assign theme = "dark" %}
-{% else %}{% assign theme = "light" %}
-{% endif %}
+
+{% if page.darktheme %}{% assign theme = "dark" %} {% else %}{% assign theme = "light" %} {% endif %}
 
 <body class="{{ theme }}">
-<div>
-<a style="width: 95%;" href="{{ page.img }}">
-<img src="{{ page.img }}" style="max-height: 864px; margin: auto; display: block;"/>
-</a>
-</div>
-<div style="text-align: center;">
-
+  <div>
+    <a style="width: 95%" href="{{ page.img }}">
+      <img
+        src="{{ page.img }}"
+        style="max-height: 864px; margin: auto; display: block"
+      />
+    </a>
+  </div>
+  <div style="text-align: center">
     <h1 class="folio-listing-header">{{ page.title}}</h1>
-    
-</div>
-<div style="margin: 1rem 0 0.2rem 0; text-align: center; font-size: 1.2rem;">
-    {{ page.date | date: "%Y" }} 
-</div>
-<div class="col three caption" style="color:unset; margin: 0;">
+  </div>
+  <div style="margin: 1rem 0 0.2rem 0; text-align: center; font-size: 1.2rem">
+    {{ page.date | date: "%Y" }}
+  </div>
+  <div class="col three caption" style="color: unset; margin: 0">
     {{ page.caption }}
-</div>
+  </div>
 
-
-<div>
-    {{ page.content }}
-</div>
+  <div>{{ page.content }}</div>
 </body>
 
+<!-- vanilla-back-to-top -->
+<script src="//unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+<script>
+  addBackToTop({
+    diameter: 56,
+    backgroundColor: "rgb(255, 82, 82)",
+    textColor: "#fff",
+  });
+</script>
+
 {% include disqus.html %}
-
-

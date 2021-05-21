@@ -1,8 +1,10 @@
 ---
 layout: post-art
-img: /assets/artwork/2012-12-03-mobile-painting.jpg
+img: /assets/artwork/compart.jpg
 img2: /assets/artwork/2012-12-03-mobile-painting-making-of.jpg
 category: [complete, featured]
+type: "<em>Proof of concept</em>"
+darktheme: true
 caption: "Made on an Android tablet. App used: Sketchbook Pro Mobile<br>Painted from a photo reference"
 
 ---
