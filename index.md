@@ -20,4 +20,4 @@ I am currently the Data Science & AI Lead at [Pique.ai](//pique.ai/), working on
 
 In my free time, I used to teach Deep learning foundation bootcamps at [VietAI](//vietai.org), sometimes <a href="/artwork">draw</a>, and have beeng trying to allot time exploring the use of <a href="/project#compart">AI technologies for creative works</a> over the years.
 
-I obtained MPhil in Computational Biology at <a href="//www.damtp.cam.ac.uk/">University of Cambridge</a>, and BSc in Maths & Finance at <a href="//www.exeter.ac.uk/">University of Exeter</a>. I then joined <a href="//ds.soict.hust.edu.vn">Data Science Lab, Hanoi University of Science Technology</a>  as a Research Assistant, reading Statistical Machine Learning before moving to the industry. 
+I obtained MPhil in Computational Biology at <a href="//www.damtp.cam.ac.uk/">University of Cambridge</a>, and BSc in Maths & Finance at <a href="//www.exeter.ac.uk/">University of Exeter</a>. I then joined <a href="http://ds.soict.hust.edu.vn">Data Science Lab, Hanoi University of Science Technology</a>  as a Research Assistant, reading Statistical Machine Learning before moving to the industry. 
