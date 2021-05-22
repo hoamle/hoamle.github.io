@@ -11,3 +11,4 @@ config.codekit
 *.jpg~
 *.png~
 *.psd
+.rake_tasks~
