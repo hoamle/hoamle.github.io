@@ -90,6 +90,10 @@ body { width: 100%;
 body.dark {
   background-color: #1b1b1b;
   color: #999;
+  a {
+    color: #bbb;
+  }
+  
 }
 
 // --------- Typography stuff -----------//
@@ -768,6 +772,10 @@ display: block;
 .one {
   width:33.33%;
   }
+.side {
+// Substitute for .one to fix image size
+  width: 200px; 
+  }
 .two {
   width: 66.66%;
   }
@@ -786,8 +794,12 @@ display: block;
   font-size: $caption_font_size;
   }
   
-  @media (max-width: 760px) {
+  @media screen and (max-width: 760px) {
     .project {width: 100%;}
+  }
+  
+  @media screen and (max-width: 800px) {
+    .side {width:33.33%;}
   }
   
   

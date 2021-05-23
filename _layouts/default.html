@@ -1,7 +1,8 @@
 <!DOCTYPE html>
 <html>
   {% include head.html %}
-  <body>
+  {% if page.darktheme %}{% assign theme = "dark" %}{% endif %}
+  <body class="{{ theme }}">
     {% include header.html %}
     <article class="group">
       {{ content }}
