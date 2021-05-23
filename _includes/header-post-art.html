@@ -8,7 +8,7 @@
 		{% unless node.nav_exclude %}
 			{% if node.title == "About" %}
 			<a href="{{node.url | prepend: site.baseurl}}" class="icon-home" style="width: 1%; color: #666;"></a>
-			{% elsif node.title == "Art keep" %}
+			{% elsif node.title == "Art" %}
 			<a href="{{node.url | prepend: site.baseurl}}" class="active">{{node.title}}</a>
 			{% else %}
 			<a href="{{node.url | prepend: site.baseurl}}" style="color: #666;">{{node.title}}</a>

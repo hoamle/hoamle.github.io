@@ -774,7 +774,7 @@ display: block;
   }
 .side {
 // Substitute for .one to fix image size
-  width: 200px; 
+  width: 224px; 
   }
 .two {
   width: 66.66%;
@@ -798,7 +798,7 @@ display: block;
     .project {width: 100%;}
   }
   
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 864px) {
     .side {width:33.33%;}
   }
   
