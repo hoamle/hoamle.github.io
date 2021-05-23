@@ -16,7 +16,7 @@ priority: 80
 
 {% marginfigure 'mf-id-1' 'assets/img/profile_2020.png' '' %}
 
-I am currently the Data Science & AI Lead at [Pique.ai](//pique.ai/), working on recommender systems as both engineer and analyst.
+I am currently the Data Science & AI Lead at [Pique.ai](//pique.ai/), working on recommender systems.
 
 In my free time, I used to teach Deep learning foundation bootcamps at [VietAI](//vietai.org), sometimes <a href="/art">draw</a>, and have beeng trying to allot time exploring the use of <a href="/portfolio#compart">AI technologies for creative works</a> over the years.
 
