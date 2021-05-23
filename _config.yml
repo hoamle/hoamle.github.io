@@ -12,12 +12,12 @@ kramdown:
   syntax_highlighter: rouge
 markdown_ext: "markdown,mkdown,mkdn,mkd,md"
 highlighter: rouge
-permalink: /blog/:short_year/:title
+permalink: /post/:short_year/:title
 timezone: America/New_York
 excerpt_separator: "" # <!--more-->  # you can specify your own separator, of course.
 exclude: ['Gemfile', 'Gemfile.lock', 'Rakefile', 'README.md']
 collections:
-  artwork:
+  art:
     output: true
   post:
     template: _post.txt
