@@ -16,8 +16,8 @@ priority: 80
 
 {% marginfigure 'mf-id-1' 'assets/img/profile_2020.png' '' %}
 
-I am currently the Data Science & AI Lead at [Pique.ai](//pique.ai/), working on recommender systems.
+I am a Full-stack AI engineer, currently titled Senior Data Scientist at [Momo](//crunchbase.com/organization/momo-vn) - who had acquired [Pique.ai](//pique.ai/) where I was the Data Science & AI Lead.
 
-In my free time, I used to teach Deep learning foundation bootcamps at [VietAI](//vietai.org), sometimes <a href="/art">draw</a>, and have been trying to allot time exploring the use of <a href="/portfolio#compart">AI technologies for creative works</a> over the years.
+I graduated from <a href="//www.damtp.cam.ac.uk/">University of Cambridge</a> and <a href="//www.exeter.ac.uk/">University of Exeter</a>, with degrees in Computational Biology, Maths and Finance. I then joined <a href="http://ds.soict.hust.edu.vn">Data Science Lab, Hanoi University of Science & Tech</a> as a Research Assistant, reading Statistical Machine Learning before moving to the industry. 
 
-I obtained MPhil in Computational Biology at <a href="//www.damtp.cam.ac.uk/">University of Cambridge</a>, and BSc in Maths & Finance at <a href="//www.exeter.ac.uk/">University of Exeter</a>. I then joined <a href="http://ds.soict.hust.edu.vn">Data Science Lab, Hanoi University of Science Technology</a>  as a Research Assistant, reading Statistical Machine Learning before moving to the industry. 
+In my free time, I <a href="/art">draw</a> sometimes, used to teach Deep Learning bootcamps at [VietAI](//vietai.org/our-program/), and have been exploring the use of <a href="/portfolio#compart">AI technologies for creative works</a> over the years.
