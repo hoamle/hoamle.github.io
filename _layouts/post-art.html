@@ -8,10 +8,7 @@ comments: true
 <body class="{{ theme }}">
   <div>
     <a style="width: 95%" href="{{ page.img }}">
-      <img
-        src="{{ page.img }}"
-        style="max-height: 864px; margin: auto; display: block"
-      />
+      <img src="{{ page.img }}" style="max-height: 864px; margin: auto; display: block" />
     </a>
   </div>
   <div style="text-align: center">
@@ -19,8 +16,7 @@ comments: true
   </div>
   <div style="margin: 1rem 0 0.2rem 0; text-align: center; font-size: 1.2rem">
     {{ page.date | date: "%Y" }}
-  </div>
-  <div class="col three caption" style="color: unset; margin: 0">
+    <br/>
     {{ page.caption }}
   </div>
 
