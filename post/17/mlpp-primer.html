@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hoa M. Le Personal site</title>
+  <!-- <title>Machine Learning as Probabilistic (Bayesian) modelling, in simpler language</title> -->
+  <meta name="description" content="">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://hoamle.github.io/post/17/mlpp-primer">
+
+  <link rel="alternate" type="application/rss+xml" title="Hoa M. Le's Personal site" href="http://hoamle.github.io/feed.xml" />
+</head>
+
+  
+  <body class="">
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    	<!-- for badge -->
+	<!-- <a href="/"><img class="badge" src="data:," alt></a> -->
+ 		
+ 		
+		
+			
+		    	
+		      	<a href="/" class="icon-home" style="width: 1%; color: white;"></a>
+				
+		    
+	    
+  	
+		
+			
+		    	
+		      	<a href="/portfolio">Portfolio</a>
+				
+		    
+	    
+  	
+		
+			
+		    	
+		      	<a href="/talk">Talks</a>
+				
+		    
+	    
+  	
+		
+			
+		    	
+		      	<a href="/post">Post</a>
+				
+		    
+	    
+  	
+		
+			
+		    	
+		      	<a href="/art">Art</a>
+				
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+	</nav>
+</header>
+
+
+    <article class="group">
+      <h1>Machine Learning as Probabilistic (Bayesian) modelling, in simpler language</h1>
+
+
+<span style="font-size: 1rem; color: #666; text-transform: uppercase; margin-right: 2px">tutorial</span>
+
+
+
+<p class="subtitle">February 17, 2017</p>
+
+<p><label for="motivation" class="margin-toggle"> ⊕</label><input type="checkbox" id="motivation" class="margin-toggle" /><span class="marginnote"><em>Motivation</em>. Many DSLab-HUST members, including myself back in late 2015, had been struggling with studying <strong>probabilistic (Bayesian) modelling</strong> given pretty limited training we had. The issue got worse when some others, instead, explored Deep Neural Networks - DNN first, and their intersection - Deep Bayesian modelling, where the links / intuition between the 2 domains were hard to made without a <em>proper foundation</em> in Probabilistic modelling. I reckoned that adding more training sessions to the existing ones with <em>revised</em> ML fundamentals - to fill in probabilistic interpretation and DNN bits, <em>more visualization</em> - to accompany the equation, and <a href="//edwardlib.org/api/model"><em>augmented graphical model notation</em></a> - to include deterministic nodes in stochastic structures - might have alleviated the problem. For that this series was developed, and added to the training sessions in early 2017 - while I was a Research assistant at the lab. </span>
+<strong>“Base”</strong> course for Machine Learning (ML) starters, under the language of <strong><em>probabilistic modelling</em></strong>. Pre-requisite for subsequent training sessions in Probabilistic (graphical) models e.g. Topic models, Deep Learning, and other ML topics.</p>
+
+<p>The objective of this course is to introduce core concepts of <em>modern</em> Machine learning under probabilistic perspective, with (i) more visualization &amp; interpretation of the accompanied math, and (ii) <a href="//edwardlib.org/api/model">augmented graphical model notation</a> to incorporate DNN architectures into stochastic structure of Probabilistic models. Upon completing this course, the learners can, hopefully, explore the <a href="/post/16/a-ml-dl-map">spectrum of ML/AI research</a>  with minimal guidance, keep their heads up on the big picture to not get lost in the complexity of the field, later learn advanced materials more efficiently.</p>
+
+<p><strong>Pre-requisite</strong>. Basic knowledge in the following mathematical areas</p>
+<ul>
+  <li>Linear Algebra: understand the notion of <em>vectors</em> and <em>space</em> to represent data; basic arithmetics: dot product, matrix multiplication.</li>
+  <li>Probability &amp; Statistics: understand the notion of <em>probability distribution</em> to quantitatively express “possibilities”</li>
+  <li>Calculus: can do partial derivatives, know the chain-rule (not required for “base” course if not diving deep into <em>how</em> <a href="#core">learning task</a> is done, but recommended for the long-term nevertheless)</li>
+</ul>
+
+<h2 id="core-concepts"><a name="core">Core concepts</a></h2>
+<p>Via the lens of probabilistic modelling, we will introduce the following high-level concepts (in <strong><em>bold italic</em></strong>).</p>
+<blockquote>
+  <p><em>Tip: read  the side notes, tap on the numbered superscript below (if you’re on your phone) for more details.</em></p>
+</blockquote>
+
+<h3 id="build-a-machine-learning-model">Build a Machine Learning model</h3>
+<ul>
+  <li>Design principle: <a name="arc"><strong><em>Model</em></strong></a> <label for="sn-model" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-model" class="margin-toggle" /><span class="sidenote"><em>“Model is a simplification of reality”</em>. Formulate real-life problems as <strong><em>parametric models</em></strong>. Note: <em>non-parametric models/methods</em> are not covered and left for further reading after “base” course. See <a href="#map">the map</a>. </span> = <em>(model)</em> <strong><em>Structure</em></strong><label for="sn-structure" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-structure" class="margin-toggle" /><span class="sidenote">Relationships between the elements of a model: data, parameters, and hyperparameters.  Relationships can either be <em>deterministic</em> or <em>stochastic</em>, and can be summarized graphically by <a name="graphical" href="/post/17/principle-of-modelling"><strong><em>graphical models</em></strong></a>. </span> + <strong><em>Learning Framework</em></strong><label for="sn-framework" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-framework" class="margin-toggle" /><span class="sidenote">Probabilistic framework: <strong><em>maximum likelihood estimation</em></strong> and <strong><em>Bayesian reasoning</em></strong>. Non-probabilistic frameworks include <a href="//metacademy.org/roadmaps/rgrosse/dgml"><em>differential geometry</em></a>, which is more mathematical i.e. more abstract, and is only recommended upon completing <code class="highlighter-rouge">PGM</code> node in the <a href="#plan">study-plan</a>. </span></li>
+</ul>
+
+<blockquote>
+  <p><em>Note: the term “<strong>Architecture</strong>” - often seen in DNN - can be thought of as a sub-concept of “<strong>Structure</strong>”</em></p>
+</blockquote>
+
+<ul>
+  <li>Tasks to do:  <strong><em>Learning</em></strong>, <strong><em>Inference</em></strong>, and <strong><em>Decision making</em></strong><label for="sn-estimate" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-estimate" class="margin-toggle" /><span class="sidenote">Realize a model by finding/computing (point) estimates of unknown parameters/ hyper-parameters (<strong><em>learning task</em></strong>) of the model; other quantities of interest, e.g. predictive posterior distribution of outcomes/ estimates of missing data/ … given trained model (<strong><em>inference tasks</em></strong>), in order to make optimal <strong><em>decisions</em></strong> - prediction, actions - under <em>uncertainties</em>. </span></li>
+</ul>
+
+<h3 id="evaluate-performance-of-a-model">Evaluate performance of a model</h3>
+
+<ul>
+  <li><strong><em>Assessment metrics</em></strong>: Which metrics to measure model performance?</li>
+  <li><strong><em>Model selection</em></strong>: Which model to use, or can we ensemble / average different models?</li>
+  <li><strong><em>Model criticism</em></strong>: Are the results meaningful<label for="sn-meaningful" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-meaningful" class="margin-toggle" /><span class="sidenote">in terms of <em>statistical</em> significance, interpretability, or interesting observation </span>  and legitimate<label for="sn-analyze" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-analyze" class="margin-toggle" /><span class="sidenote">We will touch on <strong><em>Experimental design</em></strong> </span>?</li>
+</ul>
+
+<h3 id="regularize-a-model">Regularize a model</h3>
+<ul>
+  <li>To fight <strong><em>overfitting</em></strong> issue. Example approaches: weight penalty, <strong><em>Bayesian inference/reasoning</em></strong><label for="sn-bayes" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-bayes" class="margin-toggle" /><span class="sidenote">We will also see Bayesian reasoning, and eventually <em>Bayesian inference methods</em>, when building <strong><em>generative models</em></strong> for clustering problem </span>, Data augmentation, Dropout, Ensemble methods</li>
+  <li>To strive for human-interpretable model via <em>sparsity</em><label for="sn-sparse" class="margin-toggle sidenote-number"></label><input type="checkbox" id="sn-sparse" class="margin-toggle" /><span class="sidenote">covered in Topic Models course </span> or <a href="//en.wikipedia.org/wiki/Regularization*(mathematics)">other objectives</a>.</li>
+</ul>
+
+<h2 id="course-notes"><a name="note">Course notes</a></h2>
+<p>Session 1 - <a href="//raw.githubusercontent.com/hoamle/essence_ml/e788aef7617fed6911bcfd710ebbccd8ed34eae6/essence_ml.pdf">Introduction</a>  &amp; <a href="/post/17/primer-on-building-ml-solutions">Primer on Building a Machine Learning solution</a></p>
+
+<p>Session 2 - Principles of Modelling: Model structure (linear models), Learning framework</p>
+
+<p>Session 3 - Model structure (non-linear models), Regularization, Model selection</p>
+
+<p>Session 4 - Bayesian inference, Generative models</p>
+
+<p><a href="//1drv.ms/p/s!ApOZHae4ogqZgog1P9HHN_4u3UeMeA">RECAP Session 2-4</a></p>
+
+<p>Session 5 - Introduction to <a href="//1drv.ms/p/s!ApOZHae4ogqZgog1P9HHN_4u3UeMeA">Latent Variable Models &amp; How to learn classical LVMs</a></p>
+
+<h2 id="references"><a name="ref">References</a></h2>
+<p>For this course</p>
+<blockquote>
+  <p>Andrew Ng’s Machine Learning class (<a href="//www.coursera.org/learn/machine-learning">Coursera</a> or <a href="//cs229.stanford.edu/">CS229</a>) &lt;- Practical introduction to ML and common ML algorithms.</p>
+</blockquote>
+
+<blockquote>
+  <p><a href="//cs231n.stanford.edu/">Stanford CS231n</a> - ConvNet for Visual Recognition &lt;- Practical course on DNN under the context of visual recognition.</p>
+</blockquote>
+
+<blockquote>
+  <p><a href="//www.cs.ubc.ca/~murphyk/MLbook/">Machine Learning: a Probabilistic Perspective</a> (Kevin Murphy) &lt;- Comprehensive textbooks on Probabilistic modelling. Alternative: <a href="//www.amazon.com/Pattern-Recognition-Learning-Information-Statistics/dp/0387310738">Pattern Recognition and Machine Learning</a> (Christopher Bishop)</p>
+</blockquote>
+
+<p>For bigger, more expressive landscape of Deep Bayesian modelling</p>
+<blockquote>
+  <p><a href="//videolectures.net/deeplearning2016_mohamed_generative_models/">Shakir Mohamed’s talk</a> on Deep Generative Models in Deep Learning Summer School, 2016 &lt;- Terrific summary of modelling principles and categorization of model classes</p>
+</blockquote>
+
+<blockquote>
+  <p><a href="//twitter.com/dpkingma/status/914277278602821633?lang=en">Durk Kingma’s PhD Thesis</a> &lt;- Self-contained references for the building blocks of the most recent advances such as Amortized inference with path-wise Stochastic-gradient VI (where VAE is a special case), Variational Dropout, Inverse Autoregressive Flow</p>
+</blockquote>
+
+<h2 id="course-logistics"><a name="study">Course logistics</a></h2>
+<p>2 sessions/week: 1x “<strong>Lecture</strong>” session + 1x optional “<strong>Study-group</strong>” session.</p>
+
+<p><em>Lectures</em> are meant to lead you in the right direction, and that’s it — just to get you started. They are <strong>not</strong> meant to tell you <em>everything</em> in <em>every</em> details. Thus, you should also utilize the reference reading materials, online resources for missing details</p>
+
+<p>It should also be reckoned that <em>we do not know everything</em>. In many situations, we <em>don’t even know what we don’t know</em>. Thus do not hesitate to get in touch with the course instructors, the teaching assistant, your classmates, circles of friends for further support/discussion/…</p>
+
+
+
+
+
+
+    </article>
+    <span class="print-footer">Machine Learning as Probabilistic (Bayesian) modelling, in simpler language - February 17, 2017 - Hoa M. Le</span>
+    <footer>
+  <!-- <hr class="slender", style="margin-bottom: unset;"> -->
+  <!-- <ul class="footer-links"> -->
+    <!-- <li><a href="mailto:hoamle@outlook.com"><span class="icon-mail"></span></a></li>     -->
+    <!-- 
+      <li>
+        <a href="//linkedin.com/in/hoamle"><span class="icon-linkedin"></span></a>
+      </li>
+    
+      <li>
+        <a href="//twitter.com/hoamle"><span class="icon-twitter"></span></a>
+      </li>
+      
+  </ul> -->
+<div class="credits">
+  <span>&copy; 2021 &nbsp;&nbsp;HOA M. LE</span>
+  <br>
+  <span>This site is created with <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> for <a href="//jekyllrb.com">Jekyll</a>, <a href="//github.com/bogoli/-folio">*folio</a>, and <a href="//github.com/vfeskov/vanilla-back-to-top">vanilla-back-to-top</a>. Design philosophy inspired by <a href=//jackschaedler.github.io>Jack Schaedler</a></span>
+</div>  
+</footer>
+
+    <!-- vanilla-back-to-top -->
+    <script src="//unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+        diameter: 44,
+        backgroundColor: 'rgb(255, 82, 82)',
+        textColor: '#fff'
+      })</script>
+    
+  </body>
+</html>

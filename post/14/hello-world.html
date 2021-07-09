@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <title>Hoa M. Le Personal site</title>
+  <!-- <title>Hello World</title> -->
+  <meta name="description" content="">
+
+  <!-- Google Fonts loaded here depending on setting in _data/options.yml true loads font, blank does not-->
+  
+    <link href='//fonts.googleapis.com/css?family=Lato:400,400italic' rel='stylesheet' type='text/css'>
+  
+  
+  <!-- Load up MathJax script if needed ... specify in /_data/options.yml file-->
+  
+    <script type="text/javascript" src="//cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+  
+
+  <link rel="stylesheet" type="text/css" href="/css/tufte.css">
+  <!-- <link rel="stylesheet" type="text/css" href="/css/print.css" media="print"> -->
+
+  <link rel="canonical" href="http://hoamle.github.io/post/14/hello-world">
+
+  <link rel="alternate" type="application/rss+xml" title="Hoa M. Le's Personal site" href="http://hoamle.github.io/feed.xml" />
+</head>
+
+  
+  <body class="">
+    <!--- Header and nav template site-wide -->
+<header>
+    <nav class="group">
+    	<!-- for badge -->
+	<!-- <a href="/"><img class="badge" src="data:," alt></a> -->
+ 		
+ 		
+		
+			
+		    	
+		      	<a href="/" class="icon-home" style="width: 1%; color: white;"></a>
+				
+		    
+	    
+  	
+		
+			
+		    	
+		      	<a href="/portfolio">Portfolio</a>
+				
+		    
+	    
+  	
+		
+			
+		    	
+		      	<a href="/talk">Talks</a>
+				
+		    
+	    
+  	
+		
+			
+		    	
+		      	<a href="/post">Post</a>
+				
+		    
+	    
+  	
+		
+			
+		    	
+		      	<a href="/art">Art</a>
+				
+		    
+	    
+  	
+		
+  	
+		
+  	
+		
+  	
+	</nav>
+</header>
+
+
+    <article class="group">
+      <h1>Hello World</h1>
+
+
+<p class="subtitle">September 8, 2014</p>
+
+<p>Hello world for the <script type="math/tex">n+1</script> times. This post will serve as a repo for troubleshooting blogging problems.</p>
+
+<h3 id="convert-between-different-sources">Convert between different sources</h3>
+<p>HTML to MarkDown: <code class="highlighter-rouge">pandoc input.html -o output.md --parse-raw</code></p>
+
+<h3 id="markdown-editors">Markdown editors</h3>
+<p><a href="//github.com/SublimeText-Markdown/MarkdownEditing"><code class="highlighter-rouge">MarkdownEditting</code></a> for Sublime Text</p>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">library</span><span class="p">(</span><span class="n">knitr</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## Warning: package 'knitr' was built under R version 3.3.2
+</code></pre></div></div>
+
+<div class="language-r highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">set.seed</span><span class="p">(</span><span class="m">123</span><span class="p">)</span><span class="w">
+</span><span class="n">rnorm</span><span class="p">(</span><span class="m">5</span><span class="p">)</span><span class="w">
+</span></code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## [1] -0.56047565 -0.23017749  1.55870831  0.07050839  0.12928774
+</code></pre></div></div>
+
+<p>Does <strong>knitr</strong> work with Python? Use the chunk option <code class="highlighter-rouge">engine='python'</code>:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="n">x</span> <span class="o">=</span> <span class="s">'hello, python world!'</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+<span class="k">print</span><span class="p">(</span><span class="n">x</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">' '</span><span class="p">))</span>
+</code></pre></div></div>
+
+<div class="highlighter-rouge"><div class="highlight"><pre class="highlight"><code>## hello, python world!
+## ['hello,', 'python', 'world!']
+</code></pre></div></div>
+
+<p>{% highlight c++ %}  <br /> code code code <br /> {% endhighlight %}</p>
+
+<p>Produces something like this:</p>
+
+<figure class="highlight"><pre><code class="language-c--" data-lang="c++"><span class="kt">int</span> <span class="nf">main</span><span class="p">(</span><span class="kt">int</span> <span class="n">argc</span><span class="p">,</span> <span class="kt">char</span> <span class="k">const</span> <span class="o">*</span><span class="n">argv</span><span class="p">[])</span>
+<span class="p">{</span>
+	<span class="n">string</span> <span class="n">myString</span><span class="p">;</span>
+
+	<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="s">"input a string: "</span><span class="p">;</span>
+	<span class="n">getline</span><span class="p">(</span><span class="n">cin</span><span class="p">,</span> <span class="n">myString</span><span class="p">);</span>
+	<span class="kt">int</span> <span class="n">length</span> <span class="o">=</span> <span class="n">myString</span><span class="p">.</span><span class="n">length</span><span class="p">();</span>
+	
+	<span class="kt">char</span> <span class="n">charArray</span> <span class="o">=</span> <span class="k">new</span> <span class="kt">char</span> <span class="o">*</span> <span class="p">[</span><span class="n">length</span><span class="p">];</span>
+
+	<span class="n">charArray</span> <span class="o">=</span> <span class="n">myString</span><span class="p">;</span>
+	<span class="k">for</span><span class="p">(</span><span class="kt">int</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="p">;</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">length</span><span class="p">;</span> <span class="o">++</span><span class="n">i</span><span class="p">){</span>
+		<span class="n">cout</span> <span class="o">&lt;&lt;</span> <span class="n">charArray</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">&lt;&lt;</span> <span class="s">" "</span><span class="p">;</span>
+	<span class="p">}</span>
+	
+	<span class="k">return</span> <span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span></code></pre></figure>
+
+
+
+
+
+
+
+    </article>
+    <span class="print-footer">Hello World - September 8, 2014 - Hoa M. Le</span>
+    <footer>
+  <!-- <hr class="slender", style="margin-bottom: unset;"> -->
+  <!-- <ul class="footer-links"> -->
+    <!-- <li><a href="mailto:hoamle@outlook.com"><span class="icon-mail"></span></a></li>     -->
+    <!-- 
+      <li>
+        <a href="//linkedin.com/in/hoamle"><span class="icon-linkedin"></span></a>
+      </li>
+    
+      <li>
+        <a href="//twitter.com/hoamle"><span class="icon-twitter"></span></a>
+      </li>
+      
+  </ul> -->
+<div class="credits">
+  <span>&copy; 2021 &nbsp;&nbsp;HOA M. LE</span>
+  <br>
+  <span>This site is created with <a href="//github.com/clayh53/tufte-jekyll">Tufte theme</a> for <a href="//jekyllrb.com">Jekyll</a>, <a href="//github.com/bogoli/-folio">*folio</a>, and <a href="//github.com/vfeskov/vanilla-back-to-top">vanilla-back-to-top</a>. Design philosophy inspired by <a href=//jackschaedler.github.io>Jack Schaedler</a></span>
+</div>  
+</footer>
+
+    <!-- vanilla-back-to-top -->
+    <script src="//unpkg.com/vanilla-back-to-top@7.2.1/dist/vanilla-back-to-top.min.js"></script>
+    <script>addBackToTop({
+        diameter: 44,
+        backgroundColor: 'rgb(255, 82, 82)',
+        textColor: '#fff'
+      })</script>
+    
+  </body>
+</html>
